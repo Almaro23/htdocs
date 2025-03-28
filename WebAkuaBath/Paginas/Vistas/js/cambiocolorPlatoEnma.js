@@ -15,7 +15,7 @@ function changeImage(color) {
     switch (color) {
         case 'blanco':
             image.src = '../../../imagenes/Enma/blanco.jpg';
-            colorName.textContent = 'Antracita';
+            colorName.textContent = 'Blanco';
             break;
         case 'antracita':
             image.src = '../../../imagenes/Enma/antracita.jpg';
