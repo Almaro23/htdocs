@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - AkuaBath</title>
+    <link rel="icon" href="../../imagenes/LOGO-FACE.png" type="image/png">
+    <link rel="stylesheet" href="../Estilos/contacto.css">
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="logo">
+            <a href="../../index.html">
+            <img src="../../imagenes/LOGO-FACE.png" alt="Logo de AkuaBath" /></a>
+        </div>
+        <ul class="menu-principal">
+            <li><a href="../../index.html">Inicio</a></li>
+            <li class="menu-desplegable">
+                <a>Productos</a>
+                <ul class="submenu">
+                    <li class="menu-desplegable">
+                        <a href="#">Platos de Ducha ▸</a>
+                        <ul class="submenu">
+                            <li><a href="./PlatosDeDucha/lucia.html">Modelo Lucia</a></li>
+                            <li><a href="./PlatosDeDucha/mirian.html">Modelo Mirian</a></li>
+                            <li><a href="./PlatosDeDucha/emma.html">Modelo Emma</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="menu-desplegable">
+                        <a href="#">Encimeras ▸</a>
+                        <ul class="submenu">
+                            <li><a href="./Encimeras/kuo.html">Encimera Kuo</a></li>
+                            <li><a href="./Encimeras/mio.html">Encimera Mir</a></li>
+                            <li><a href="./Encimeras/rem.html">Encimera Rem</a></li>
+                            <li><a href="./Encimeras/rem.html">Encimera Plana Con y Sin faldón</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-desplegable">
+                        <a href="#">Lavabos Sobreencimera ▸</a>
+                        <ul class="submenu">
+                            <li><a href="./Lavabos/kira.html">Lavabo Kira</a></li>
+                            <li><a href="./Lavabos/luz.html">Lavabo Luz</a></li>
+                            <li><a href="./Lavabos/jana.html">Lavabo Jana</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="./sobreNosotros.html">Sobre Nosotros</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- lo hago con un form submit para que se envie el mensaje a mi correo
+    no se hace con php porque no sera la definitiva y para mensajes ami servirme de un servi externo es mejor
+    Tarda entre 1 y 2 min en recibirlo es algo cutre pero para demo perfecto -->
+    <div class="contact-container">
+        <h1 class="contact-title">¡Ponte en contacto con nosotros!</h1>
+        <p class="contact-description">Estamos aquí para ayudarte con cualquier consulta, información adicional o solicitud.</p>
+
+        <div class="contact-form-container">
+            <form action="https://formsubmit.co/4fc70a6641a65432cce7607f261a3236" method="POST" class="contact-form">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Escriba su nombre" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Escriba su correo electrónico" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="subject">Selecciona el tema:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Selecciona un tema</option>
+                        <option value="trabajo">Trabaja con Nosotros</option>
+                        <option value="informacion">Interés</option>
+                        <option value="reclamaciones">Reclamaciones</option>
+                    </select>
+                </div>
+            
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="¿Que nos deseas preguntar? En Akua Bath tenemos la mejor respuesta!" required></textarea>
+                </div>
+            
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+            
+            
+        </div>
+    </div>
+    <br><br><br><br>
+
+
+    
+    <!-- los ponemos en cajas con estilo de IA uq es tipico pero visualmente mas bonito -->
+    <div class="contacto-container">
+        <div class="contacto-box">
+            <h3>📍 ¿Dónde Estamos?</h3>
+            <p>Poligono Industrial La Azucarera<br>El Carpio (Córdoba).<br>14620</p>
+        </div>
+    
+        <div class="contacto-box">
+            <h3>📞 Teléfonos de Contacto</h3>
+            <p>+34 643 078 910<br>+34 957 841 886</p>
+        </div>
+    
+        <div class="contacto-box">
+            <h3>📧 Email de Contacto</h3>
+            <p><a href="https://workspace.google.com/intl/es/gmail/
+                ">info@akuabath.es <br>
+                pedidos@akuabath.es</a></p>
+        </div>
+
+        
+        
+    </div>
+    
+    
+
+    <footer class="pie-pagina">
+        <div class="contenido-footer">
+            <div class="informacion-footer">
+                <h2>AkuaBath</h2>
+                <p><strong>Horario:</strong> Lunes a Viernes - 8:00 a 14:00</p>
+                <p><strong>Ubicación:</strong> Polígono Industrial La Azucarera, El Carpio</p>
+            </div>
+    
+            <div class="redes-sociales">
+                <a href="https://facebook.com" target="_blank"><img src="../../imagenes/RedesSociales/facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com" target="_blank"><img src="../../imagenes/RedesSociales/Instagram.png" alt="Instagram"></a>
+                <a href="https://twitter.com" target="_blank"><img src="../../imagenes/RedesSociales/twitter.png" alt="Twitter"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><img src="../../imagenes/RedesSociales/whatsapp.png" alt="Whatsapp"></a>
+            </div>
+    
+            <div class="mapa-footer">
+                <ul>
+                    <li><a href="../../index.html">Inicio</a></li>
+                    <li><a href="../Vistas/PlatosDeDucha/lucia.html">Productos</a></li>
+                    <li><a href="./sobreNosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="copyright">
+            <p>&copy; 2025 AkuaBath - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="./js/interaccion-colores.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url('./imagenes/fondo345.jpg');
+}
+
+
+/* Barra de navegación principal */
+.barra-navegacion {
+    background: transparent;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Logo */
+.barra-navegacion .logo {
+    margin-right: 40px;
+}
+
+.barra-navegacion .logo img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Menú principal */
+.menu-principal {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-principal li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.menu-principal a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px 16px;
+    display: block;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu-principal a:hover {
+    background-color: #939494;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-principal li:hover > .submenu {
+    display: block;
+    opacity: 1;
+}
+
+.submenu li {
+    position: relative;
+}
+
+.submenu a {
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+
+.submenu a:hover {
+    background-color: #747677;
+    padding-left: 20px;
+}
+
+.submenu .submenu {
+    top: 0;
+    left: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+.menu-desplegable > a {
+    position: relative;
+}
+
+.menu-desplegable > a:after {
+    font-size: 14px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.menu-desplegable:hover > a:after {
+    transform: rotate(90deg);
+}
+
+/* Estilo para la barra de búsqueda */
+.barra-busqueda {
+    margin-left: 40px; 
+}
+
+.barra-busqueda form {
+    display: flex;
+    align-items: center;
+}
+
+.barra-busqueda input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-right: 10px;
+    width: 200px; 
+    transition: all 0.3s ease;
+}
+
+.barra-busqueda input:focus {
+    border-color: #eff5fc; 
+    outline: none;
+}
+
+.barra-busqueda button {
+    padding: 8px 16px;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.barra-busqueda button:hover {
+    background-color: #ffffff;
+}
+.barra-busqueda {
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+.barra-busqueda input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.barra-busqueda button {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.barra-busqueda button:hover {
+    background-color: #2d2d31;
+}
+
+
+
+#eslogan {
+    font-family: "Latin Modern Roman";
+    font-style: italic;
+}
+
+.bienvenida {
+    position: relative;
+    height: 93vh;
+    background-image: url('./imagenes/lucia2.png');
+    border-radius: 60px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 85px;
+    margin-right: 85px;
+    margin-top: -30px;
+}
+
+.caracteristicas {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px;
+}
+
+.caracteristica,
+.catalogo {
+    background-size: cover;
+    background-position: center;
+    width: 45%;
+    padding: 60px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+}
+
+
+.caracteristica h3,
+.catalogo h3 {
+    font-family: 'Dancing Script', cursive; /* Usamos la fuente elegante */
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    background-color: #afaaaa;
+    border-radius: 50px;
+    padding: 20px;
+    display: inline-block;
+}
+
+
+.caracteristica:hover,
+.catalogo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.catalogo {
+    background-color: #4a90e2;
+}
+
+
+.boton-catalogo {
+    display: inline-block;
+    background-color: #fff;
+    color: #4a90e2;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-catalogo:hover {
+    background-color: #357ab8;
+    color: white;
+    transform: scale(1.05);
+}
+
+.transicion {
+    text-align: right;
+    padding: 50px 10%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    /* letra importada de google fonts */
+    letter-spacing: 2px; 
+    text-transform: capitalize; 
+    font-family: 'Dancing Script', cursive;}
+
+.ubicacion {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: #f9f9f9;
+}
+
+.ubicacion h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+.pie-pagina {
+    background-color: #212121;
+    color: #fff;
+    padding: 50px 10%;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #444;
+}
+
+.contenido-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.informacion-footer {
+    flex: 1;
+    margin: 0 20px;
+    text-align: left;
+    padding-right: 30px;
+}
+
+.informacion-footer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #b8b8b8; 
+    font-family:cursive ;
+}
+
+.informacion-footer p {
+    font-size: 1rem;
+    color: #b0b0b0; 
+}
+
+.redes-sociales {
+    flex: 1;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.redes-sociales a {
+    margin: 0 20px;
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redes-sociales img {
+    width: 60px; 
+    height: 60px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) invert(1); 
+}
+
+.redes-sociales a:hover img {
+    transform: scale(1.2); 
+    filter: brightness(1.2) invert(1);
+}
+
+.mapa-footer {
+    flex: 1;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.mapa-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mapa-footer ul li {
+    margin: 10px 0;
+}
+
+.mapa-footer ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.mapa-footer ul li a:hover {
+    color: #4a90e2; 
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+@media (max-width: 768px) {
+    .contenido-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .informacion-footer, .redes-sociales, .mapa-footer {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .pie-pagina {
+        padding: 30px 5%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .caracteristica,
+    .catalogo {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .catalogo h3 {
+        font-size: 20px;
+    }
+
+    .boton-catalogo {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
