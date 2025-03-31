@@ -21,7 +21,7 @@ const colorImages = {
 colorOptions.forEach(color => {
     color.addEventListener('click', () => {
         // Obtenemos el color del atributo data-color o del estilo
-        const selectedColor = color.dataset.color || color.style.backgroundColor;
+        const selectedColor=color.dataset.color || color.style.backgroundColor;
         
         // Cambiar el fondo de la caja de color seleccionado
         selectedColorBox.style.backgroundColor = selectedColor;

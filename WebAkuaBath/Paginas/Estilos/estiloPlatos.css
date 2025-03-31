@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 @keyframes caida-cascada {
@@ -16,7 +17,7 @@
     }
 }
 
-main,  .product-container, .pie-pagina, .contacto-boton, .contacto-container, .contacto-box, .contacto-box h3, .contacto-box p, .contacto-box a, .contacto-box a:hover, .catalogo-boton, .catalogo-boton:hover {
+main, .product-container, .pie-pagina, .contacto-boton, .contacto-container, .contacto-box, .contacto-box h3, .contacto-box p, .contacto-box a, .contacto-box a:hover, .catalogo-boton, .catalogo-boton:hover {
     animation: caida-cascada 1s ease-out forwards;
 }
 
@@ -40,6 +41,7 @@ body {
     color: var(--color-principal);
     line-height: 1.6;
     font-size: 16px;
+
 }
 .barra-navegacion {
     background: transparent;
@@ -94,7 +96,6 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
 
 .submenu {
     display: none;
@@ -156,7 +157,7 @@ body {
 
 .swiper-container {
     width: 100%;
-    height: 450px; /* Ajusta la altura del carrusel */
+    height: 450px;
     margin-bottom: 60px;
     margin-top: 90px;
 }
@@ -168,14 +169,13 @@ body {
 .swiper-slide img {
     width: auto;
     max-height: 100%;
-    object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
-
+    object-fit: contain;
 }
 .swiper-button-next, .swiper-button-prev {
-    color: black; /* Color de las flechas de navegación */
+    color: black;
 }
 .swiper-pagination {
-    bottom: 10px; /* Ubica la paginación en la parte inferior */
+    bottom: 10px;
 }
 
 .product-container {
@@ -186,28 +186,23 @@ body {
     margin-top: -10px;
 }
 
-/* Título del producto */
 .product-title {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-
 .product-image {
     width: 100%;
     height: auto; 
 }
-
-
-
 
 .features {
     display: flex;
     flex-wrap: wrap;
     gap: 20px; 
     justify-content: center; 
-    padding: 20px; /
+    padding: 20px;
 }
 
 .feature-box {
@@ -232,12 +227,8 @@ body {
     }
 }
 
-
-/* Detalles adicionales */
 .details-container {
     margin-top: 40px;
-    margin-left: 400px;
-    margin-right: 400px;
 }
 
 details {
@@ -275,7 +266,6 @@ details[open] {
     margin-bottom: 10px;
 }
 
-
 .pie-pagina {
     background-color: #212121;
     color: #fff;
@@ -303,13 +293,13 @@ details[open] {
 .informacion-footer h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: #b8b8b8; 
+    color: #b8b8b8;
     font-family:cursive ;
 }
 
 .informacion-footer p {
     font-size: 1rem;
-    color: #b0b0b0; 
+    color: #b0b0b0;
 }
 
 .redes-sociales {
@@ -359,7 +349,7 @@ details[open] {
 }
 
 .mapa-footer ul li a:hover {
-    color: #4a90e2; 
+    color: #4a90e2;
 }
 
 .copyright {
@@ -370,6 +360,7 @@ details[open] {
     border-top: 1px solid #444;
     padding-top: 20px;
 }
+
 @media (max-width: 768px) {
     .contenido-footer {
         flex-direction: column;
@@ -388,7 +379,7 @@ details[open] {
 
 html, body {
     overflow-x: hidden;
-    margin: 0; 
+    margin: 0;
 }
 
 .spec-item {
@@ -401,7 +392,6 @@ html, body {
     justify-content: center;
     display: flex;
 }
-
 
 .spec-item .color {
     width: 40px;
@@ -447,7 +437,6 @@ html, body {
     transform: scale(1.05);
 }
 
-
 .colores-container {
     max-width: 600px;
     margin: 0 auto;
@@ -475,6 +464,7 @@ h2 {
     display: flex;
     justify-content: center;
 }
+
 .color {
     width: 40px;
     height: 40px;
@@ -488,20 +478,40 @@ h2 {
     border-color: #999;
 }
 
-
-
 .color-container {
     display: flex;
-    flex-wrap: wrap;          
-    gap: 10px;               
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: flex-start;
 }
 
 .color {
-    width: 200px;             
-    height: 50px;             
-    border-radius: 5px;       
-    cursor: pointer;       
-    transition: transform 0.3s ease; 
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.swiper-container {
+    width: 60%; /* El carrusel ocupa el 60% del espacio */
+}
+
+.properties-container {
+    width: 35%; /* Las propiedades ocupan el 35% */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 

@@ -55,13 +55,14 @@
             <li><a href="./Paginas/Vistas/contacto.html">Contacto</a></li>
         </ul>
 
-        <!-- Barra de búsqueda añadida -->
-        <div class="barra-busqueda">
-            <form id="search-form">
-                <input type="text" name="q" placeholder="Buscar..." id="search-input">
-                <button type="submit">Buscar</button>
-            </form>
-        </div>
+   <!-- Barra de búsqueda -->
+<div class="barra-busqueda" role="search">
+    <form id="search-form" aria-label="Formulario de búsqueda">
+        <input type="text" name="q" placeholder="Buscar..." id="search-input" aria-label="Buscar productos" />
+        <button type="submit" aria-label="Enviar búsqueda">Buscar</button>
+    </form>
+</div>
+
 
         <!-- Botón de traducción -->
         <div id="google_translate_element" style="position: absolute; top: 10px; right: 10px;"></div>

@@ -55,84 +55,127 @@
     </nav>
 
     <div class="product-container">
-        <h1 class="product-title">Plato de Ducha Modelo Mirian</h1>
+        <h1 class="product-title">Plato de Ducha Modelo Miriam</h1>
         <div class="product-info">
             <p>Plato de Ducha Fabricado en Resina con carga mineral en masa coloreada y textura pizarra.</p>
             <hr style="border: 1px solid black; margin: 20px 0;" />
         </div>
 
-        <!-- Carrusel Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="../../../imagenes/mirian.png" alt="Plato de Ducha Lucia - Beige" class="product-image">
+        <div class="product-content">
+            <!-- Carrusel Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../../../imagenes/mirian.png" alt="Plato de Ducha Lucia - Beige" class="product-image" height="1000px">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../imagenes/mirian4.png" alt="Plato de Ducha Lucia - Beige" class="product-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../imagenes/mirian3.png" alt="Plato de Ducha Lucia - Beige" class="product-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../imagenes/mirian2.png" alt="Plato de Ducha Lucia - Beige" class="product-image">
+                    </div>
+                    
                 </div>
-                <div class="swiper-slide">
-                    <img src="../../../imagenes/mirian4.png" alt="Plato de Ducha Lucia - Beige" class="product-image">
-                </div>
-                <div class="swiper-slide">
-                    <img src="../../../imagenes/mirian2.png" alt="Plato de Ducha Lucia - Beige" class="product-image">
-                </div>
-                <div class="swiper-slide">
-                    <img src="../../../imagenes/mirian3.png" alt="Plato de Ducha Lucia - Beige" class="product-image">
-                </div>
-                
-                
             </div>
-            
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    slidesPerView: 1, // Muestra solo una imagen a la vez
+                    spaceBetween: 815, // Espacio entre las imágenes
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    autoplay: {
+                        delay: 3000, // Cambia automáticamente cada 3 segundos
+                        disableOnInteraction: false,
+                    },
+                });
+            </script>
+
+            <!-- Propiedades del Producto -->
+            <div class="properties-container">
+                <h2>Propiedades del Producto</h2>
+                <div class="propiedades-list">
+                    <div class="propiedad">
+                        <img src="../../../imagenes/nula.png" alt="Resistente al calor">
+                        <p>Nula absorción del agua</p>
+                    </div>
+                    <div class="propiedad">
+                        <img src="../../../imagenes/diamante.png" alt="Resistencia a los impactos">
+                        <p>Alta resistencia al rayado</p>
+                    </div>
+                    <div class="propiedad">
+                        <img src="../../../imagenes/icono-durabilidad.png" alt="Superficie higiénica">
+                        <p>Dureza en la escala de Barcol de 45</p>
+                    </div>
+                    <div class="propiedad">
+                        <img src="../../../imagenes/temperatura.png" alt="Facilidad de limpieza">
+                        <p>Resistente al cambio de temperatura</p>
+                    </div>
+                    <div class="propiedad">
+                        <img src="../../../imagenes/personalizacion.png" alt="Larga Durabilidad">
+                        <p>Diseño Personalizable</p>
+                    </div>
+                    <div class="propiedad">
+                        <img src="../../../imagenes/antidesli.png" alt="Resistencia química">
+                        <p>Antideslizante</p>
+                    </div>
+                    <div class="propiedad">
+                        <img src="../../../imagenes/antibacterial.png" alt="Facilidad en cortes a medida">
+                        <p>Antibacterias</p>
+                    </div>
+                    <div class="propiedad">
+                        <img src="../../../imagenes/quimicos.png" alt="Facilidad en cortes a medida">
+                        <p>Resistente a Agentes Químicos de limpieza</p>
+                    </div>
+                    <div class="propiedad">
+                        <img src="../../../imagenes/grosor.png" alt="Facilidad en cortes a medida">
+                        <p>Grosor de 3 cm</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <script>
-            var swiper = new Swiper('.swiper-container', {
-                loop: true,
-                slidesPerView: 1, // Muestra solo una imagen a la vez
-                spaceBetween: 55, // Espacio entre las imágenes
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                autoplay: {
-                    delay: 3000, // Cambia automáticamente cada 3 segundos
-                    disableOnInteraction: false,
-                },
-            });
-        </script>
-
-        <br><br><br><br>
 
         <hr style="border: 1px solid black; margin: 20px 0;" />
+        <!-- Características del producto -->
+        <div class="features">
+            <div class="feature-box" style="background-color: #ffffff;">
+                <h3>Antideslizante C3 UNE 41901:2017</h3>
+                <p>Gran resistencia al deslizamiento, ideal para duchas seguras.</p>
+            </div>
+            <div class="feature-box" style="background-color: #e4e0e0;">
+                <h3>Aptitud para la limpieza C2 UNE-EN 14527</h3>
+                <p>Fácil de limpiar y mantener en perfectas condiciones.</p>
+            </div>
+            <div class="feature-box" style="background-color: #ffffff;">
+                <h3>Aspecto de la superficie C2 UNE-EN 14527</h3>
+                <p>Acabado elegante y moderno que complementa cualquier baño.</p>
+            </div>
+            <div class="feature-box" style="background-color: #e4e0e0;">
+                <h3>Evacuación del agua C2 UNE-EN 14527</h3>
+                <p>Sistema eficiente que garantiza una rápida evacuación del agua.</p>
+            </div>
+            <div class="feature-box" style="background-color: #ffffff;">
+                <h3>Resistencia a productos químicos C2 UNE-EN 14527</h3>
+                <p>Alta resistencia a productos químicos de limpieza comunes.</p>
+            </div>
+            <div class="feature-box" style="background-color: #e4e0e0;">
+                <h3>Estabilidad del fondo y durabilidad C2 UNE-EN 14527</h3>
+                <p>Durabilidad y estabilidad a largo plazo.</p>
+            </div>
+        </div>
 
-       <!-- Características del producto -->
-       <div class="features">
-        <div class="feature-box" style="background-color: #ffffff;">
-            <h3>Antideslizante C3 UNE 41901:2017</h3>
-            <p>Gran resistencia al deslizamiento, ideal para duchas seguras.</p>
-        </div>
-        <div class="feature-box" style="background-color: #e4e0e0;">
-            <h3>Aptitud para la limpieza C2 UNE-EN 14527</h3>
-            <p>Fácil de limpiar y mantener en perfectas condiciones.</p>
-        </div>
-        <div class="feature-box" style="background-color: #ffffff;">
-            <h3>Aspecto de la superficie C2 UNE-EN 14527</h3>
-            <p>Acabado elegante y moderno que complementa cualquier baño.</p>
-        </div>
-        <div class="feature-box" style="background-color: #e4e0e0;">
-            <h3>Evacuación del agua C2 UNE-EN 14527</h3>
-            <p>Sistema eficiente que garantiza una rápida evacuación del agua.</p>
-        </div>
-        <div class="feature-box" style="background-color: #ffffff;">
-            <h3>Resistencia a productos químicos C2 UNE-EN 14527</h3>
-            <p>Alta resistencia a productos químicos de limpieza comunes.</p>
-        </div>
-        <div class="feature-box" style="background-color: #e4e0e0;">
-            <h3>Estabilidad del fondo y durabilidad C2 UNE-EN 14527</h3>
-            <p>Durabilidad y estabilidad a largo plazo.</p>
-        </div>
-    </div>
+        <br><br>
+
+     
         <!-- Detalles del producto -->
         <div class="details-container">
             <details>
@@ -144,53 +187,11 @@
             </details>
         </div>
 
-        <div class="propiedades-container">
-            <h2>Propiedades del Producto</h2>
-            <br><br>
-            <div class="propiedades-list">
-                <div class="propiedad">
-                    <img src="../../../imagenes/nula.png" alt="Resistente al calor">
-                    <p>Nula absorción del agua</p>
-                </div>
-                <div class="propiedad">
-                    <img src="../../../imagenes/diamante.png" alt="Resistencia a los impactos">
-                    <p>Alta resistencia al rayado</p>
-                </div>
-                <div class="propiedad">
-                    <img src="../../../imagenes/icono-durabilidad.png" alt="Superficie higiénica">
-                    <p>Dureza en la escala de Barcol de 45</p>
-                </div>
-                <div class="propiedad">
-                    <img src="../../../imagenes/temperatura.png" alt="Facilidad de limpieza">
-                    <p>Resistente al cambio de temperatura</p>
-                </div>
-                <div class="propiedad">
-                    <img src="../../../imagenes/personalizacion.png" alt="Larga Durabilidad">
-                    <p>Diseño Personalizable</p>
-                </div>
-                <div class="propiedad">
-                    <img src="../../../imagenes/antidesli.png" alt="Resistencia química">
-                    <p>Antideslizante</p>
-                </div>
-                <div class="propiedad">
-                    <img src="../../../imagenes/antibacterial.png" alt="Facilidad en cortes a medida">
-                    <p>Antibacterias</p>
-                </div>
-                <div class="propiedad">
-                    <img src="../../../imagenes/quimicos.png" alt="Facilidad en cortes a medida">
-                    <p>Resistente a Agentes Químicos de limpieza</p>
-                </div>
-                <div class="propiedad">
-                    <img src="../../../imagenes/grosor.png" alt="Facilidad en cortes a medida">
-                    <p>Grosor de 3 cm</p>
-                </div>
-            </div>
-        </div>
 
         <hr style="border: 1px solid black; margin: 20px 0;" />
 
         <div class="colores-container">
-            <h2>Escoja su color favorito </h2>
+            <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 29px;">Haz Tuyo El Plato</h2>
             <div class="color-image-container">
                 <!-- Imagen inicial -->
                 <img id="color-image" src="../../../imagenes/Miriam/blanco.jpg" alt="Plato de Ducha" class="color-image " width="400px">
