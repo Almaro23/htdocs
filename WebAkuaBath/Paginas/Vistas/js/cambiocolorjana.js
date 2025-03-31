@@ -11,10 +11,10 @@ const selectedColorBox = document.querySelector('.selected-color-box');
 const colorImages = {
     '#ffffff': '../../../imagenes/kira.png',
     '#808080': '../../../imagenes/mir.png',
-    '#000000': '../../../imagenes/kira-black.png',
-    '#f0e68c': '../../../imagenes/kira-yellow-soft.png',
-    '#ffd700': '../../../imagenes/kira-yellow-intense.png',
-    '#6f4f37': '../../../imagenes/kira-brown.png'
+    '#000000': '../../../imagenes/kira.png',
+    '#f0e68c': '../../../imagenes/mir.png',
+    '#ffd700': '../../../imagenes/kira.png',
+    '#6f4f37': '../../../imagenes/mir.png'
 };
 
 // Iteramos sobre cada opción de color
