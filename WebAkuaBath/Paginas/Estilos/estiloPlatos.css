@@ -229,6 +229,9 @@ body {
 
 .details-container {
     margin-top: 40px;
+    margin-left: 350px;
+    margin-right: 350px;
+ 
 }
 
 details {
