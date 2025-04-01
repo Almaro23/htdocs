@@ -241,7 +241,6 @@ body {
 
 .caracteristica h3,
 .catalogo h3 {
-    font-family: 'Dancing Script', cursive; /* Usamos la fuente elegante */
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 20px;
