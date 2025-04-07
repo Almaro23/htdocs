@@ -147,3 +147,36 @@ const swiper = new Swiper('.swiper-container', {
 
 
 
+// Obtener el botón de lupa y la barra de búsqueda
+const lupaBtn = document.querySelector('.barra-busqueda button');
+const barraBusqueda = document.querySelector('.barra-busqueda');
+const searchInput = document.querySelector('#search-input');
+
+// Mostrar la barra de búsqueda cuando se hace clic en la lupa
+lupaBtn.addEventListener('click', function(event) {
+    event.stopPropagation();  // Evitar que el clic se propague
+    barraBusqueda.classList.toggle('show');  // Alternar visibilidad
+    searchInput.focus();  // Focalizar el campo de texto
+});
+
+// Cerrar la barra de búsqueda si se hace clic fuera de ella
+document.addEventListener('click', function(event) {
+    if (!barraBusqueda.contains(event.target) && !lupaBtn.contains(event.target)) {
+        barraBusqueda.classList.remove('show');  // Ocultar barra de búsqueda
+    }
+});
+
+
+document.querySelectorAll('.option').forEach(option => {
+    option.addEventListener('click', () => {
+        // Cerrar todos los otros paneles
+        document.querySelectorAll('.option').forEach(otherOption => {
+            if (otherOption !== option) {
+                otherOption.classList.remove('open');
+            }
+        });
+
+        // Alternar la clase "open" en la opción clicada
+        option.classList.toggle('open');
+    });
+});

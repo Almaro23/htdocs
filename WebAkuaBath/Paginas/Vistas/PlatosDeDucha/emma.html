@@ -8,13 +8,15 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8.0.7/swiper-bundle.min.js"></script>
     <link rel="icon" href="../../../imagenes/LOGO-FACE.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.0.7/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
    
 </head>
 <body>
     <nav class="barra-navegacion">
         <div class="logo">
             <a href="../../../index.html">
-                <img src="../../../imagenes/LOGO-FACE.png" alt="Logo de AkuaBath" />
+                <img src="../../../imagenes/AKUA BATH2.png" alt="Logo de AkuaBath" /></a>
             </a>
         </div>
         <ul class="menu-principal">
@@ -23,7 +25,7 @@
                 <a>Productos</a>
                 <ul class="submenu">
                     <li class="menu-desplegable">
-                        <a href="#">Platos de Ducha ▸</a>
+                        <a href="../PlatosDeDucha/descubrelos.html">Platos de Ducha</a>
                         <ul class="submenu">
                             <li><a href="../PlatosDeDucha/lucia.html">Modelo Lucia</a></li>
                             <li><a href="../PlatosDeDucha/mirian.html">Modelo Mirian</a></li>
@@ -31,21 +33,11 @@
                         </ul>
                     </li>
                     <li class="menu-desplegable">
-                        <a href="#">Encimeras ▸</a>
-                        <ul class="submenu">
-                            <li><a href="../Encimeras/kuo.html">Encimera Kuo</a></li>
-                            <li><a href="../Encimeras/mio.html">Encimera Mir</a></li>
-                            <li><a href="../Encimeras/rem.html">Encimera Rem</a></li>
-                            <li><a href="../Encimeras/rem.html">Encimera Plana Con y Sin faldón</a></li>
-                        </ul>
+                        <a href="../Encimeras/descubrelos.html">Encimeras</a>
+                     
                     </li>
                     <li class="menu-desplegable">
-                        <a href="#">Lavabos Sobreencimera ▸</a>
-                        <ul class="submenu">
-                            <li><a href="../Lavabos/kira.html">Lavabo Kira</a></li>
-                            <li><a href="../Lavabos/luz.html">Lavabo Luz</a></li>
-                            <li><a href="../Lavabos/jana.html">Lavabo Jana</a></li>
-                        </ul>
+                        <a href="../Lavabos/descubrelos.html">Lavabos Sobreencimera</a>
                     </li>
                 </ul>
             </li>
@@ -55,7 +47,7 @@
     </nav>
 
     <div class="product-container">
-        <h1 class="product-title">Plato de Ducha Modelo Emma</h1>
+        <h1  id="titulo" class="product-title">Plato de Ducha Modelo Emma</h1>
         <div class="product-info">
             <p>Plato de Ducha Fabricado en Resina con carga mineral en masa coloreada y textura pizarra.</p>
             <hr style="border: 1px solid black; margin: 20px 0;" />
@@ -80,6 +72,12 @@
                     <div class="swiper-slide">
                         <img src="../../../imagenes/enma5.png" alt="Plato de Ducha Lucia - Beige" class="product-image">
                     </div>
+                    <div class="swiper-slide">
+                        <img src="../../../imagenes/Enma/rejilla1.jpg" alt="Plato de Ducha Lucia - Beige" class="product-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../../imagenes/Enma/rejilla2.jpg" alt="Plato de Ducha Lucia - Beige" class="product-image">
+                    </div>
                 </div>
             </div>
             <script>
@@ -96,7 +94,7 @@
                         prevEl: '.swiper-button-prev',
                     },
                     autoplay: {
-                        delay: 3000, // Cambia automáticamente cada 3 segundos
+                        delay: 5000, // Cambia automáticamente cada 3 segundos
                         disableOnInteraction: false,
                     },
                 });
@@ -141,51 +139,16 @@
                     <div class="propiedad">
                         <img src="../../../imagenes/grosor.png" alt="Facilidad en cortes a medida">
                         <p>Grosor de 3 cm</p>
+                        
                     </div>
+                    
                 </div>
             </div>
         </div>
 
-        <hr style="border: 1px solid black; margin: 20px 0;" />
-        <!-- Características del producto -->
-        <div class="features">
-            <div class="feature-box" style="background-color: #ffffff;">
-                <h3>Antideslizante C3 UNE 41901:2017</h3>
-                <p>Gran resistencia al deslizamiento, ideal para duchas seguras.</p>
-            </div>
-            <div class="feature-box" style="background-color: #e4e0e0;">
-                <h3>Aptitud para la limpieza C2 UNE-EN 14527</h3>
-                <p>Fácil de limpiar y mantener en perfectas condiciones.</p>
-            </div>
-            <div class="feature-box" style="background-color: #ffffff;">
-                <h3>Aspecto de la superficie C2 UNE-EN 14527</h3>
-                <p>Acabado elegante y moderno que complementa cualquier baño.</p>
-            </div>
-            <div class="feature-box" style="background-color: #e4e0e0;">
-                <h3>Evacuación del agua C2 UNE-EN 14527</h3>
-                <p>Sistema eficiente que garantiza una rápida evacuación del agua.</p>
-            </div>
-            <div class="feature-box" style="background-color: #ffffff;">
-                <h3>Resistencia a productos químicos C2 UNE-EN 14527</h3>
-                <p>Alta resistencia a productos químicos de limpieza comunes.</p>
-            </div>
-            <div class="feature-box" style="background-color: #e4e0e0;">
-                <h3>Estabilidad del fondo y durabilidad C2 UNE-EN 14527</h3>
-                <p>Durabilidad y estabilidad a largo plazo.</p>
-            </div>
-        </div>
+       
 
-        <!-- Detalles del producto -->
-        <div class="details-container">
-            <details>
-                <summary>Características principales y medidas</summary>
-                <p><strong>Masa Pigmentada</strong></p>
-                <p><strong>Textura:</strong> Pizarra</p>
-                <p><strong>Espesor:</strong> 2,5 ~ 3,00 cm</p>
-                <p><strong>Medidas:</strong> Ancho 70 - 80 - 90 cm / Largo 80 - 210 cm</p>
-            </details>
-        </div>
-
+       
      
 
         <hr style="border: 1px solid black; margin: 20px 0;" />
@@ -223,19 +186,52 @@
         <br><br>        
         <hr style="border: 1px solid black; margin: 20px 0;" />
 
+         <!-- Características del producto -->
+         <div class="features">
+            <div class="feature-box" style="background-color: #ffffff;">
+                <h3>Antideslizante C3 UNE 41901:2017</h3>
+                <p>Gran resistencia al deslizamiento, ideal para duchas seguras.</p>
+            </div>
+            <div class="feature-box" style="background-color: #e4e0e0;">
+                <h3>Aptitud para la limpieza C2 UNE-EN 14527</h3>
+                <p>Fácil de limpiar y mantener en perfectas condiciones.</p>
+            </div>
+            <div class="feature-box" style="background-color: #ffffff;">
+                <h3>Aspecto de la superficie C2 UNE-EN 14527</h3>
+                <p>Acabado elegante y moderno que complementa cualquier baño.</p>
+            </div>
+            <div class="feature-box" style="background-color: #e4e0e0;">
+                <h3>Evacuación del agua C2 UNE-EN 14527</h3>
+                <p>Sistema eficiente que garantiza una rápida evacuación del agua.</p>
+            </div>
+            <div class="feature-box" style="background-color: #ffffff;">
+                <h3>Resistencia a productos químicos C2 UNE-EN 14527</h3>
+                <p>Alta resistencia a productos químicos de limpieza comunes.</p>
+            </div>
+            <div class="feature-box" style="background-color: #e4e0e0;">
+                <h3>Estabilidad del fondo y durabilidad C2 UNE-EN 14527</h3>
+                <p>Durabilidad y estabilidad a largo plazo.</p>
+            </div>
+
+             <!-- Detalles del producto -->
+        <div class="details-container">
+            <details>
+                <summary>Características principales y medidas</summary>
+                <p><strong>Masa Pigmentada</strong></p>
+                <p><strong>Textura:</strong> Pizarra</p>
+                <p><strong>Espesor:</strong> 2,5 ~ 3,00 cm</p>
+                <p><strong>Medidas:</strong> Ancho 70 - 80 - 90 cm / Largo 80 - 210 cm</p>
+            </details>
+        </div>
+
+        </div>
+
         <!-- Complementos -->
         <div class="complementos">
-            <h2 class="complementos-title">Rejillas Disponibles </h2>
             <br><br>
             <div class="complementos-container">
-                <div class="complementos-text">
-                    <p>Suministrados con rejilla acero inoxidable con dos opciones de colores.</p>
-                </div>
-                <br><br>
-                <div class="complementos-images">
-                    <img src="../../../imagenes/Enma/rejilla1.jpg" alt="Complemento 1" class="complemento-img" height="200px" > 
-                    <img src="../../../imagenes/Enma/rejilla2.jpg" alt="Complemento 2" class="complemento-img"height="200px"> 
-                </div>
+               
+                
             </div>
         </div>
     </div>

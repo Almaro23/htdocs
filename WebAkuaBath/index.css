@@ -64,7 +64,7 @@ body {
 }
 
 .menu-principal a:hover {
-    background-color: #939494;
+    background-color:#e2e2e2;
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -75,7 +75,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #333;
+    background-color: #e2e2e2;
     min-width: 200px;
     border-radius: 5px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -93,7 +93,7 @@ body {
 }
 
 .submenu a {
-    color: #fff;
+    color: #000000;
     padding: 12px 20px;
     text-decoration: none;
     display: block;
@@ -200,8 +200,8 @@ body {
 
 .bienvenida {
     position: relative;
-    height: 93vh;
-    background-image: url('./imagenes/lucia2.png');
+    height: 73vh;
+    background-image: url('./imagenes/inicio222.png');
     border-radius: 60px;
     background-size: cover;
     background-position: center;
@@ -258,31 +258,22 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.catalogo {
-    background-color: #4a90e2;
-}
+
 
 
 .boton-catalogo {
     display: inline-block;
     background-color: #fff;
-    color: #4a90e2;
-    padding: 12px 25px;
+    padding: 10px 15px;
     text-decoration: none;
     font-size: 18px;
     border-radius: 5px;
-    margin-top: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.boton-catalogo:hover {
-    background-color: #357ab8;
-    color: white;
-    transform: scale(1.05);
-}
 
 .transicion {
-    text-align: right;
+    text-align: center;
     padding: 50px 10%;
     font-size: 24px;
     font-weight: bold;
@@ -437,4 +428,355 @@ body {
         padding: 10px 20px;
         font-size: 16px;
     }
+}
+
+/* Estilo para la barra de búsqueda (oculta por defecto) */
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px; /* Desplazarlo a la derecha */
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    opacity: 0;
+    visibility: hidden;
+    width: 0; /* Oculta */
+    transition: all 0.3s ease;
+}
+
+/* Mostrar la barra de búsqueda cuando se activa */
+.barra-busqueda.show {
+    opacity: 1;
+    visibility: visible;
+    width: 250px; /* Ancho de la barra visible */
+}
+
+/* Estilo para el campo de texto */
+.barra-busqueda input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Estilo del botón (lupa) */
+.barra-busqueda button {
+    background-color: navy;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;  /* Tamaño adecuado para la lupa */
+    color: #333;
+    margin-left: 10px;
+}
+
+.barra-busqueda button::before {
+    content: "\2192"; /* Código Unicode para una flecha derecha → */
+    font-size: 22px;  /* Tamaño del ícono */
+    display: inline-block;
+}
+
+
+.barra-busqueda button:hover {
+    color: #ffffff;
+}
+/* Estilos adicionales si los necesitas */
+.barra-busqueda {
+    --transition-speed: 0.3s;
+  }
+  
+  .barra-busqueda form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .barra-busqueda input {
+    border: none;
+    background: transparent;
+  }
+  
+  .barra-busqueda button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  
+  .caracteristica {
+    position: relative;
+    height: 260px; /* O la altura que prefieras */
+    background-size: cover;
+    background-position: center;
+    border-radius: 23px;
+    overflow: hidden;
+}
+
+.caracteristica a {
+    height: 40%; /* Para que cubra todo el div */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 23px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+}
+
+.caracteristica h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+}
+
+.boton-catalogo {
+    background-color: #969191;
+    color: #333;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: #ffffff;
+}
+
+.boton-catalogo:hover {
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+}
+
+.caracteristica a {
+    display: block;
+    text-decoration: none;
+}
+
+
+/* Estilos generales para las secciones */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Sección de Compras Seguras */
+.compras-seguras {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.metodos-pago {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.metodo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.metodo img {
+    max-height: 50px;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+/* Sección de Artículos Recientes */
+.articulos-recientes {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.grid-articulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tarjeta-articulo {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-articulo:hover {
+    transform: translateY(-5px);
+}
+
+.imagen-articulo {
+    height: 200px;
+    overflow: hidden;
+}
+
+.imagen-articulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-articulo:hover .imagen-articulo img {
+    transform: scale(1.05);
+}
+
+.contenido-articulo {
+    padding: 20px;
+}
+
+.titulo-articulo {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    min-height: 70px;
+}
+
+.meta-articulo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fecha {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.icono-fecha {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('./imagenes/iconos/calendario.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+
+.btn-favorito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.btn-favorito:hover {
+    color: #e74c3c;
+}
+
+.icono-corazon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('./imagenes/iconos/corazon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .metodos-pago {
+        gap: 20px;
+    }
+    
+    .metodo img {
+        max-height: 40px;
+        max-width: 120px;
+    }
+    
+    .grid-articulos {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+    
+    .titulo-articulo {
+        font-size: 14px;
+        min-height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-seccion {
+        font-size: 24px;
+    }
+    
+    .subtitulo-seccion {
+        font-size: 14px;
+    }
+    
+    .metodos-pago {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .grid-articulos {
+        grid-template-columns: 1fr;
+    }
+    
+    .titulo-articulo {
+        min-height: auto;
+    }
+}
+
+
+/* Eliminar el subrayado y cambiar el color de los enlaces */
+.articulos-recientes a {
+    text-decoration: none; /* Elimina la línea debajo del enlace */
+    color: inherit; /* Hereda el color del texto del contenedor padre */
+}
+
+/* Agregar estilo a los botones de favorito */
+.btn-favorito {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: inherit; /* Hereda el color del texto */
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.btn-favorito:hover {
+    color: #000000; /* El color que prefieras cuando pasa el mouse */
 }

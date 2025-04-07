@@ -32,12 +32,13 @@ main {
 }
 
 
-.barra-navegacion {    
+/* Barra de navegación principal */
+.barra-navegacion {
     background: transparent;
     padding: 20px 40px;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     position: relative;
     top: 0;
     width: 100%;
@@ -45,9 +46,8 @@ main {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Logo */
 .barra-navegacion .logo {
-    margin-right: 40px; 
+    margin-right: 40px;
 }
 
 .barra-navegacion .logo img {
@@ -56,6 +56,7 @@ main {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+/* Menú principal */
 .menu-principal {
     display: flex;
     list-style-type: none;
@@ -81,17 +82,18 @@ main {
 }
 
 .menu-principal a:hover {
-    background-color: #939494;
+    background-color: #e2e2e2;
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Submenú */
 .submenu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #333;
+    background-color: #e2e2e2;
     min-width: 200px;
     border-radius: 5px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -109,7 +111,7 @@ main {
 }
 
 .submenu a {
-    color: #fff;
+    color: #000000;
     padding: 12px 20px;
     text-decoration: none;
     display: block;
@@ -143,6 +145,7 @@ main {
 .menu-desplegable:hover > a:after {
     transform: rotate(90deg);
 }
+
 
 
 
@@ -189,6 +192,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, opacity 0.3s ease;
+    height: 700px;
 }
 
 .product-image img:hover {
@@ -340,6 +344,7 @@ main {
     margin: 40px auto;
     max-width: 900px;
     flex-wrap: wrap; 
+    position: relative; /* Para el posicionamiento de los elementos dentro */
 }
 
 .option {
@@ -352,6 +357,8 @@ main {
     min-width: 250px; 
     text-align: center; 
     cursor: pointer; 
+    height: 100%; /* Para que la altura sea flexible */
+    position: relative; /* Para posicionar el panel dentro */
 }
 
 .option:hover {
@@ -370,27 +377,33 @@ main {
     transition: background-color 0.3s ease;
 }
 
-
 .panel {
     display: none;
     padding: 10px;
     font-size: 16px;
     line-height: 1.6;
-}
-
-.option ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.option ul li {
-    margin: 8px 0;
+    height: 2; /* Al principio no tiene altura */
+    overflow: hidden; /* Para que el contenido no se vea al inicio */
+    transition: height 0.3s ease-out;
 }
 
 .option.open .panel {
     display: block;
+    height: auto; /* Cuando se abra, la altura será automática */
     animation: fadeIn 0.3s ease-out;
+}
+
+.option.open {
+    flex: 2; /* Cuando se abre, toma más espacio */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Animación de aparición */

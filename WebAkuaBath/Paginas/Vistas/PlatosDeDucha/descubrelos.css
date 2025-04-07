@@ -1,34 +1,15 @@
-/* General */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
+/* Reset de estilos básicos */
+* {
     margin: 0;
     padding: 0;
-    background-image: url('../../imagenes/fondo345.jpg');
-    background-size: cover;
-    background-position: center;
+    box-sizing: border-box;
 }
 
-/* Animación para elementos */
-@keyframes caida-cascada {
-    0% {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Efecto de caída para los elementos */
-main, .contact-container, .pie-pagina, .contacto-boton, .contacto-container, .contacto-box, .contacto-box h3, .contacto-box p, .contacto-box a, .catalogo-boton, .catalogo-boton:hover {
-    animation: caida-cascada 1s ease-out forwards;
-}
-
-main {
-    padding: 40px 20px;
-    animation-delay: 0.2s;
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #ffffff;
 }
 
 /* Barra de navegación principal */
@@ -70,7 +51,7 @@ main {
 
 .menu-principal a {
     color: #000000;
-    text-decoration: none;
+    text-decoration: none; /* Elimina el subrayado */
     font-size: 16px;
     padding: 12px 16px;
     display: block;
@@ -112,7 +93,7 @@ main {
 .submenu a {
     color: #000000;
     padding: 12px 20px;
-    text-decoration: none;
+    text-decoration: none; /* Elimina el subrayado */
     display: block;
     font-size: 14px;
     font-weight: 500;
@@ -145,154 +126,60 @@ main {
     transform: rotate(90deg);
 }
 
-    #titulo{
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-    
+/* Galería de productos */
+.product-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
 
-/* Contacto */
-.contact-container {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 40px;
+.product {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    overflow: hidden;
+    width: 450px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.contact-title {
-    font-size: 36px;
+.product:hover {
+    transform: translateY(-10px);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
     color: #333;
+    text-align: center;
 }
 
-.contact-description {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 40px;
-}
-
-.contact-form-container {
-    text-align: left;
-}
-
-.contact-form .form-group {
-    margin-bottom: 25px;
-}
-
-.contact-form label {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
+.product img {
     width: 100%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    margin-top: 10px;
-    box-sizing: border-box;
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    border-bottom: 2px solid #eee;
 }
 
-.contact-form textarea {
-    resize: vertical;
-}
-
-.contact-form .submit-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 30px;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form .submit-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Contacto Box */
-.contacto-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    padding: 50px 20px;
-    margin-top: 50px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 8px;
-}
-
-.contacto-box {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    min-width: 250px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    margin-bottom: 30px;
-}
-
-.contacto-box h3 {
-    font-size: 22px;
-    margin-bottom: 20px;
+.product h3 {
+    font-size: 1.5rem;
+    margin: 20px 0;
     color: #333;
 }
 
-.contacto-box p {
-    font-size: 16px;
+.product p {
+    font-size: 1rem;
     color: #666;
-    margin-bottom: 20px;
+    padding: 0 20px 20px;
 }
 
-.contacto-box a {
-    color: #4a90e2;
-    text-decoration: none;
-}
-
-.contacto-box a:hover {
-    text-decoration: underline;
-}
-
-.contacto-box:hover {
-    transform: scale(1.05);
-}
-
-/* Botón de catálogo */
-.catalogo-boton {
-    display: inline-block;
-    background-color: #4a90e2;
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 8px;
-    margin-top: 20px;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.catalogo-boton:hover {
-    background-color: #357ab8;
-    transform: scale(1.05);
-}
-
-/* Pie de página */
+/* Estilo para pie de página */
 .pie-pagina {
     background-color: #212121;
     color: #fff;
-    padding: 60px 10%;
-    text-align: center;
+    padding: 50px 10%;
     font-family: 'Arial', sans-serif;
     border-top: 1px solid #444;
 }
@@ -365,7 +252,7 @@ main {
 
 .mapa-footer ul li a {
     color: #b0b0b0;
-    text-decoration: none;
+    text-decoration: none; /* Elimina el subrayado */
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
@@ -383,11 +270,10 @@ main {
     padding-top: 20px;
 }
 
-/* Medias queries */
+/* Estilos Responsivos */
 @media (max-width: 768px) {
     .contenido-footer {
         flex-direction: column;
-        align-items: center;
     }
 
     .informacion-footer, .redes-sociales, .mapa-footer {
@@ -398,33 +284,7 @@ main {
     .pie-pagina {
         padding: 30px 5%;
     }
-
-    .contacto-container {
-        margin-left: 5%;
-        margin-right: 5%;
-        gap: 20px;
-    }
-
-    .contacto-box {
-        width: 48%;
-        padding: 20px;
-    }
 }
-
-@media (max-width: 480px) {
-    .contacto-container {
-        margin-left: 2%;
-        margin-right: 2%;
-        padding: 20px;
-    }
-    
-    .contacto-box {
-        width: 100%;
-    }
-}
-
-/* Sino lo pongo me va a hacer scroll horizontal */
-html, body {
-    overflow-x: hidden;
-    margin: 0;
+a {
+    text-decoration: none !important;
 }
