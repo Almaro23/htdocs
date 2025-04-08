@@ -539,3 +539,119 @@ h2 {
         margin-top: 20px;
     }
 }
+
+/* Your existing CSS remains unchanged */
+
+/* Additional responsive styles */
+@media (max-width: 1200px) {
+    .details-container {
+      margin-left: 150px;
+      margin-right: 150px;
+    }
+  
+    .swiper-container {
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .details-container {
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+  
+    .propiedad {
+      width: 45%;
+    }
+  
+    .barra-navegacion {
+      padding: 15px 20px;
+    }
+  
+    .menu-principal li {
+      margin: 0 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .barra-navegacion {
+      flex-direction: column;
+    }
+  
+    .barra-navegacion .logo {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  
+    .menu-principal {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .details-container {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .swiper-container {
+      height: 350px;
+      margin-top: 120px;
+    }
+  
+    .product-image {
+      max-width: 100%;
+    }
+  
+    .spec-item {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .menu-principal a {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  
+    .submenu {
+      min-width: 160px;
+    }
+  
+    .swiper-container {
+      height: 300px;
+    }
+  
+    .propiedad {
+      width: 100%;
+    }
+  
+    .redes-sociales a {
+      margin: 0 10px;
+    }
+  
+    .redes-sociales img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .color {
+      width: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .swiper-container {
+      height: 250px;
+      margin-top: 150px;
+    }
+  
+    .product-title {
+      font-size: 1.5rem;
+    }
+  
+    .color {
+      width: 100px;
+      height: 40px;
+    }
+  }
+  
