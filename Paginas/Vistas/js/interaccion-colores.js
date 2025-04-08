@@ -180,3 +180,142 @@ document.querySelectorAll('.option').forEach(option => {
         option.classList.toggle('open');
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Menú móvil toggle
+    const menuToggle = document.createElement('button');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '☰';
+    
+    const barraNavegacion = document.querySelector('.barra-navegacion');
+    const menuPrincipal = document.querySelector('.menu-principal');
+    
+    if (barraNavegacion && menuPrincipal) {
+        barraNavegacion.insertBefore(menuToggle, menuPrincipal);
+        
+        menuToggle.addEventListener('click', function() {
+            menuPrincipal.classList.toggle('active');
+            menuToggle.innerHTML = menuPrincipal.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', function(event) {
+            if (!menuPrincipal.contains(event.target) && event.target !== menuToggle) {
+                menuPrincipal.classList.remove('active');
+                menuToggle.innerHTML = '☰';
+            }
+        });
+        
+        // Submenús en móvil
+        const menuDesplegables = document.querySelectorAll('.menu-desplegable');
+        menuDesplegables.forEach(function(item) {
+            const link = item.querySelector('a');
+            
+            // Crear botón de toggle para submenús
+            const toggleBtn = document.createElement('button');
+            toggleBtn.className = 'submenu-toggle';
+            toggleBtn.innerHTML = '+';
+            toggleBtn.style.cssText = 'background: none; border: none; font-size: 18px; margin-left: 5px; cursor: pointer;';
+            
+            if (link) {
+                link.appendChild(toggleBtn);
+                
+                toggleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    item.classList.toggle('active');
+                    toggleBtn.innerHTML = item.classList.contains('active') ? '-' : '+';
+                });
+            }
+        });
+    }
+    
+    // Barra de búsqueda toggle
+    const searchToggle = document.createElement('button');
+    searchToggle.className = 'search-toggle';
+    searchToggle.innerHTML = '🔍';
+    searchToggle.style.cssText = 'background: none; border: none; font-size: 18px; cursor: pointer; margin-left: 10px;';
+    
+    const barraBusqueda = document.querySelector('.barra-busqueda');
+    
+    if (barraBusqueda && barraNavegacion) {
+        barraNavegacion.appendChild(searchToggle);
+        
+        searchToggle.addEventListener('click', function() {
+            barraBusqueda.classList.toggle('show');
+            if (barraBusqueda.classList.contains('show')) {
+                barraBusqueda.querySelector('input').focus();
+            }
+        });
+    }
+    
+    // Ajustar altura de tarjetas de artículos para uniformidad
+    function adjustArticleCardHeight() {
+        const cards = document.querySelectorAll('.tarjeta-articulo');
+        const titles = document.querySelectorAll('.titulo-articulo');
+        
+        if (window.innerWidth > 767) {
+            // Resetear alturas
+            titles.forEach(title => title.style.height = 'auto');
+            
+            // Encontrar la altura máxima
+            let maxHeight = 0;
+            titles.forEach(title => {
+                const height = title.offsetHeight;
+                if (height > maxHeight) {
+                    maxHeight = height;
+                }
+            });
+            
+            // Aplicar altura uniforme
+            titles.forEach(title => title.style.height = maxHeight + 'px');
+        } else {
+            // En móvil, dejar altura automática
+            titles.forEach(title => title.style.height = 'auto');
+        }
+    }
+    
+    // Ejecutar al cargar y al cambiar tamaño de ventana
+    adjustArticleCardHeight();
+    window.addEventListener('resize', adjustArticleCardHeight);
+    
+    // Efecto parallax para la sección de bienvenida
+    const bienvenida = document.querySelector('.bienvenida');
+    if (bienvenida) {
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition < window.innerHeight) {
+                bienvenida.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+            }
+        });
+    }
+    
+    // Animación de aparición al hacer scroll
+    const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.caracteristica, .catalogo, .tarjeta-articulo');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (elementPosition < screenPosition) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    };
+    
+    // Aplicar estilos iniciales para animación
+    const elementsToAnimate = document.querySelectorAll('.caracteristica, .catalogo, .tarjeta-articulo');
+    elementsToAnimate.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+    
+    // Ejecutar animación al cargar y al hacer scroll
+    window.addEventListener('load', animateOnScroll);
+    window.addEventListener('scroll', animateOnScroll);
+});
