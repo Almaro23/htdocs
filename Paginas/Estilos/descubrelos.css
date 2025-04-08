@@ -270,21 +270,155 @@ h1 {
     padding-top: 20px;
 }
 
-/* Estilos Responsivos */
-@media (max-width: 768px) {
-    .contenido-footer {
-        flex-direction: column;
+/* Additional responsive styles */
+@media (max-width: 1200px) {
+    .product-gallery {
+      padding: 40px 30px;
+      gap: 25px;
     }
-
-    .informacion-footer, .redes-sociales, .mapa-footer {
-        text-align: center;
-        margin-bottom: 20px;
+  
+    .product {
+      width: 400px;
     }
-
-    .pie-pagina {
-        padding: 30px 5%;
+  }
+  
+  @media (max-width: 992px) {
+    .barra-navegacion {
+      padding: 15px 20px;
     }
-}
+  
+    .menu-principal li {
+      margin: 0 10px;
+    }
+  
+    .product-gallery {
+      padding: 30px 20px;
+      gap: 20px;
+    }
+  
+    .product {
+      width: 350px;
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .barra-navegacion {
+      flex-direction: column;
+    }
+  
+    .barra-navegacion .logo {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  
+    .menu-principal {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .product-gallery {
+      padding: 25px 15px;
+    }
+  
+    .product {
+      width: 100%;
+      max-width: 450px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      margin: 15px 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .menu-principal a {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  
+    .submenu {
+      min-width: 160px;
+    }
+  
+    .product-gallery {
+      padding: 20px 10px;
+      gap: 15px;
+    }
+  
+    .product h3 {
+      font-size: 1.3rem;
+      margin: 15px 0;
+    }
+  
+    .product p {
+      font-size: 0.9rem;
+      padding: 0 15px 15px;
+    }
+  
+    .redes-sociales a {
+      margin: 0 10px;
+    }
+  
+    .redes-sociales img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .barra-navegacion {
+      padding: 10px;
+    }
+  
+    .menu-principal li {
+      margin: 0 5px;
+    }
+  
+    .menu-principal a {
+      font-size: 13px;
+      padding: 8px 10px;
+    }
+  
+    .product img {
+      height: 180px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .informacion-footer h2 {
+      font-size: 1.5rem;
+    }
+  
+    .informacion-footer p {
+      font-size: 0.9rem;
+    }
+  
+    .mapa-footer ul li a {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .product img {
+      height: 160px;
+    }
+  
+    .product h3 {
+      font-size: 1.2rem;
+    }
+  
+    .product p {
+      font-size: 0.85rem;
+    }
+  }
+  
 a {
     text-decoration: none !important;
 }
