@@ -14,7 +14,7 @@ function changeImage(color) {
 
     switch (color) {
         case 'blanco':
-            image.src = '../../../imagenes/Lucia/blanco.jpg';
+            image.src = '../../../imagenes/Lucia/blanco1.jpg';
             colorName.textContent = 'Blanco';
             break;
         case 'gris7030':
@@ -22,7 +22,7 @@ function changeImage(color) {
             colorName.textContent = 'Gris 70/30';
             break;
         case 'gris':
-            image.src = '../../../imagenes/Lucia/gris.jpg';
+            image.src = '../../../imagenes/Lucia/gris1.jpg';
             colorName.textContent = 'Gris';
             break;
         case 'grismedio':

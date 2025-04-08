@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lavabo Kira</title>
+    <title>Lavabo Kira
+    </title>
     <link rel="icon" href="../../../imagenes/LOGO-FACE.png" type="image/png">
     <link rel="stylesheet" href="../../Estilos/estiloLavabos.css">
 </head>
@@ -22,11 +23,11 @@
                 <ul class="submenu">
                     <li class="menu-desplegable">
                         <a href="../PlatosDeDucha/descubrelos.html">Platos de Ducha</a>
-                      
+                       
                     </li>
                     <li class="menu-desplegable">
                         <a href="../Encimeras/descubrelos.html">Encimeras</a>
-                       
+                        
                     </li>
                     <li class="menu-desplegable">
                         <a href="#">Lavabos Sobreencimera ▸</a>
@@ -34,6 +35,13 @@
                             <li><a href="../Lavabos/kira.html">Lavabo Kira</a></li>
                             <li><a href="../Lavabos/luz.html">Lavabo Luz</a></li>
                             <li><a href="../Lavabos/jana.html">Lavabo Jana</a></li>
+                            <li><a href="../Lavabos/elia.html">Lavabo Elia</a></li>
+                            <li><a href="../Lavabos/gala.html">Lavabo Gala</a></li>
+                            <li><a href="../Lavabos/alma.html">Lavabo Alma</a></li>
+                            <li><a href="../Lavabos/vera.html">Lavabo Vera</a></li>
+
+
+                            
                         </ul>
                     </li>
                 </ul>
@@ -42,37 +50,60 @@
             <li><a href="../contacto.html">Contacto</a></li>
         </ul>
     </nav>
-
     <div class="product-container">
         <div class="product-info">
             <h2>Lavabo Kira</h2>
-            <p>El lavabo Kira es una pieza de diseño moderno y elegante que se adapta a cualquier estilo de baño. Con líneas suaves y acabados de alta calidad, Kira proporciona una estética limpia y funcional.</p>
+            <p>El lavabo Kira destaca por su diseño minimalista y elegante, una opción perfecta para quienes buscan modernidad y funcionalidad en su baño. Con líneas limpias y un acabado suave, este lavabo es ideal para crear un ambiente contemporáneo sin perder la practicidad. Su forma única se adapta a cualquier estilo, ofreciendo una combinación perfecta de estilo y utilidad.</p>
+
             <h3>Características:</h3>
             <ul>
                 <li>Material: Cerámica de alta calidad.</li>
-                <li>Dimensiones: 38 x 55 x 10 cm.</li>
-                <li>Acabado: Brillante.</li>
+                <li>Dimensiones: 50 x 37 x 8 cm.</li>
+                <li>Acabado: STANDARD.</li>
             </ul>
     
             <div class="spec-item">
                 <h3>Colores Disponibles</h3>
                 <div class="color-options">
-                    <span class="color" style="background-color: #ffffff;" data-color="#ffffff" title="Blanco"></span>
-                    <span class="color" style="background-color: #808080;"  data-color="#808080" title="Gris"></span>
-                    <span class="color" style="background-color: #000000;"data-color="#000000" title="Negro"></span>
-                    <span class="color" style="background-color: #f0e68c;" data-color="#f0e68c" title="Amarillo Suave"></span>
-                    <span class="color" style="background-color: #ffd700;" data-color="#ffd700" title="Amarillo Intenso"></span>
-                    <span class="color" style="background-color: #6f4f37;" data-color="#6f4f37" title="Marrón"></span>
+                    <!-- Cuadros de colores -->
+                    <div class="color" style="background-color: #ffffff;" title="Blanco RAL 9003" onclick="changeImage('blanco')"></div>
+                    <div class="color" style="background-color: #585858;" title="Antracita RAL 7011" onclick="changeImage('antracita')"></div>
+                    <div class="color" style="background-color: #b6b6b6;" title="Gris Perla RAL 7035" onclick="changeImage('gris')"></div>
+                    <div class="color" style="background-color: #000000;" title="Negro RAL 9005" onclick="changeImage('negro')"></div>
+                    <div class="color" style="background-color: #f5deb3;" title="Arena" onclick="changeImage('arena')"></div>
                 </div>
     
                 <div class="selected-color-box"></div>
             </div>
         </div>
     
-        <div class="product-image">
-            <!-- Imagen inicial que se cambiará según el color -->
-            <img src="../../../imagenes/kira.png" alt="Imagen del Lavabo Kira">
+<div class="product-main-image">
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="../../../imagenes/kira.png" alt="Lavabo Jana - Vista 1" id="main-product-image">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../../imagenes/kira2.jpg" alt="Lavabo Jana - Vista 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../../imagenes/kira3.jpg" alt="Lavabo Jana - Vista 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../../imagenes/kira4.jpg" alt="Lavabo Jana - Vista 4">
+            </div>
         </div>
+        <button class="carousel-button prev" aria-label="Anterior">&lt;</button>
+        <button class="carousel-button next" aria-label="Siguiente">&gt;</button>
+        <div class="carousel-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+        </div>
+    </div>
+</div>
+
     </div>
     
 
@@ -105,7 +136,7 @@
             <p>&copy; 2025 AkuaBath - Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="../js/cambiocolorkira.js"></script>
+    <script src="../js/cambiocolorjana.js"></script>
 
-</body>
+</body> 
 </html>
