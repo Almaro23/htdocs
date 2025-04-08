@@ -385,7 +385,7 @@ body {
 }
 
 .mapa-footer ul li a:hover {
-    color: #4a90e2; 
+    color: #000000; 
 }
 
 .copyright {
@@ -780,3 +780,87 @@ body {
 .btn-favorito:hover {
     color: #000000; /* El color que prefieras cuando pasa el mouse */
 }
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .caracteristica, .catalogo {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .pie-pagina {
+        padding: 30px 5%;
+    }
+
+    .contenido-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .informacion-footer, .redes-sociales, .mapa-footer {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .caracteristica h3, .catalogo h3 {
+        font-size: 22px;
+    }
+
+    .boton-catalogo {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-principal li {
+        margin: 10px 0;
+    }
+
+    .caracteristicas {
+        flex-direction: column;
+    }
+
+    .bienvenida {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .pie-pagina {
+        padding: 30px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .bienvenida {
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    .caracteristicas {
+        padding: 20px;
+    }
+
+    .titulo-seccion {
+        font-size: 24px;
+    }
+
+    .subtitulo-seccion {
+        font-size: 14px;
+    }
+
+    .grid-articulos {
+        grid-template-columns: 1fr;
+    }
+
+    .metodos-pago {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+

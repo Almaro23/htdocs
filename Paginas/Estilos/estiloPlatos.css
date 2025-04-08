@@ -523,3 +523,19 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Responsividad */
+@media (max-width: 768px) {
+    .product-content {
+        flex-direction: column;
+    }
+
+    .swiper-container {
+        width: 100%; /* Ajustar el carrusel al 100% */
+        height: 300px; /* Menor altura para dispositivos pequeños */
+    }
+
+    .properties-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
