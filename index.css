@@ -830,7 +830,7 @@ body {
     }
     
     .barra-navegacion {
-        padding: 15px 20px;
+        padding: 10px 20px;
     }
     
     .menu-toggle {
@@ -1016,7 +1016,7 @@ body {
 /* Móviles pequeños (hasta 575px) */
 @media (max-width: 575px) {
     .barra-navegacion {
-        padding: 10px 15px;
+        padding: 5px 15px;
     }
     
     .barra-navegacion .logo img {
