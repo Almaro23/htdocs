@@ -319,3 +319,63 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('load', animateOnScroll);
     window.addEventListener('scroll', animateOnScroll);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Elementos del menú
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuPrincipal = document.querySelector('.menu-principal');
+    const menuItems = document.querySelectorAll('.menu-principal > li.menu-desplegable');
+    
+    // Toggle para el menú principal
+    if (menuToggle && menuPrincipal) {
+        menuToggle.addEventListener('click', function() {
+            menuPrincipal.classList.toggle('active');
+            document.body.classList.toggle('menu-open'); // Para bloquear el scroll cuando el menú está abierto
+        });
+    }
+    
+    // Toggle para submenús en móvil
+    menuItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            // Solo en vista móvil
+            if (window.innerWidth <= 991) {
+                // Si el clic fue directamente en el enlace principal (no en un submenú)
+                if (e.target === item.querySelector('a') || e.target === item.querySelector('a > *')) {
+                    e.preventDefault();
+                    // Cerrar todos los otros submenús
+                    menuItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle el submenú actual
+                    item.classList.toggle('active');
+                }
+            }
+        });
+    });
+    
+    // Cerrar el menú al hacer clic fuera
+    document.addEventListener('click', function(e) {
+        if (menuPrincipal && menuPrincipal.classList.contains('active')) {
+            if (!menuPrincipal.contains(e.target) && e.target !== menuToggle) {
+                menuPrincipal.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        }
+    });
+    
+    // Cerrar el menú al redimensionar la ventana a tamaño desktop
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991) {
+            if (menuPrincipal && menuPrincipal.classList.contains('active')) {
+                menuPrincipal.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+            // Eliminar la clase active de todos los elementos del menú
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+    });
+});
