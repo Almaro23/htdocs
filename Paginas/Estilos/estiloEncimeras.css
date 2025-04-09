@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    
+    overflow-x: hidden;
 }
 
 a {
@@ -31,7 +31,6 @@ main {
     animation-delay: 0.2s;
 }
 
-
 /* Barra de navegación principal */
 .barra-navegacion {
     background: transparent;
@@ -44,6 +43,7 @@ main {
     width: 100%;
     z-index: 100;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    box-sizing: border-box;
 }
 
 .barra-navegacion .logo {
@@ -146,9 +146,6 @@ main {
     transform: rotate(90deg);
 }
 
-
-
-
 .product-container {
     display: flex;
     justify-content: center;
@@ -193,6 +190,7 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, opacity 0.3s ease;
     height: 700px;
+    object-fit: cover;
 }
 
 .product-image img:hover {
@@ -213,7 +211,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 30px;
 }
 
@@ -222,13 +220,14 @@ main {
     margin: 0 20px;
     text-align: left;
     padding-right: 30px;
+    min-width: 250px;
 }
 
 .informacion-footer h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
     color: #b8b8b8; 
-    font-family:cursive ;
+    font-family: cursive;
 }
 
 .informacion-footer p {
@@ -240,6 +239,7 @@ main {
     flex: 1;
     margin: 0 20px;
     text-align: center;
+    min-width: 250px;
 }
 
 .redes-sociales a {
@@ -264,6 +264,7 @@ main {
     flex: 1;
     margin: 0 20px;
     text-align: left;
+    min-width: 250px;
 }
 
 .mapa-footer ul {
@@ -294,49 +295,7 @@ main {
     border-top: 1px solid #444;
     padding-top: 20px;
 }
-@media (max-width: 768px) {
-    .contenido-footer {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .informacion-footer, .redes-sociales, .mapa-footer {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .pie-pagina {
-        padding: 30px 5%;
-    }
-}
-
-@media (max-width: 768px) {
-    .product-container {
-        flex-direction: column;
-        padding: 20px 5%;
-    }
-
-    .product-info {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .product-image {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu li {
-        margin: 10px 0;
-    }
-
-    
-}
 .product-options {
     display: flex;
     justify-content: center;
@@ -344,7 +303,7 @@ main {
     margin: 40px auto;
     max-width: 900px;
     flex-wrap: wrap; 
-    position: relative; /* Para el posicionamiento de los elementos dentro */
+    position: relative;
 }
 
 .option {
@@ -357,8 +316,8 @@ main {
     min-width: 250px; 
     text-align: center; 
     cursor: pointer; 
-    height: 100%; /* Para que la altura sea flexible */
-    position: relative; /* Para posicionar el panel dentro */
+    height: 100%;
+    position: relative;
 }
 
 .option:hover {
@@ -382,19 +341,19 @@ main {
     padding: 10px;
     font-size: 16px;
     line-height: 1.6;
-    height: 2; /* Al principio no tiene altura */
-    overflow: hidden; /* Para que el contenido no se vea al inicio */
+    height: 2;
+    overflow: hidden;
     transition: height 0.3s ease-out;
 }
 
 .option.open .panel {
     display: block;
-    height: auto; /* Cuando se abra, la altura será automática */
+    height: auto;
     animation: fadeIn 0.3s ease-out;
 }
 
 .option.open {
-    flex: 2; /* Cuando se abre, toma más espacio */
+    flex: 2;
 }
 
 @keyframes fadeIn {
@@ -405,28 +364,12 @@ main {
         opacity: 1;
     }
 }
-
-/* Animación de aparición */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@media (max-width: 768px) {
-    .product-options {
-        flex-direction: column; 
-    }
-}
-
 
 .spec-item .color-options {
     display: flex;
     gap: 10px;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .spec-item .color {
@@ -436,6 +379,7 @@ main {
     cursor: pointer;
     border: 2px solid #000;
     transition: transform 0.2s ease;
+    position: relative;
 }
 
 .spec-item .color:hover {
@@ -454,19 +398,249 @@ main {
     font-size: 14px;
     border-radius: 5px;
     white-space: nowrap;
+    z-index: 10;
 }
 
 .selected-color-box {
-    
     width: 250px;
     height: 250px;
     border: 5px solid #ffffff;
-    margin-top: -190px;
+    margin-top: 20px;
     display: inline-block;
     transition: background-color 0.3s ease;
-    margin-left: 490px;
+    margin-left: auto;
+    margin-right: auto;
 }
-html, body {
-    overflow-x: hidden;
-    margin: 0; /* Asegura que no haya márgenes no deseados */
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .product-container {
+        padding: 0 5%;
+        gap: 30px;
+    }
+    
+    .product-image img {
+        height: 600px;
+    }
+    
+    .selected-color-box {
+        width: 200px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .barra-navegacion {
+        padding: 15px 20px;
+    }
+    
+    .menu-principal li {
+        margin: 0 10px;
+    }
+    
+    .product-info h2 {
+        font-size: 2rem;
+    }
+    
+    .product-image img {
+        height: 500px;
+    }
+    
+    .informacion-footer, .redes-sociales, .mapa-footer {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .barra-navegacion {
+        justify-content: space-between;
+        padding: 15px;
+    }
+    
+    .menu-principal {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 150;
+    }
+    
+    .menu-principal.active {
+        right: 0;
+    }
+    
+    .menu-principal li {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .submenu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        display: none;
+        opacity: 1;
+        padding-left: 20px;
+    }
+    
+    .menu-principal li:hover > .submenu {
+        display: none;
+    }
+    
+    .menu-principal li.active > .submenu {
+        display: block;
+    }
+    
+    .submenu .submenu {
+        left: 0;
+        top: 0;
+    }
+    
+    .product-container {
+        flex-direction: column;
+        padding: 20px 5%;
+        gap: 30px;
+    }
+    
+    .product-info {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .specifications {
+        justify-content: center;
+    }
+    
+    .product-image {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .product-image img {
+        height: auto;
+        max-height: 500px;
+    }
+    
+    .contenido-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .informacion-footer, .redes-sociales, .mapa-footer {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .pie-pagina {
+        padding: 30px 5%;
+    }
+    
+    .selected-color-box {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .barra-navegacion .logo img {
+        height: 40px;
+    }
+    
+    .product-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .product-info p {
+        font-size: 1rem;
+    }
+    
+    .spec-item {
+        width: 100%;
+    }
+    
+    .option {
+        min-width: 100%;
+    }
+    
+    .selected-color-box {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .redes-sociales a {
+        margin: 0 10px;
+    }
+    
+    .redes-sociales img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        padding: 20px 10px;
+    }
+    
+    .product-info h2 {
+        font-size: 1.5rem;
+    }
+    
+    .informacion-footer h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* JavaScript will be needed for these features */
+html.menu-open {
+    overflow: hidden;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 140;
+}
+
+.overlay.active {
+    display: block;
 }

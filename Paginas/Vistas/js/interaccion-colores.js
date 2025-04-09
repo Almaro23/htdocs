@@ -379,3 +379,60 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Mobile menu toggle
+  const menuToggle = document.querySelector(".menu-toggle")
+  const menuPrincipal = document.querySelector(".menu-principal")
+  const overlay = document.querySelector(".overlay")
+  const body = document.querySelector("html")
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      menuPrincipal.classList.toggle("active")
+      overlay.classList.toggle("active")
+      body.classList.toggle("menu-open")
+    })
+  }
+
+  if (overlay) {
+    overlay.addEventListener("click", () => {
+      menuPrincipal.classList.remove("active")
+      overlay.classList.remove("active")
+      body.classList.remove("menu-open")
+    })
+  }
+
+  // Submenu toggle for mobile
+  const menuItems = document.querySelectorAll(".menu-principal > li.menu-desplegable")
+
+  menuItems.forEach((item) => {
+    const link = item.querySelector("a")
+
+    if (window.innerWidth <= 768) {
+      link.addEventListener("click", (e) => {
+        e.preventDefault()
+        item.classList.toggle("active")
+      })
+    }
+  })
+
+  // Product options toggle
+  const options = document.querySelectorAll(".option")
+
+  options.forEach((option) => {
+    const title = option.querySelector("h3")
+
+    if (title) {
+      title.addEventListener("click", () => {
+        options.forEach((opt) => {
+          if (opt !== option) {
+            opt.classList.remove("open")
+          }
+        })
+        option.classList.toggle("open")
+      })
+    }
+  })
+})
