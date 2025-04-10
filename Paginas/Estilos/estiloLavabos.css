@@ -231,18 +231,21 @@ main {
     white-space: nowrap;
 }
 
-/* Estilos actualizados para el carrusel con imágenes más grandes */
+/* Estilos mejorados para el carrusel con imágenes del mismo tamaño */
 .carousel {
     position: relative;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
 }
 
 .carousel-container {
     display: flex;
     transition: transform 0.5s ease;
+    height: 550px; /* Altura fija para todas las diapositivas */
 }
 
 .carousel-slide {
@@ -252,6 +255,10 @@ main {
     position: absolute;
     top: 0;
     left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-slide.active {
@@ -261,9 +268,9 @@ main {
 
 .carousel-slide img {
     width: 100%;
-    height: auto;
-    max-height: 550px;
-    object-fit: contain;
+    height: 100%;
+    object-fit: contain; /* Mantiene la proporción y asegura que la imagen completa sea visible */
+    background-color: #ffffff;
 }
 
 .carousel-button {
@@ -279,11 +286,15 @@ main {
     font-size: 20px;
     cursor: pointer;
     z-index: 10;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-button:hover {
     background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .carousel-button.prev {
@@ -307,7 +318,11 @@ main {
     background-color: #ccc;
     margin: 0 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.dot:hover {
+    transform: scale(1.2);
 }
 
 .dot.active {
@@ -344,7 +359,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 30px;
 }
 
@@ -353,6 +368,7 @@ main {
     margin: 0 20px;
     text-align: left;
     padding-right: 30px;
+    min-width: 250px;
 }
 
 .informacion-footer h2 {
@@ -371,6 +387,7 @@ main {
     flex: 1;
     margin: 0 20px;
     text-align: center;
+    min-width: 250px;
 }
 
 .redes-sociales a {
@@ -395,6 +412,7 @@ main {
     flex: 1;
     margin: 0 20px;
     text-align: left;
+    min-width: 250px;
 }
 
 .mapa-footer ul {
@@ -431,18 +449,50 @@ html, body {
     margin: 0;
 }
 
-/* Estilos responsivos */
+/* Estilos responsivos mejorados */
+@media (max-width: 1200px) {
+    .product-container {
+        padding: 40px 5%;
+    }
+    
+    .pie-pagina {
+        padding: 50px 5%;
+    }
+}
+
 @media (max-width: 992px) {
     .carousel {
         max-width: 550px;
     }
 
-    .carousel-slide img {
-        max-height: 500px;
+    .carousel-container {
+        height: 500px;
+    }
+    
+    .barra-navegacion {
+        padding: 15px 20px;
+    }
+    
+    .menu-principal li {
+        margin: 0 10px;
     }
 }
 
 @media (max-width: 768px) {
+    .barra-navegacion {
+        flex-direction: column;
+    }
+    
+    .barra-navegacion .logo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .menu-principal {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
     .contenido-footer {
         flex-direction: column;
         align-items: center;
@@ -450,7 +500,9 @@ html, body {
 
     .informacion-footer, .redes-sociales, .mapa-footer {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        padding-right: 0;
+        min-width: 100%;
     }
 
     .pie-pagina {
@@ -460,6 +512,7 @@ html, body {
     .product-container {
         flex-direction: column;
         padding: 20px 5%;
+        gap: 30px;
     }
 
     .product-info {
@@ -472,25 +525,12 @@ html, body {
         text-align: center;
     }
 
-    .product-image img {
-        margin: 0 auto;
-    }
-
-    .menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu li {
-        margin: 10px 0;
-    }
-
     .carousel {
         max-width: 100%;
     }
 
-    .carousel-slide img {
-        max-height: 450px;
+    .carousel-container {
+        height: 450px;
     }
 
     .carousel-button {
@@ -503,11 +543,15 @@ html, body {
         width: 12px;
         height: 12px;
     }
+    
+    .spec-item {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
-    .carousel-slide img {
-        max-height: 350px;
+    .carousel-container {
+        height: 350px;
     }
 
     .carousel-button {
@@ -519,5 +563,44 @@ html, body {
     .dot {
         width: 10px;
         height: 10px;
+        margin: 0 4px;
+    }
+    
+    .product-info h2 {
+        font-size: 2rem;
+    }
+    
+    .product-info p {
+        font-size: 1rem;
+    }
+    
+    .menu-principal a {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    
+    .redes-sociales a {
+        margin: 0 10px;
+    }
+    
+    .redes-sociales img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Mejora para dispositivos muy pequeños */
+@media (max-width: 360px) {
+    .carousel-container {
+        height: 300px;
+    }
+    
+    .product-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .carousel-button {
+        width: 30px;
+        height: 30px;
     }
 }
