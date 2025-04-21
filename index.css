@@ -64,7 +64,7 @@ body {
 }
 
 .menu-principal a:hover {
-    background-color:#e2e2e2;
+    background-color:#000000;
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -99,7 +99,7 @@ body {
     display: block;
     font-size: 14px;
     font-weight: 500;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #000000;
     transition: background-color 0.3s ease;
 }
 
