@@ -30,12 +30,12 @@ main {
     animation-delay: 0.2s;
 }
 
-/* Barra de navegación principal */
+/* Barra de navegación principal alineada a la izquierda */
 .barra-navegacion {
     background: transparent;
     padding: 20px 40px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* cambio principal */
     align-items: center;
     position: relative;
     top: 0;
@@ -144,6 +144,8 @@ main {
     transform: rotate(90deg);
 }
 
+/* CONTINÚA IGUAL EL RESTO */
+
 .product-container {
     display: flex;
     justify-content: space-between;
@@ -231,7 +233,7 @@ main {
     white-space: nowrap;
 }
 
-/* Estilos mejorados para el carrusel con imágenes del mismo tamaño */
+/* Carrusel (sin cambios) */
 .carousel {
     position: relative;
     width: 100%;
@@ -241,6 +243,8 @@ main {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
 }
+/* Los estilos responsive y pie-página también siguen igual */
+
 
 .carousel-container {
     display: flex;

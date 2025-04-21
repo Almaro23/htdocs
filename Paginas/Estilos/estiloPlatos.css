@@ -49,13 +49,14 @@ body {
     background: transparent;
     padding: 20px 40px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* cambio principal */
     align-items: center;
     position: relative;
     top: 0;
     width: 100%;
     z-index: 100;
     transition: background-color 0.3s ease, transform 0.3s ease;
+
 }
 
 .barra-navegacion .logo {

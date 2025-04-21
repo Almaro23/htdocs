@@ -17,7 +17,7 @@ body {
     background: transparent;
     padding: 20px 40px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* cambio principal */
     align-items: center;
     position: relative;
     top: 0;
