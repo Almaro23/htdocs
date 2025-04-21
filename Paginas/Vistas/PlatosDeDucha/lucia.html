@@ -98,6 +98,13 @@
                     },
                 });
             </script>
+                        <!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
+
+
 
             <!-- Propiedades del Producto -->
             <div class="properties-container">
@@ -144,26 +151,25 @@
 
 
         <div class="colores-container">
-            <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 29px;">Haz Tuyo El Plato</h2>
-            <div class="color-image-container">
-                <!-- Imagen inicial -->
-                <img id="color-image" src="../../../imagenes/Lucia/blanco1.jpg" alt="Plato de Ducha" class="color-image" width="400px">
-            </div>
+            <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 29px;">¿Qué color combina más en tu baño?</h2>
+        
             <div class="color-options">
                 <!-- Cuadros de colores -->
                 <div class="color" style="background-color: #ffffff;" title="Blanco RAL 9003" onclick="changeImage('blanco')"></div>
                 <div class="color" style="background-color: #585858;" title="Antracita RAL 7011" onclick="changeImage('antracita')"></div>
                 <div class="color" style="background-color: #b6b6b6;" title="Gris Perla RAL 7035" onclick="changeImage('gris')"></div>
                 <div class="color" style="background-color: #000000;" title="Negro RAL 9005" onclick="changeImage('negro')"></div>
-                <div class="color" style="background-color: #f5deb3;" title="Arena" onclick="changeImage('arena')"></div>
+                <div class="color" style="background-color: #d9c99d;" title="Arena" onclick="changeImage('arena')"></div>
             </div>
             
-            
+            <!-- Aquí se mostrará el nombre del color seleccionado -->
+            <div id="selectedColor" style="font-size: 20px; margin-top: 20px; font-weight: bold;"></div>
         </div>
 
         <hr style="border: 1px solid black; margin: 20px 0;" />
         <!-- Características del producto -->
-        <div class="features">
+         <!-- Características del producto -->
+         <div class="features">
             <div class="feature-box" style="background-color: #ffffff;">
                 <h3>Antideslizante C3 UNE 41901:2017</h3>
                 <p>Gran resistencia al deslizamiento, ideal para duchas seguras.</p>
@@ -188,18 +194,32 @@
                 <h3>Estabilidad del fondo y durabilidad C2 UNE-EN 14527</h3>
                 <p>Durabilidad y estabilidad a largo plazo.</p>
             </div>
-        </div>
+            <div class="feature-box" style="background-color: #ffffff;">
+                <h3>Masa Pigmentada</h3>
+                <p>Masa de alta calidad.</p>
+            </div>
 
-        <!-- Características del producto -->
-        <div class="details-container">
-            <details>
-                <summary>Características principales y medidas</summary>
-                <p><strong>Masa Pigmentada</strong></p>
-                <p><strong>Textura:</strong> Pizarra</p>
-                <p><strong>Espesor:</strong> 2,5 ~ 3,00 cm</p>
-                <p><strong>Medidas:</strong> Ancho 70 - 80 - 90 cm / Largo 80 - 210 cm</p>
-            </details>
-        </div>
+            <div class="feature-box" style="background-color: #e4e0e0;">
+                <h3>Textura</h3>
+                <p>Trabajamos con textura de Pizarra de la mejor calidad del Mercado.</p>
+            </div>
+
+            <div class="feature-box" style="background-color: #ffffff;">
+                <h3>Espesor y Medidas</h3>
+                <p>2,5 ~ 3,00 cm.</p>
+                <p>Ancho 70 - 80 - 90 cm / Largo 80 - 210 cm</p>
+
+            </div>
+           
+
+
+
+     <!-- Detalles del producto -->
+     <div class="details-container">
+       
+    </div>
+
+    </div>
 
 
         <!-- Complementos -->

@@ -91,3 +91,34 @@ function changeImage(color) {
             break;
     }
 }
+
+document.querySelectorAll('.swiper-slide img').forEach(function(img) {
+    img.addEventListener('click', function() {
+        var lightbox = document.getElementById('lightbox');
+        var lightboxImg = document.getElementById('lightbox-img');
+        lightbox.style.display = 'block';
+        lightboxImg.src = this.src;
+    });
+});
+
+// Función para cerrar el lightbox
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+}
+// Para abrir el lightbox
+document.querySelector('.lightbox').classList.add('active');
+
+// Para cerrar el lightbox
+document.querySelector('.lightbox').classList.remove('active');
+function changeImage(color) {
+    const colorNames = {
+        blanco: "Blanco RAL 9003",
+        antracita: "Antracita RAL 7011",
+        gris: "Gris Perla RAL 7035",
+        negro: "Negro RAL 9005",
+        arena: "Arena"
+    };
+
+    // Muestra el nombre del color en el div
+    document.getElementById('selectedColor').textContent = `Color seleccionado: ${colorNames[color]}`;
+}
