@@ -375,91 +375,7 @@ main {
     color: #0056b3;
 }
 
-@media (max-width: 768px) {
-    .sobre-nosotros iframe {
-        height: 350px; /* Ajusta la altura del mapa en pantallas pequeñas */
-    }
 
-    .contacto-container {
-        flex-direction: column;
-    }
-
-    .contacto-box {
-        margin-bottom: 20px;
-    }
-}
-/* Responsividad para pantallas más pequeñas */
-@media (max-width: 1024px) {
-    .barra-navegacion {
-        padding: 15px 30px;
-    }
-
-    .menu-principal {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-principal li {
-        margin: 10px 0;
-    }
-
-    .sobre-nosotros {
-        padding: 30px;
-    }
-
-    .contenido-footer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .informacion-footer, .redes-sociales, .mapa-footer {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .pie-pagina {
-        padding: 30px 5%;
-    }
-
-    .contacto-container {
-        flex-direction: column;
-    }
-
-    .contacto-box {
-        margin-bottom: 20px;
-    }
-
-    .sobre-nosotros iframe {
-        height: 350px;
-    }
-}
-
-@media (max-width: 768px) {
-    .sobre-nosotros iframe {
-        height: 300px;
-    }
-
-    .contacto-container {
-        flex-direction: column;
-    }
-
-    .contacto-box {
-        margin-bottom: 20px;
-    }
-
-    .menu-principal {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-principal li {
-        margin: 10px 0;
-    }
-
-    .pie-pagina {
-        padding: 30px 5%;
-    }
-}
 /* #titulo {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
@@ -1312,4 +1228,10 @@ main {
 
     }
 
+}
+/* Universal box-sizing y correcciones para evitar desbordes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
