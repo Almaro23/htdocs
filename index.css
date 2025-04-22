@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
@@ -11,7 +10,6 @@ body {
     color: #333;
     background-image: url('./imagenes/fondo345.jpg');
 }
-
 
 /* Barra de navegación principal */
 .barra-navegacion {
@@ -64,7 +62,7 @@ body {
 }
 
 .menu-principal a:hover {
-    background-color:#000000;
+    background-color: #000000;
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -128,71 +126,72 @@ body {
     transform: rotate(90deg);
 }
 
-
 /* Estilo para la barra de búsqueda */
 .barra-busqueda {
-    margin-left: 40px; 
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    transition: all 0.3s ease;
+    --transition-speed: 0.3s;
+}
+
+.barra-busqueda.show {
+    opacity: 1;
+    visibility: visible;
+    width: 250px;
 }
 
 .barra-busqueda form {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .barra-busqueda input {
+    border: none;
+    outline: none;
     padding: 8px;
     font-size: 14px;
-    border: 1px solid #ccc;
     border-radius: 15px;
-    margin-right: 10px;
-    width: 200px; 
-    transition: all 0.3s ease;
+    width: 100%;
+    background: transparent;
 }
 
 .barra-busqueda input:focus {
-    border-color: #eff5fc; 
+    border-color: #eff5fc;
     outline: none;
 }
 
 .barra-busqueda button {
-    padding: 8px 16px;
-    background-color: #4a90e2;
+    background-color: navy;
     border: none;
-    border-radius: 5px;
-    color: white;
     cursor: pointer;
+    font-size: 22px;
+    color: #333;
+    margin-left: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.barra-busqueda button:hover {
-    background-color: #ffffff;
-}
-.barra-busqueda {
-    margin-left: auto;
-    margin-right: 40px;
-}
-
-.barra-busqueda input {
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-.barra-busqueda button {
-    padding: 8px 12px;
-    font-size: 16px;
-    background-color: #000000;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.barra-busqueda button::before {
+    content: "\2192";
+    font-size: 22px;
+    display: inline-block;
 }
 
 .barra-busqueda button:hover {
     background-color: #2d2d31;
+    color: #ffffff;
 }
-
-
 
 #eslogan {
     font-family: "Latin Modern Roman";
@@ -239,6 +238,25 @@ body {
     margin: 0 auto;
 }
 
+.caracteristica {
+    position: relative;
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 23px;
+    overflow: hidden;
+}
+
+.caracteristica a {
+    height: 40%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 23px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: block;
+}
 
 .caracteristica h3,
 .catalogo h3 {
@@ -252,6 +270,15 @@ body {
     display: inline-block;
 }
 
+.caracteristica h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+}
 
 .caracteristica:hover,
 .catalogo:hover {
@@ -259,19 +286,25 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-
-
-
 .boton-catalogo {
     display: inline-block;
-    background-color: #fff;
+    background-color: #969191;
     padding: 10px 15px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: #ffffff;
 }
 
+.boton-catalogo:hover {
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+}
 
 .transicion {
     text-align: right;
@@ -280,10 +313,10 @@ body {
     font-weight: bold;
     color: #333;
     margin-bottom: 5px;
-    /* letra importada de google fonts */
     letter-spacing: 2px; 
     text-transform: capitalize; 
-    font-family: 'Dancing Script', cursive;}
+    font-family: 'Dancing Script', cursive;
+}
 
 .ubicacion {
     text-align: center;
@@ -395,169 +428,6 @@ body {
     border-top: 1px solid #444;
     padding-top: 20px;
 }
-@media (max-width: 768px) {
-    .contenido-footer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .informacion-footer, .redes-sociales, .mapa-footer {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .pie-pagina {
-        padding: 30px 5%;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .caracteristica,
-    .catalogo {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .catalogo h3 {
-        font-size: 20px;
-    }
-
-    .boton-catalogo {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-}
-
-/* Estilo para la barra de búsqueda (oculta por defecto) */
-.barra-busqueda {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: 20px; /* Desplazarlo a la derecha */
-    background-color: #fff;
-    border-radius: 25px;
-    padding: 5px 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    opacity: 0;
-    visibility: hidden;
-    width: 0; /* Oculta */
-    transition: all 0.3s ease;
-}
-
-/* Mostrar la barra de búsqueda cuando se activa */
-.barra-busqueda.show {
-    opacity: 1;
-    visibility: visible;
-    width: 250px; /* Ancho de la barra visible */
-}
-
-/* Estilo para el campo de texto */
-.barra-busqueda input[type="text"] {
-    border: none;
-    outline: none;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 14px;
-    width: 100%;
-}
-
-/* Estilo del botón (lupa) */
-.barra-busqueda button {
-    background-color: navy;
-    border: none;
-    cursor: pointer;
-    font-size: 22px;  /* Tamaño adecuado para la lupa */
-    color: #333;
-    margin-left: 10px;
-}
-
-.barra-busqueda button::before {
-    content: "\2192"; /* Código Unicode para una flecha derecha → */
-    font-size: 22px;  /* Tamaño del ícono */
-    display: inline-block;
-}
-
-
-.barra-busqueda button:hover {
-    color: #ffffff;
-}
-/* Estilos adicionales si los necesitas */
-.barra-busqueda {
-    --transition-speed: 0.3s;
-  }
-  
-  .barra-busqueda form {
-    display: flex;
-    align-items: center;
-  }
-  
-  .barra-busqueda input {
-    border: none;
-    background: transparent;
-  }
-  
-  .barra-busqueda button {
-    cursor: pointer;
-    background: transparent;
-    border: none;
-  }
-  
-  .caracteristica {
-    position: relative;
-    height: 260px; /* O la altura que prefieras */
-    background-size: cover;
-    background-position: center;
-    border-radius: 23px;
-    overflow: hidden;
-}
-
-.caracteristica a {
-    height: 40%; /* Para que cubra todo el div */
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    border-radius: 23px;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-
-}
-
-.caracteristica h3 {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    z-index: 2;
-}
-
-.boton-catalogo {
-    background-color: #969191;
-    color: #333;
-    font-size: 22px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    border: none;
-    position: absolute;
-    bottom: 5px;
-    left: 10px;
-    color: #ffffff;
-}
-
-.boton-catalogo:hover {
-    background-color: #f0f0f0;
-    color: #333;
-    text-decoration: none;
-}
-
-.caracteristica a {
-    display: block;
-    text-decoration: none;
-}
-
 
 /* Estilos generales para las secciones */
 .container {
@@ -697,10 +567,12 @@ body {
     cursor: pointer;
     padding: 0;
     transition: color 0.3s ease;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 .btn-favorito:hover {
-    color: #e74c3c;
+    color: #000000;
 }
 
 .icono-corazon {
@@ -713,85 +585,52 @@ body {
     margin-right: 5px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .metodos-pago {
-        gap: 20px;
-    }
-    
-    .metodo img {
-        max-height: 40px;
-        max-width: 120px;
-    }
-    
-    .grid-articulos {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 20px;
-    }
-    
-    .titulo-articulo {
-        font-size: 14px;
-        min-height: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .titulo-seccion {
-        font-size: 24px;
-    }
-    
-    .subtitulo-seccion {
-        font-size: 14px;
-    }
-    
-    .metodos-pago {
-        flex-direction: column;
-        gap: 25px;
-    }
-    
-    .grid-articulos {
-        grid-template-columns: 1fr;
-    }
-    
-    .titulo-articulo {
-        min-height: auto;
-    }
-}
-
-
 /* Eliminar el subrayado y cambiar el color de los enlaces */
 .articulos-recientes a {
-    text-decoration: none; /* Elimina la línea debajo del enlace */
-    color: inherit; /* Hereda el color del texto del contenedor padre */
-}
-
-/* Agregar estilo a los botones de favorito */
-.btn-favorito {
     text-decoration: none;
-    background-color: transparent;
-    border: none;
-    color: inherit; /* Hereda el color del texto */
-    font-size: 16px;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    color: inherit;
 }
-
-.btn-favorito:hover {
-    color: #000000; /* El color que prefieras cuando pasa el mouse */
-}
-
-/* RESPONSIVE DESIGN - MEJORADO */
 
 /* Menú móvil */
 .menu-toggle {
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
     cursor: pointer;
-    font-size: 24px;
+    padding: 0;
+    z-index: 1000;
+    position: relative;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Botón de búsqueda para móvil */
+.search-toggle {
+    display: none;
     background: none;
     border: none;
-    color: #000;
-    z-index: 1000;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
 }
+
+/* Bloquear scroll cuando el menú está abierto */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* RESPONSIVE DESIGN */
 
 /* Pantallas grandes (1200px y más) */
 @media (min-width: 1200px) {
@@ -825,14 +664,22 @@ body {
 /* Tablets (768px a 991px) */
 @media (max-width: 991px) {
     .container {
-        max-width: 720px;
+        max-width: 700px;
     }
     
     .barra-navegacion {
         padding: 10px 20px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .menu-toggle {
+        display: flex;
+    }
+    
+    .search-toggle {
         display: block;
     }
     
@@ -842,13 +689,14 @@ body {
         right: -300px;
         width: 280px;
         height: 100vh;
-        background-color: #000000;
+        background-color: #fff;
         flex-direction: column;
         padding: 80px 20px 20px;
         transition: right 0.3s ease;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         z-index: 999;
         overflow-y: auto;
+        display: flex;
     }
     
     .menu-principal.active {
@@ -860,6 +708,13 @@ body {
         width: 100%;
     }
     
+    .menu-principal a {
+        padding: 12px 0;
+        display: block;
+        width: 100%;
+        color: #000;
+    }
+    
     .submenu {
         position: static;
         width: 100%;
@@ -867,6 +722,10 @@ body {
         display: none;
         opacity: 1;
         padding-left: 15px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        margin-top: 5px;
+        padding: 5px 0;
     }
     
     .menu-principal li:hover > .submenu {
@@ -879,6 +738,45 @@ body {
     
     .submenu .submenu {
         left: 0;
+    }
+    
+    .submenu a {
+        padding: 10px 15px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .submenu a:last-child {
+        border-bottom: none;
+    }
+    
+    /* Indicador de menú desplegable */
+    .menu-desplegable > a:after {
+        content: "+";
+        float: right;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-desplegable.active > a:after {
+        content: "-";
+    }
+    
+    /* Ajustes para la barra de búsqueda */
+    .barra-busqueda {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 90%;
+        margin: 0 auto;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .barra-busqueda.show {
+        opacity: 1;
+        visibility: visible;
     }
     
     .bienvenida {
@@ -902,6 +800,8 @@ body {
     .contenido-footer {
         flex-direction: column;
     }
+    
+    
     
     .informacion-footer, 
     .redes-sociales, 
@@ -1385,3 +1285,191 @@ body {
     }
   }
   
+  /* Corrección para el menú móvil */
+@media (max-width: 991px) {
+    /* Asegurarse de que el botón de menú sea visible */
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1000;
+      position: relative; /* Asegurar que sea visible */
+    }
+    
+    .menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #000;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+    
+    /* Estilo unificado para el menú principal en móvil */
+    .menu-principal {
+      position: fixed;
+      top: 0;
+      right: -300px; /* Oculto por defecto */
+      width: 280px;
+      height: 100vh;
+      background-color: #fff; /* Color de fondo unificado */
+      flex-direction: column;
+      padding: 80px 20px 20px;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      overflow-y: auto;
+      display: flex; /* Asegurar que se muestre como flex */
+    }
+    
+    /* Cuando está activo, mostrar el menú */
+    .menu-principal.active {
+      right: 0;
+    }
+    
+    /* Asegurar que los elementos del menú sean visibles */
+    .menu-principal li {
+      margin: 10px 0;
+      width: 100%;
+      list-style: none;
+    }
+    
+    .menu-principal a {
+      color: #000;
+      padding: 12px 0;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  /* Estilos para el botón de menú móvil */
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+    position: relative;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Botón de búsqueda para móvil */
+  .search-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  /* Media query para móvil */
+  @media (max-width: 991px) {
+    /* Mostrar botón de menú y ocultar menú principal */
+    .menu-toggle {
+      display: flex;
+    }
+    
+    .search-toggle {
+      display: block;
+    }
+  
+    /* Ajustes para la barra de navegación */
+    .barra-navegacion {
+      padding: 10px 20px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    /* Estilo para el menú principal en móvil */
+    .menu-principal {
+      position: fixed;
+      top: 0;
+      right: -300px; /* Oculto por defecto */
+      width: 280px;
+      height: 100vh;
+      background-color: #fff;
+      flex-direction: column;
+      padding: 80px 20px 20px;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      overflow-y: auto;
+      display: flex;
+    }
+    
+    .menu-principal.active {
+      right: 0; /* Visible cuando está activo */
+    }
+    
+    .menu-principal li {
+      margin: 10px 0;
+      width: 100%;
+    }
+    
+    .menu-principal a {
+      padding: 12px 0;
+      display: block;
+      width: 100%;
+    }
+    
+    /* Submenús en móvil */
+    .submenu {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+      display: none;
+      opacity: 1;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      margin-top: 5px;
+      padding: 5px 0;
+    }
+    
+    .menu-principal li.active > .submenu {
+      display: block;
+    }
+    
+    .submenu a {
+      padding: 10px 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .submenu a:last-child {
+      border-bottom: none;
+    }
+    
+    /* Indicador de menú desplegable */
+    .menu-desplegable > a:after {
+      content: "+";
+      float: right;
+      transition: transform 0.3s ease;
+    }
+    
+    .menu-desplegable.active > a:after {
+      content: "-";
+
+    }
+
+}

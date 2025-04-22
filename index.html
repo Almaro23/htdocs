@@ -19,6 +19,14 @@
             <a href="./index.html">
             <img src="./imagenes/AKUA BATH2.png" alt="Logo de AkuaBath" /></a>
         </div>
+        
+        <!-- Botón de menú móvil (AÑADIR ESTO) -->
+        <button class="menu-toggle" aria-expanded="false" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
         <ul class="menu-principal">
             <li><a href="./index.html">Inicio</a></li>
             <li class="menu-desplegable">     
@@ -26,15 +34,12 @@
                 <ul class="submenu">
                     <li class="menu-desplegable">
                         <a href="./Paginas/Vistas/PlatosDeDucha/descubrelos.html">Platos de Ducha</a>
-                        
                     </li>
                     <li class="menu-desplegable">
                         <a href="./Paginas/Vistas/Encimeras/descubrelos.html">Encimeras</a>
-                        
                     </li>
                     <li class="menu-desplegable">
                         <a href="./Paginas/Vistas/Lavabos/descubrelos.html">Lavabos Sobreencimera</a>
-                        
                     </li>
                 </ul>
             </li>
@@ -48,14 +53,14 @@
             </form>
         </div>
         
-        
-
-
-
+        <!-- Botón de búsqueda para móvil (AÑADIR ESTO) -->
+        <button class="search-toggle" aria-label="Mostrar búsqueda">
+            <i class="fa fa-search"></i>
+        </button>
+    
         <!-- Botón de traducción -->
         <div id="google_translate_element" style="position: absolute; top: 10px; right: 10px;"></div>
     </nav>
-    
     <section class="transicion">
         <h2>Diseño, Calidad y Exclusividad</h2>
     </section>
@@ -181,6 +186,8 @@
  <!-- Google Translate -->
  <script src="./Paginas/Vistas/js/barrabusqueda.js"></script>
  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ <script src="./Paginas/Vistas/js/menuMovil.js"></script>
+
 
 </body>
 </html>
