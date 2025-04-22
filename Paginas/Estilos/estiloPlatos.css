@@ -123,6 +123,8 @@ body {
     position: relative;
 }
 
+
+
 .submenu a {
     color: #000000  !important; /* Texto blanco */
     padding: 12px 20px;
@@ -703,3 +705,13 @@ h2 {
     opacity: 1;
 }
 
+/* #titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+#titulo {
+    font-family: 'Cormorant Garamond', serif;
+} */
+#titulo {
+    font-family: 'Cinzel', serif;
+}

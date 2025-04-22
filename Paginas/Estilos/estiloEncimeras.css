@@ -644,3 +644,13 @@ html.menu-open {
 .overlay.active {
     display: block;
 }
+/* #titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+#titulo {
+    font-family: 'Cormorant Garamond', serif;
+} */
+#titulo {
+    font-family: 'Cinzel', serif;
+}
