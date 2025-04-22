@@ -116,13 +116,13 @@ main {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #e2e2e2;
+    background-color:#f4f6f6 !important; /* Fondo negro */ 
     min-width: 200px;
     border-radius: 5px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+    opacity: 2;
+    transition: opacity 0.5s ease;
+  }
 
 .menu-principal li:hover > .submenu {
     display: block;
@@ -134,20 +134,21 @@ main {
 }
 
 .submenu a {
-    color: #000000;
+    color: #000000  !important; /* Texto blanco */
     padding: 12px 20px;
     text-decoration: none;
     display: block;
     font-size: 14px;
     font-weight: 500;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #1a1a1a !important;
     transition: background-color 0.3s ease;
 }
 
 .submenu a:hover {
-    background-color: #747677;
+    background-color: #818181 !important; /* Negro más claro al pasar el ratón */
     padding-left: 20px;
 }
+
 
 .submenu .submenu {
     top: 0;

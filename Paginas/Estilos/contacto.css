@@ -88,42 +88,43 @@ main {
 
 /* Submenú */
 .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #e2e2e2;
-    min-width: 200px;
-    border-radius: 5px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color:#f4f6f6 !important; /* Fondo negro */ 
+  min-width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+  opacity: 2;
+  transition: opacity 0.5s ease;
 }
 
 .menu-principal li:hover > .submenu {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
 
 .submenu li {
-    position: relative;
+  position: relative;
 }
 
 .submenu a {
-    color: #000000;
-    padding: 12px 20px;
-    text-decoration: none;
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    border-bottom: 1px solid #444;
-    transition: background-color 0.3s ease;
+  color: #000000  !important; /* Texto blanco */
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #1a1a1a !important;
+  transition: background-color 0.3s ease;
 }
 
 .submenu a:hover {
-    background-color: #747677;
-    padding-left: 20px;
+  background-color: #818181 !important; /* Negro más claro al pasar el ratón */
+  padding-left: 20px;
 }
+
 
 .submenu .submenu {
     top: 0;

@@ -106,13 +106,13 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #e2e2e2;
+    background-color:#f4f6f6 !important; /* Fondo negro */ 
     min-width: 200px;
     border-radius: 5px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+    opacity: 2;
+    transition: opacity 0.5s ease;
+  }
 
 .menu-principal li:hover > .submenu {
     display: block;
@@ -124,20 +124,21 @@ body {
 }
 
 .submenu a {
-    color: #000000;
+    color: #000000  !important; /* Texto blanco */
     padding: 12px 20px;
     text-decoration: none;
     display: block;
     font-size: 14px;
     font-weight: 500;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #1a1a1a !important;
     transition: background-color 0.3s ease;
 }
 
 .submenu a:hover {
-    background-color: #747677;
+    background-color: #818181 !important; /* Negro más claro al pasar el ratón */
     padding-left: 20px;
 }
+
 
 .submenu .submenu {
     top: 0;
@@ -161,7 +162,7 @@ body {
 
 
 .swiper-container {
-    width: 100%;
+    width: 75%;
     height: 450px;
     margin-bottom: 60px;
     margin-top: 90px;
@@ -172,9 +173,9 @@ body {
     align-items: center;
 }
 .swiper-slide img {
-    width: auto;
+    width: 100%;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .swiper-button-next, .swiper-button-prev {
     color: black;
@@ -199,7 +200,7 @@ body {
 
 .product-image {
     width: 100%;
-    height: auto; 
+    height: 100%; 
 }
 
 .features {
@@ -517,10 +518,12 @@ h2 {
 }
 
 .properties-container {
-    width: 35%; /* Las propiedades ocupan el 35% */
-    padding: 20px;
+    width: 30%; /* Las propiedades ocupan el 35% */
+    padding: 5px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    
 }
 
 /* Responsividad */
