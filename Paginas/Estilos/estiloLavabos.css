@@ -471,134 +471,260 @@ html, body {
     margin: 0;
 }
 
-/* Estilos responsivos mejorados */
-@media (max-width: 1200px) {
-    .product-container {
-        padding: 40px 5%;
-    }
-    
-    .pie-pagina {
-        padding: 50px 5%;
+/* RESPONSIVE DESIGN */
+
+/* Pantallas grandes (1200px y más) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
     }
 }
 
-@media (max-width: 992px) {
-    .carousel {
-        max-width: 550px;
-    }
-
-    .carousel-container {
-        height: 500px;
+/* Pantallas medianas (992px a 1199px) */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
     }
     
-    .barra-navegacion {
-        padding: 15px 20px;
+    .caracteristica, 
+    .catalogo {
+        width: 47%;
+        padding: 40px;
     }
     
-    .menu-principal li {
-        margin: 0 10px;
+    .bienvenida {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+    .caracteristicas {
+        padding: 40px;
     }
 }
 
-@media (max-width: 768px) {
-    .barra-navegacion {
-        flex-direction: column;
+/* Tablets (768px a 991px) */
+@media (max-width: 991px) {
+    .container {
+        max-width: 700px;
     }
     
-    .barra-navegacion .logo {
-        margin-right: 0;
-        margin-bottom: 15px;
+    .barra-navegacion {
+        padding: 10px 20px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .search-toggle {
+        display: block;
     }
     
     .menu-principal {
-        flex-wrap: wrap;
-        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 280px;
+        height: 100vh;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgb(255, 255, 255);
+        z-index: 999;
+        overflow-y: auto;
+        display: flex;
+    }
+    
+    .menu-principal.active {
+        right: 0;
+    }
+    
+    .menu-principal li {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .menu-principal a {
+        padding: 12px 0;
+        display: block;
+        width: 100%;
+        color: #000;
+    }
+    
+    .submenu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        display: none;
+        opacity: 1;
+        padding-left: 15px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        margin-top: 5px;
+        padding: 5px 0;
+    }
+    
+    .menu-principal li:hover > .submenu {
+        display: none;
+    }
+    
+    .menu-principal li.active > .submenu {
+        display: block;
+    }
+    
+    .submenu .submenu {
+        left: 0;
+    }
+    
+    .submenu a {
+        padding: 10px 15px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .submenu a:last-child {
+        border-bottom: none;
+    }
+    
+    /* Indicador de menú desplegable */
+    .menu-desplegable > a:after {
+        content: "+";
+        float: right;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-desplegable.active > a:after {
+        content: "-";
+    }
+    
+    /* Ajustes para la barra de búsqueda */
+    .barra-busqueda {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 90%;
+        margin: 0 auto;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .barra-busqueda.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .bienvenida {
+        height: 60vh;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 30px;
+    }
+    
+    .caracteristica, 
+    .catalogo {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .caracteristicas {
+        padding: 30px;
+        gap: 30px;
     }
     
     .contenido-footer {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .informacion-footer, .redes-sociales, .mapa-footer {
-        text-align: center;
-        margin-bottom: 30px;
-        padding-right: 0;
-        min-width: 100%;
-    }
-
-    .pie-pagina {
-        padding: 30px 5%;
-    }
-
-    .product-container {
-        flex-direction: column;
-        padding: 20px 5%;
-        gap: 30px;
-    }
-
-    .product-info {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .product-image {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .carousel {
-        max-width: 100%;
-    }
-
-    .carousel-container {
-        height: 450px;
-    }
-
-    .carousel-button {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
-
-    .dot {
-        width: 12px;
-        height: 12px;
     }
     
-    .spec-item {
+    
+    
+    .informacion-footer, 
+    .redes-sociales, 
+    .mapa-footer {
         width: 100%;
+        margin: 0 0 30px 0;
+        text-align: center;
+        padding-right: 0;
+    }
+    
+    .mapa-footer ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .mapa-footer ul li {
+        margin: 5px 10px;
+    }
+    
+    .grid-articulos {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 480px) {
-    .carousel-container {
+/* Móviles grandes (576px a 767px) */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .barra-navegacion .logo img {
+        height: 40px;
+    }
+    
+    .bienvenida {
+        height: 50vh;
+        margin-left: 15px;
+        margin-right: 15px;
+        border-radius: 20px;
+    }
+    
+    .caracteristicas {
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .caracteristica, 
+    .catalogo {
+        padding: 30px;
+    }
+    
+    .caracteristica h3, 
+    .catalogo h3 {
+        font-size: 20px;
+        padding: 15px;
+    }
+    
+    .transicion {
+        font-size: 20px;
+        padding: 30px 5%;
+    }
+    
+    .ubicacion {
+        padding: 30px 5%;
+    }
+    
+    .ubicacion h2 {
+        font-size: 1.5rem;
+    }
+    
+    .mapa iframe {
         height: 350px;
     }
-
-    .carousel-button {
-        width: 35px;
-        height: 35px;
-        font-size: 16px;
-    }
-
-    .dot {
-        width: 10px;
-        height: 10px;
-        margin: 0 4px;
+    
+    .pie-pagina {
+        padding: 30px 5%;
     }
     
-    .product-info h2 {
-        font-size: 2rem;
-    }
-    
-    .product-info p {
-        font-size: 1rem;
-    }
-    
-    .menu-principal a {
-        font-size: 14px;
-        padding: 10px 12px;
+    .informacion-footer h2 {
+        font-size: 1.5rem;
     }
     
     .redes-sociales a {
@@ -609,30 +735,674 @@ html, body {
         width: 45px;
         height: 45px;
     }
+    
+    .grid-articulos {
+        grid-template-columns: 1fr;
+    }
+    
+    .titulo-seccion {
+        font-size: 24px;
+    }
+    
+    .subtitulo-seccion {
+        font-size: 14px;
+    }
+    
+    .metodos-pago {
+        gap: 20px;
+    }
 }
 
-/* Mejora para dispositivos muy pequeños */
-@media (max-width: 360px) {
-    .carousel-container {
-        height: 300px;
+/* Móviles pequeños (hasta 575px) */
+@media (max-width: 575px) {
+    .barra-navegacion {
+        padding: 5px 15px;
     }
     
-    .product-info h2 {
-        font-size: 1.8rem;
+    .barra-navegacion .logo img {
+        height: 35px;
     }
     
-    .carousel-button {
-        width: 30px;
+    .bienvenida {
+        height: 40vh;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 15px;
+        margin-top: 0;
+    }
+    
+    .caracteristicas {
+        padding: 15px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .caracteristica, 
+    .catalogo {
+        padding: 20px;
+        height: 220px;
+    }
+    
+    .caracteristica h3, 
+    .catalogo h3 {
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .boton-catalogo {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+    
+    .transicion {
+        font-size: 18px;
+        padding: 20px 5%;
+    }
+    
+    .ubicacion h2 {
+        font-size: 1.3rem;
+    }
+    
+    .mapa iframe {
+        height: 250px;
+    }
+    
+    .informacion-footer h2 {
+        font-size: 1.3rem;
+    }
+    
+    .informacion-footer p {
+        font-size: 0.9rem;
+    }
+    
+    .redes-sociales img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .mapa-footer ul li a {
+        font-size: 0.9rem;
+    }
+    
+    .copyright {
+        font-size: 0.8rem;
+    }
+    
+    .metodos-pago {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .metodo img {
+        max-height: 40px;
+        max-width: 100px;
+    }
+    
+    .titulo-articulo {
+        min-height: auto;
+        font-size: 14px;
+    }
+    
+    .imagen-articulo {
+        height: 180px;
+    }
+}
+
+/* Soporte para pantallas muy pequeñas */
+@media (max-width: 320px) {
+    .barra-navegacion .logo img {
         height: 30px;
     }
+    
+    .bienvenida {
+        height: 35vh;
+    }
+    
+    .caracteristica, 
+    .catalogo {
+        height: 200px;
+        padding: 15px;
+    }
+    
+    .caracteristica h3, 
+    .catalogo h3 {
+        font-size: 16px;
+        padding: 8px;
+    }
+    
+    .boton-catalogo {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
 }
-/* #titulo {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+
+/* Soporte para modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #f8f8f8;
+        color: #000000;
+    }
+    
+    .menu-principal a {
+        color: #000000;
+    }
+    
+    .menu-principal a:hover {
+        background-color: #e2e2e2;
+    }
+    
+    .submenu {
+        background-color: #e2e2e2;
+    }
+    
+    .submenu a {
+        color: #000000;
+        border-bottom: 1px solid #e2e2e2;
+    }
+    
+    .submenu a:hover {
+        background-color: #e2e2e2;
+    }
+    
+    .barra-busqueda {
+        background-color: #333;
+    }
+    
+    .barra-busqueda input {
+        color: #000000;
+    }
+    
+    .titulo-seccion {
+        color: #000000;
+    }
+    
+    .subtitulo-seccion {
+        color: #ccc;
+    }
+    
+    .tarjeta-articulo {
+        background-color: #e2e2e2;
+    }
+    
+    .titulo-articulo {
+        color: #000000;
+    }
+    
+    .fecha {
+        color: #ccc;
+    }
 }
-#titulo {
-    font-family: 'Cormorant Garamond', serif;
-} */
-#titulo {
-    font-family: 'Cinzel', serif;
+
+/* Soporte para dispositivos con pantalla táctil */
+@media (hover: none) {
+    .menu-principal a:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .caracteristica:hover,
+    .catalogo:hover {
+        transform: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .tarjeta-articulo:hover {
+        transform: none;
+    }
+    
+    .tarjeta-articulo:hover .imagen-articulo img {
+        transform: none;
+    }
+    
+    .redes-sociales a:hover img {
+        transform: none;
+    }
+    
+    /* Añadir estados activos para dispositivos táctiles */
+    .menu-principal a:active {
+        background-color: #ffffff;
+    }
+    
+    .caracteristica:active,
+    .catalogo:active {
+        transform: scale(0.98);
+    }
+    
+    .boton-catalogo:active {
+        background-color: #f0f0f0;
+        color: #333;
+    }
+    
+    .tarjeta-articulo:active {
+        transform: translateY(-2px);
+    }
+}
+
+/* Añadir JavaScript para el menú móvil */
+
+/* Estilos adicionales para el menú móvil */
+
+/* Estilo para el botón de menú móvil */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Bloquear scroll cuando el menú está abierto */
+  body.menu-open {
+    overflow: hidden;
+  }
+  
+  /* Media query para móvil */
+  @media (max-width: 991px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    /* Estilo para el menú principal en móvil */
+    .menu-principal {
+      position: fixed;
+      top: 0;
+      right: -300px; /* Oculto por defecto */
+      width: 280px;
+      height: 100vh;
+      background-color: #fff; /* Cambia al color que prefieras */
+      flex-direction: column;
+      padding: 80px 20px 20px;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      overflow-y: auto;
+    }
+  
+    .menu-principal.active {
+      right: 0; /* Visible cuando está activo */
+    }
+  
+    .menu-principal li {
+      margin: 10px 0;
+      width: 100%;
+    }
+  
+    .menu-principal a {
+      color: #000; /* Asegúrate de que sea visible en el fondo */
+      padding: 12px 0;
+    }
+  
+    /* Submenús en móvil */
+    .submenu {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+      display: none;
+      opacity: 1;
+      background-color: #f5f5f5; /* Un tono más claro para diferenciar */
+      border-radius: 5px;
+      margin-top: 5px;
+      padding: 5px 0;
+    }
+  
+    .menu-principal li.active > .submenu {
+      display: block;
+    }
+  
+    .submenu a {
+      padding: 10px 15px;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .submenu a:last-child {
+      border-bottom: none;
+    }
+  
+    /* Indicador de menú desplegable */
+    .menu-desplegable > a:after {
+      content: "+";
+      float: right;
+      transition: transform 0.3s ease;
+    }
+  
+    .menu-desplegable.active > a:after {
+      content: "-";
+    }
+  
+    /* Ajustes para la barra de búsqueda */
+    .barra-busqueda {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      width: 90%;
+      margin: 0 auto;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+  
+    .barra-busqueda.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    /* Botón para mostrar/ocultar la barra de búsqueda */
+    .search-toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 20px;
+      margin-left: auto;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+  }
+  
+  /* Ajustes para pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    .menu-principal {
+      width: 250px;
+    }
+  
+    .barra-busqueda {
+      width: 95%;
+      top: 60px;
+    }
+  }
+  
+  /* Corrección para el menú móvil */
+@media (max-width: 991px) {
+    /* Asegurarse de que el botón de menú sea visible */
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1000;
+      position: relative; /* Asegurar que sea visible */
+    }
+    
+    .menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #000;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+    
+    /* Estilo unificado para el menú principal en móvil */
+    .menu-principal {
+      position: fixed;
+      top: 0;
+      right: -300px; /* Oculto por defecto */
+      width: 280px;
+      height: 100vh;
+      background-color: #fff; /* Color de fondo unificado */
+      flex-direction: column;
+      padding: 80px 20px 20px;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      overflow-y: auto;
+      display: flex; /* Asegurar que se muestre como flex */
+    }
+    
+    /* Cuando está activo, mostrar el menú */
+    .menu-principal.active {
+      right: 0;
+    }
+    
+    /* Asegurar que los elementos del menú sean visibles */
+    .menu-principal li {
+      margin: 10px 0;
+      width: 100%;
+      list-style: none;
+    }
+    
+    .menu-principal a {
+      color: #000;
+      padding: 12px 0;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  /* Estilos para el botón de menú móvil */
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+    position: relative;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Botón de búsqueda para móvil */
+  .search-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  /* Media query para móvil */
+  @media (max-width: 991px) {
+    /* Mostrar botón de menú y ocultar menú principal */
+    .menu-toggle {
+      display: flex;
+    }
+    
+    .search-toggle {
+      display: block;
+    }
+  
+    /* Ajustes para la barra de navegación */
+    .barra-navegacion {
+      padding: 10px 20px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    /* Estilo para el menú principal en móvil */
+    .menu-principal {
+      position: fixed;
+      top: 0;
+      right: -300px; /* Oculto por defecto */
+      width: 280px;
+      height: 100vh;
+      background-color: #fff;
+      flex-direction: column;
+      padding: 80px 20px 20px;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      overflow-y: auto;
+      display: flex;
+    }
+    
+    .menu-principal.active {
+      right: 0; /* Visible cuando está activo */
+    }
+    
+    .menu-principal li {
+      margin: 10px 0;
+      width: 100%;
+    }
+    
+    .menu-principal a {
+      padding: 12px 0;
+      display: block;
+      width: 100%;
+    }
+    
+    /* Submenús en móvil */
+    .submenu {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+      display: none;
+      opacity: 1;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      margin-top: 5px;
+      padding: 5px 0;
+    }
+    
+    .menu-principal li.active > .submenu {
+      display: block;
+    }
+    
+    .submenu a {
+      padding: 10px 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .submenu a:last-child {
+      border-bottom: none;
+    }
+    
+    /* Indicador de menú desplegable */
+    .menu-desplegable > a:after {
+      content: "+";
+      float: right;
+      transition: transform 0.3s ease;
+    }
+    
+    .menu-desplegable.active > a:after {
+      content: "-";
+
+    }
+
+    
+
+
+
+  
+
+}
+
+
+
+
+
+/* Carrusel de imágenes */
+.product-main-image {
+    flex: 1;
+    max-width: 600px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-dots .dot.active {
+    background-color: #a5a5a5;
+}
+
+.product-container {
+    overflow: visible; /* o auto, si necesitas scroll */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
