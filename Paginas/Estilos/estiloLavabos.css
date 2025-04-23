@@ -1406,3 +1406,7 @@ html, body {
 *::after {
   box-sizing: border-box;
 }
+
+#titulo {
+    font-family: 'Cinzel', serif;
+}
