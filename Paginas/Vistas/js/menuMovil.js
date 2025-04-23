@@ -55,3 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
+
+  overlay.addEventListener("click", () => {
+    menuPrincipal.classList.remove("active")
+    body.classList.remove("menu-open")
+    if (menuToggle) {
+      menuToggle.setAttribute("aria-expanded", "false")
+    }
+  })
+  
