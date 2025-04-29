@@ -1447,6 +1447,105 @@ h2 {
 }
 
 }
+
+
+
+/* NAVBAR */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: fixed;
+    background-color: #fff;
+}
+
+/* LOGO */
+.logo img {
+    max-height: 158px;
+    display: block;
+}
+
+/* MENÚ PRINCIPAL */
+.menu-principal {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: #111;
+    font-size: 15px;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.menu-principal a:hover {
+    opacity: 0.6;
+}
+
+/* DESPLEGABLES */
+.menu-desplegable {
+    position: relative;
+}
+
+.menu-desplegable > a::after {
+    content: ' ▾';
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: rgb(255, 255, 255);
+    padding: 8px 0;
+    min-width: 180px;
+    z-index: 10;
+}
+
+.submenu li {
+    padding: 0;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #111;
+    transition: background-color 0.2s ease;
+}
+
+
+
+.color-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.color {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Hace que sean redondos */
+    cursor: pointer;
+    border: 2px solid #ccc; /* Opcional: da un borde fino para que destaquen */
+    transition: transform 0.2s ease;
+}
+
+.color:hover {
+    transform: scale(1.1);
+    border-color: #999; /* Efecto sutil al pasar el ratón */
+}
+
+
 /* Universal box-sizing y correcciones para evitar desbordes */
 *,
 *::before,
@@ -1454,5 +1553,23 @@ h2 {
   box-sizing: border-box;
 }
 
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
 
-
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}

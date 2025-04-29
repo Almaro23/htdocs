@@ -92,14 +92,24 @@ function changeImage(color) {
     }
 }
 
-document.querySelectorAll('.swiper-slide img').forEach(function(img) {
-    img.addEventListener('click', function() {
-        var lightbox = document.getElementById('lightbox');
-        var lightboxImg = document.getElementById('lightbox-img');
-        lightbox.style.display = 'block';
-        lightboxImg.src = this.src;
+document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.swiper-slide img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt || 'Imagen ampliada';
+        });
     });
 });
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+}
+
 
 // Función para cerrar el lightbox
 function closeLightbox() {
@@ -120,5 +130,5 @@ function changeImage(color) {
     };
 
     // Muestra el nombre del color en el div
-    document.getElementById('selectedColor').textContent = `Color seleccionado: ${colorNames[color]}`;
+    document.getElementById('selectedColor').textContent = ` ${colorNames[color]}`;
 }
