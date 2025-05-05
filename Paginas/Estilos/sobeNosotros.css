@@ -1230,7 +1230,6 @@ main {
     }
 
 }
-/* Universal box-sizing y correcciones para evitar desbordes */
 *,
 *::before,
 *::after {

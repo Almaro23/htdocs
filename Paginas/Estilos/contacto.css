@@ -526,7 +526,7 @@ html, body {
   }
   
   .menu-desplegable.active > a:after {
-      content: "-";
+      content: "";
   }
   
   /* Ajustes para la barra de búsqueda */
@@ -1289,7 +1289,7 @@ box-sizing: border-box;
 }
 
 .menu-desplegable > a::after {
-    content: ' ▾';
+    content: '';
     font-size: 0.8em;
     margin-left: 4px;
 }
