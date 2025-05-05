@@ -80,9 +80,8 @@ main {
 }
 
 .menu-principal a:hover {
-    background-color: #e2e2e2;
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
 }
 
 /* Submenú */
@@ -91,7 +90,6 @@ main {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color:#f4f6f6 !important; /* Fondo negro */ 
     min-width: 200px;
     border-radius: 5px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
@@ -119,10 +117,7 @@ main {
     transition: background-color 0.3s ease;
 }
 
-.submenu a:hover {
-    background-color: #818181 !important; /* Negro más claro al pasar el ratón */
-    padding-left: 20px;
-}
+
 
 
 .submenu .submenu {
@@ -144,6 +139,8 @@ main {
 .menu-desplegable:hover > a:after {
     transform: rotate(90deg);
 }
+
+
 
 /* CONTINÚA IGUAL EL RESTO */
 
@@ -1500,3 +1497,104 @@ html, body {
 *::after {
   box-sizing: border-box;
 }
+
+
+
+
+
+
+
+
+
+
+/* Estilo para el contenedor del carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Ajusta según tus necesidades */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* Contenedor de slides */
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Estilo para cada slide */
+  .carousel-slide {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    height: 400px; /* Altura fija para todos los slides */
+  }
+  
+  /* Slide activo */
+  .carousel-slide.active {
+    opacity: 1;
+    position: relative;
+  }
+  
+  /* Estilo para las imágenes dentro de los slides */
+  .carousel-slide img {
+    width: 100%;
+    height: 100%; /* Cambiado de 'auto' a '100%' */
+    object-fit: cover; /* Mantiene la proporción pero llena el espacio */
+    display: block;
+    border-radius: 8px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Botones de navegación */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 18px;
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+  
+  /* Indicadores (dots) */
+  .carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: white;
+  }
+  

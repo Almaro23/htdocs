@@ -137,7 +137,6 @@ body {
 }
 
 .submenu a:hover {
-    background-color: #818181 !important; /* Negro más claro al pasar el ratón */
     padding-left: 20px;
 }
 

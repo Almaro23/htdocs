@@ -64,3 +64,56 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   })
   
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".carousel-slide")
+    const dots = document.querySelectorAll(".dot")
+    const prevButton = document.querySelector(".carousel-button.prev")
+    const nextButton = document.querySelector(".carousel-button.next")
+  
+    let currentSlide = 0
+  
+    // Función para mostrar un slide específico
+    function showSlide(index) {
+      // Ocultar todos los slides
+      slides.forEach((slide) => {
+        slide.classList.remove("active")
+      })
+  
+      // Desactivar todos los dots
+      dots.forEach((dot) => {
+        dot.classList.remove("active")
+      })
+  
+      // Mostrar el slide actual
+      slides[index].classList.add("active")
+      dots[index].classList.add("active")
+  
+      currentSlide = index
+    }
+  
+    // Event listeners para los botones
+    prevButton.addEventListener("click", () => {
+      let newIndex = currentSlide - 1
+      if (newIndex < 0) newIndex = slides.length - 1
+      showSlide(newIndex)
+    })
+  
+    nextButton.addEventListener("click", () => {
+      let newIndex = currentSlide + 1
+      if (newIndex >= slides.length) newIndex = 0
+      showSlide(newIndex)
+    })
+  
+    // Event listeners para los dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        showSlide(index)
+      })
+    })
+  
+    // Inicializar el carrusel
+    showSlide(0)
+  })
+  
