@@ -11,6 +11,10 @@ body {
     background-image: url('./imagenes/fondo345.jpg');
 }
 
+main, .transicion, .caracteristicas, .articulos-recientes, .compras-seguras, .ubicacion, .pie-pagina {
+    animation: caida-cascada 1s ease-out forwards;
+}
+
 /* Barra de navegación principal */
 .barra-navegacion {
     background: transparent;
