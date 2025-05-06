@@ -10,6 +10,7 @@ body {
   line-height: 1.6;
   background-color: #f4f4f4;
   background-image: url('../../imagenes/fondo345.jpg');
+  background-repeat: no-repeat;
 }
 
 /* Barra de navegación principal */
