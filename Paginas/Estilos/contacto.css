@@ -1279,9 +1279,6 @@ box-sizing: border-box;
     transition: opacity 0.2s ease;
 }
 
-.menu-principal a:hover {
-    opacity: 0.6;
-}
 
 /* DESPLEGABLES */
 .menu-desplegable {

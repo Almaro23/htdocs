@@ -166,9 +166,6 @@ main {
     transition: transform 0.3s ease;
 }
 
-.menu-desplegable:hover > a:after {
-    transform: rotate(90deg);
-}
 
 #titulo{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -1267,13 +1264,12 @@ main {
     transition: opacity 0.2s ease;
 }
 
-.menu-principal a:hover {
-    opacity: 0.6;
-}
+
 
 /* DESPLEGABLES */
 .menu-desplegable {
     position: relative;
+
 }
 
 .menu-desplegable > a::after {
@@ -1287,7 +1283,6 @@ main {
     position: absolute;
     top: 30px;
     left: 0;
-    background: rgb(255, 255, 255);
     padding: 8px 0;
     min-width: 180px;
     z-index: 10;
@@ -1303,7 +1298,7 @@ main {
     font-size: 14px;
     font-weight: 400;
     color: #111;
-    transition: background-color 0.2s ease;
+
 }
 
 
@@ -1315,12 +1310,25 @@ main {
     align-items: center;
     padding: 10px 40px;
     position: fixed;
-    background-color: #fff;
-}
+    background-color: white;
+   
+    
+    }
 
+  
 /* Universal box-sizing y correcciones para evitar desbordes */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 8px 0;
+    min-width: 180px;
+    z-index: 10;
 }
