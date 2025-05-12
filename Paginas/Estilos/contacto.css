@@ -204,7 +204,7 @@ main {
 }
 
 .contact-form .submit-btn {
-    background-color: #007bff;
+    background-color: #1a1a1b;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -291,7 +291,7 @@ main {
 .pie-pagina {
     background-color: #212121;
     color: #fff;
-    padding: 60px 10%;
+    padding: 20px 10%;
     text-align: center;
     font-family: 'Arial', sans-serif;
     border-top: 1px solid #444;
@@ -336,11 +336,12 @@ main {
 }
 
 .redes-sociales img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: brightness(0) invert(1);
 }
+
 
 .redes-sociales a:hover img {
     transform: scale(1.2);
@@ -1332,4 +1333,18 @@ box-sizing: border-box;
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.menu-principal li {
+    margin: 0 5px;
+    position: relative;
+}
+
+.menu-principal,
+.menu-principal li,
+.menu-principal .submenu,
+.menu-principal .submenu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }

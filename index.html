@@ -82,17 +82,46 @@
         </div>
         <div class="caracteristica" style="background-image: url('./imagenes/img1.jpg'); color: black; border-radius: 23px;">
             <a href="./Paginas/Vistas/Lavabos/descubrelos.html" class="enlace-total">
-                <h3 style="background-color: rgba(0, 0, 0, 0.479); color: white; padding: 10px; border-radius: 5px;">COMBINA TU <span>BAÑO CON NUESTROS LAVABOS</span></h3>
+                <h3 style="background-color: rgba(0, 0, 0, 0.479); color: white; padding: 10px; border-radius: 5px;">COMBINA TU <span>BAÑO</span></h3>
             </a>
         </div>
         <div class="caracteristica" style="background-image: url('./imagenes/img2.png'); color: black; border-radius: 23px;">
             <a href="./Paginas/Vistas/Encimeras/descubrelos.html" class="enlace-total">
-                <h3 style="background-color: rgba(0, 0, 0, 0.479); color: white; padding: 10px; border-radius: 5px;">FABRICACIÓN <span>PROPIA EN NUESTROS PRODUCTOS</span></h3>
+                <h3 style="background-color: rgba(0, 0, 0, 0.479); color: white; padding: 10px; border-radius: 5px;">FABRICACIÓN <span>PROPIA</span></h3>
             </a>
         </div>
-        <div class="caracteristica catalogo" style="background-image: url('./imagenes/catalogo.png'); border-radius: 23px;">
-            <a style="background-color: rgba(0, 0, 0, 0.479); color: white; padding: 10px; border-radius: 5px; height: 50px; margin-bottom: 10px;" href="./AKUABATH 2025.pdf" download="Catalogo_AkuaBath" class="boton-catalogo"><span>CATÁLOGO</span> </a>
-        </div>
+        <div class="caracteristica catalogo" style="background-image: url('./imagenes/catalogo.png'); border-radius: 23px; position: relative; overflow: hidden; height: 260px;">
+    
+    <!-- Enlace invisible que cubre todo el div -->
+    <a href="./Catalogo_AkuaBath.pdf" 
+       download="Catalogo_AkuaBath" 
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+    </a>
+
+    <!-- Botón visible en la esquina inferior izquierda -->
+    <a href="./Catalogo_AkuaBath.pdf" 
+       download="Catalogo_AkuaBath" 
+       class="boton-catalogo" 
+       style="
+            background-color: rgba(0, 0, 0, 0.479); 
+            color: white; 
+            padding: 20px; 
+            border-radius: 5px; 
+            height: 60px; 
+            position: absolute; 
+            bottom: 20px; 
+            left: 20px; 
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        ">
+        <span>CATÁLOGO</span>
+    </a>
+
+</div>
+
+     
     </section>
 
 
@@ -112,7 +141,7 @@
                 <div class="contenido-articulo">
                     <h3 class="titulo-articulo">TENDENCIAS EN BAÑOS 2025: MATERIALES, COLORES Y DISEÑOS</h3>
                     <div class="meta-articulo">
-                        <button class="btn-favorito"><i class="icono-corazon"></i>Ver más​</button></a>
+                        <button class="btn-favorito"><i class="icono-corazon"></i></button></a>
                     </div>
                 </div>
             </article>
@@ -126,7 +155,7 @@
                 <div class="contenido-articulo">
                     <h3 class="titulo-articulo">PERSONALIZA TU BAÑO CON NUESTROS MUEBLES MODULARES A MEDIDA</h3>
                     <div class="meta-articulo">
-                        <button class="btn-favorito"><i class="icono-corazon"></i>Ver más</button></a>
+                        <button class="btn-favorito"><i class="icono-corazon"></i></button></a>
                     </div>
                 </div>
             </article>
@@ -141,7 +170,7 @@
                 <div class="contenido-articulo">
                     <h3 class="titulo-articulo">¿BUSCAS UN LAVABO PERSONALIZADO?</h3>
                     <div class="meta-articulo">
-                        <button class="btn-favorito"><i class="icono-corazon"></i>Ver más</button></a>
+                        <button class="btn-favorito"><i class="icono-corazon"></i></button></a>
                     </div>
                 </div>
             </article>

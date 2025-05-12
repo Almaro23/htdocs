@@ -618,3 +618,36 @@ html.menu-open {
 *::after {
   box-sizing: border-box;
 }
+
+.menu-principal li {
+    margin: 0 5px;
+    position: relative;
+}
+.menu-principal,
+.menu-principal li,
+.menu-principal .submenu,
+.menu-principal .submenu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.redes-sociales img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+.spec-item .color[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    white-space: nowrap;
+}

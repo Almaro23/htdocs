@@ -132,3 +132,16 @@ document.addEventListener("DOMContentLoaded", () => {
       */
   })
   
+
+  function changeImage(color) {
+    const colorNames = {
+        blanco: "Blanco RAL 9003",
+        antracita: "Antracita RAL 7011",
+        gris: "Gris Perla RAL 7035",
+        negro: "Negro RAL 9005",
+        arena: "Arena"
+    };
+
+    // Muestra el nombre del color en el div
+    document.getElementById('selectedColor').textContent = ` ${colorNames[color]}`;
+}

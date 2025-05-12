@@ -206,6 +206,8 @@ body.menu-open {
   gap: 30px;
   padding: 50px;
   flex-wrap: wrap;
+    font-family: 'Cinzel', serif;
+
 }
 
 .product {
@@ -252,7 +254,7 @@ h1 {
 .pie-pagina {
   background-color: #212121;
   color: #fff;
-  padding: 50px 10%;
+  padding: 45px 10%;
   font-family: 'Arial', sans-serif;
   border-top: 1px solid #444;
 }
@@ -956,6 +958,8 @@ a {
 } */
 #titulo {
   font-family: 'Cinzel', serif;
+  margin-top: 35px;
+  margin-bottom: 5px;
 }
 
 /* NAVBAR */
@@ -1043,4 +1047,23 @@ a {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.menu-principal li {
+    margin: 0 5px;
+    position: relative;
+}
+.menu-principal,
+.menu-principal li,
+.menu-principal .submenu,
+.menu-principal .submenu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.redes-sociales img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) invert(1);
 }
