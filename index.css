@@ -585,7 +585,6 @@ main, .transicion, .caracteristicas, .articulos-recientes, .compras-seguras, .ub
     
 }
 
-/* Eliminar el subrayado y cambiar el color de los enlaces */
 .articulos-recientes a {
     text-decoration: none;
     color: inherit;
@@ -615,7 +614,6 @@ main, .transicion, .caracteristicas, .articulos-recientes, .compras-seguras, .ub
     transition: all 0.3s ease;
 }
 
-/* Botón de búsqueda para móvil */
 .search-toggle {
     display: none;
     background: none;
@@ -625,7 +623,6 @@ main, .transicion, .caracteristicas, .articulos-recientes, .compras-seguras, .ub
     margin-left: 10px;
 }
 
-/* Bloquear scroll cuando el menú está abierto */
 body.menu-open {
     overflow: hidden;
 }
@@ -1135,11 +1132,7 @@ body.menu-open {
     }
 }
 
-/* Añadir JavaScript para el menú móvil */
 
-/* Estilos adicionales para el menú móvil */
-
-/* Estilo para el botón de menú móvil */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -1162,25 +1155,22 @@ body.menu-open {
     transition: all 0.3s ease;
   }
   
-  /* Bloquear scroll cuando el menú está abierto */
   body.menu-open {
     overflow: hidden;
   }
   
-  /* Media query para móvil */
   @media (max-width: 991px) {
     .menu-toggle {
       display: flex;
     }
   
-    /* Estilo para el menú principal en móvil */
     .menu-principal {
       position: fixed;
       top: 0;
-      right: -300px; /* Oculto por defecto */
+      right: -300px;
       width: 280px;
       height: 100vh;
-      background-color: #fff; /* Cambia al color que prefieras */
+      background-color: #fff; 
       flex-direction: column;
       padding: 80px 20px 20px;
       transition: right 0.3s ease;
@@ -1199,7 +1189,7 @@ body.menu-open {
     }
   
     .menu-principal a {
-      color: #000; /* Asegúrate de que sea visible en el fondo */
+      color: #000; 
       padding: 12px 0;
     }
   
@@ -1210,7 +1200,7 @@ body.menu-open {
       box-shadow: none;
       display: none;
       opacity: 1;
-      background-color: #f5f5f5; /* Un tono más claro para diferenciar */
+      background-color: #f5f5f5; 
       border-radius: 5px;
       margin-top: 5px;
       padding: 5px 0;
@@ -1229,7 +1219,6 @@ body.menu-open {
       border-bottom: none;
     }
   
-    /* Indicador de menú desplegable */
     .menu-desplegable > a:after {
       content: "+";
       float: right;
@@ -1240,7 +1229,7 @@ body.menu-open {
       content: "-";
     }
   
-    /* Ajustes para la barra de búsqueda */
+ 
     .barra-busqueda {
       position: absolute;
       top: 70px;
@@ -1259,7 +1248,6 @@ body.menu-open {
       visibility: visible;
     }
   
-    /* Botón para mostrar/ocultar la barra de búsqueda */
     .search-toggle {
       display: block;
       background: none;

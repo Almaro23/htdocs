@@ -231,16 +231,15 @@ main {
     white-space: nowrap;
 }
 
-/* Carrusel (sin cambios) */
 .carousel {
     position: relative;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 18px; /* Sombra redondeada pero controlada */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombrado suave */
-    background-color: transparent; /* Fondo limpio */
+    border-radius: 18px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); 
+    background-color: transparent; 
 }
 
 .carousel-container {
@@ -273,7 +272,7 @@ main {
     height: auto;
     object-fit: cover;
     display: block;
-    border-radius: 8px; /* Igual que el contenedor para evitar bordes raros */
+    border-radius: 8px; 
     margin: 0;
     padding: 0;
 }
@@ -975,11 +974,7 @@ html, body {
     }
 }
 
-/* Añadir JavaScript para el menú móvil */
 
-/* Estilos adicionales para el menú móvil */
-
-/* Estilo para el botón de menú móvil */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -1001,25 +996,22 @@ html, body {
     transition: all 0.3s ease;
   }
   
-  /* Bloquear scroll cuando el menú está abierto */
   body.menu-open {
     overflow: hidden;
   }
   
-  /* Media query para móvil */
   @media (max-width: 991px) {
     .menu-toggle {
       display: flex;
     }
   
-    /* Estilo para el menú principal en móvil */
     .menu-principal {
       position: fixed;
       top: 0;
-      right: -300px; /* Oculto por defecto */
+      right: -300px; 
       width: 280px;
       height: 100vh;
-      background-color: #fff; /* Cambia al color que prefieras */
+      background-color: #fff; 
       flex-direction: column;
       padding: 80px 20px 20px;
       transition: right 0.3s ease;
