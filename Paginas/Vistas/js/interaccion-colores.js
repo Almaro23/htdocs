@@ -176,7 +176,6 @@ document.querySelectorAll('.option').forEach(option => {
             }
         });
 
-        // Alternar la clase "open" en la opción clicada
         option.classList.toggle('open');
     });
 });

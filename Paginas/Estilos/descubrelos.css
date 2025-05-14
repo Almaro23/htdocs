@@ -3,14 +3,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
-  background-image: url('../../imagenes/fondo345.jpg');
-  background-repeat: no-repeat;
+  background-image: url('../../imagenes/fondo345.jpg') !important ;
+  background-repeat: repeat;
 }
 
 /* Barra de navegación principal */
