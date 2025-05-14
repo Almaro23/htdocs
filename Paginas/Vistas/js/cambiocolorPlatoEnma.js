@@ -111,14 +111,11 @@ function closeLightbox() {
 }
 
 
-// Función para cerrar el lightbox
 function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
 }
-// Para abrir el lightbox
 document.querySelector('.lightbox').classList.add('active');
 
-// Para cerrar el lightbox
 document.querySelector('.lightbox').classList.remove('active');
 function changeImage(color) {
     const colorNames = {

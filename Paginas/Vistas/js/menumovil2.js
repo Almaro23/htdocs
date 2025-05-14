@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   
-    // Opciones desplegables (paneles informativos)
     const options = document.querySelectorAll(".option");
     options.forEach(option => {
       option.addEventListener("click", () => {

@@ -7,14 +7,12 @@ const colorOptions = document.querySelectorAll('.color');
 // Iteramos sobre cada opción de color
 colorOptions.forEach(color => {
     color.addEventListener('click', () => {
-        // Obtenemos el color del atributo data-color o del estilo
         const selectedColor = color.dataset.color || color.style.backgroundColor;
         
         // Cambiar el fondo de la caja de color seleccionado
         selectedColorBox.style.backgroundColor = selectedColor;
 
-        // Buscar la imagen correspondiente al color
-        // Podemos usar el dataset.color para guardar el código hexadecimal exacto
+      
         const imageUrl = colorImages[color.dataset.color];
         if (imageUrl) {
             productImage.src = imageUrl;
@@ -23,7 +21,6 @@ colorOptions.forEach(color => {
             console.log('No se encontró imagen para el color:', selectedColor);
         }
 
-        // Efecto visual: Agrandar la caja temporalmente
         selectedColorBox.style.transform = 'scale(1.05)';
         setTimeout(() => {
             selectedColorBox.style.transform = 'scale(1)';
@@ -32,19 +29,15 @@ colorOptions.forEach(color => {
 });
 
 
-// Iteramos sobre cada opción de color
 colorOptions.forEach(color => {
     color.addEventListener('click', () => {
-        // Cambiar el fondo de la caja de color seleccionado
         selectedColorBox.style.backgroundColor = color.style.backgroundColor;
 
-        // Cambiar la imagen del producto según el color seleccionado
         const selectedColor = color.style.backgroundColor;
         if (colorImages[selectedColor]) {
             productImage.src = colorImages[selectedColor];
         }
 
-        // Efecto visual: Agrandar la caja temporalmente
         selectedColorBox.style.transform = 'scale(1.05)';
         setTimeout(() => {
             selectedColorBox.style.transform = 'scale(1)';
@@ -70,10 +63,6 @@ accordions.forEach(accordion => {
     });
 });
 
-//valoraciones en sobre nosotros
-//recogemos datos del formulario y los mostramos en la seccion de opiniones
-//las valoraciones nuestras see situan arriba de la seccion de opiniones
-//juego con if y else para completar los campos y validaciones tipicas
 
 document.getElementById("boton-valoracion").addEventListener("click", function() {
     document.getElementById("formulario-valoracion").style.display = "block";
@@ -115,8 +104,6 @@ document.getElementById("enviar-valoracion").addEventListener("click", function(
 });
 
 
-// .product-image
-//imagen durante un segundo aumenta con zoom y luego vuelve a lo original
 const productImages = document.querySelectorAll('.product-image');
 
 productImages.forEach(image => {
@@ -130,7 +117,7 @@ productImages.forEach(image => {
 });
 
 const swiper = new Swiper('.swiper-container', {
-    loop: true, // Opcional: habilitar el loop para que sea un carrusel infinito
+    loop: true, 
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
@@ -140,7 +127,7 @@ const swiper = new Swiper('.swiper-container', {
         clickable: true
     },
     autoplay: {
-        delay: 2500, // Tiempo entre cada cambio de imagen (en milisegundos)
+        delay: 2500, 
         disableOnInteraction: false
     }
 });
@@ -152,24 +139,21 @@ const lupaBtn = document.querySelector('.barra-busqueda button');
 const barraBusqueda = document.querySelector('.barra-busqueda');
 const searchInput = document.querySelector('#search-input');
 
-// Mostrar la barra de búsqueda cuando se hace clic en la lupa
 lupaBtn.addEventListener('click', function(event) {
     event.stopPropagation();  
     barraBusqueda.classList.toggle('show');  
     searchInput.focus();  
 });
 
-// Cerrar la barra de búsqueda si se hace clic fuera de ella
 document.addEventListener('click', function(event) {
     if (!barraBusqueda.contains(event.target) && !lupaBtn.contains(event.target)) {
-        barraBusqueda.classList.remove('show');  // Ocultar barra de búsqueda
+        barraBusqueda.classList.remove('show');  
     }
 });
 
 
 document.querySelectorAll('.option').forEach(option => {
     option.addEventListener('click', () => {
-        // Cerrar todos los otros paneles
         document.querySelectorAll('.option').forEach(otherOption => {
             if (otherOption !== option) {
                 otherOption.classList.remove('open');
@@ -182,7 +166,6 @@ document.querySelectorAll('.option').forEach(option => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Menú móvil toggle
     const menuToggle = document.createElement('button');
     menuToggle.className = 'menu-toggle';
     menuToggle.innerHTML = '☰';
@@ -198,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
             menuToggle.innerHTML = menuPrincipal.classList.contains('active') ? '✕' : '☰';
         });
         
-        // Cerrar menú al hacer clic fuera
+
         document.addEventListener('click', function(event) {
             if (!menuPrincipal.contains(event.target) && event.target !== menuToggle) {
                 menuPrincipal.classList.remove('active');
@@ -206,12 +189,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Submenús en móvil
         const menuDesplegables = document.querySelectorAll('.menu-desplegable');
         menuDesplegables.forEach(function(item) {
             const link = item.querySelector('a');
             
-            // Crear botón de toggle para submenús
             const toggleBtn = document.createElement('button');
             toggleBtn.className = 'submenu-toggle';
             toggleBtn.innerHTML = '+';
@@ -231,7 +212,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Barra de búsqueda toggle
     const searchToggle = document.createElement('button');
     searchToggle.className = 'search-toggle';
     searchToggle.innerHTML = '🔍';
@@ -250,7 +230,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Ajustar altura de tarjetas de artículos para uniformidad
     function adjustArticleCardHeight() {
         const cards = document.querySelectorAll('.tarjeta-articulo');
         const titles = document.querySelectorAll('.titulo-articulo');
@@ -268,19 +247,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            // Aplicar altura uniforme
             titles.forEach(title => title.style.height = maxHeight + 'px');
         } else {
-            // En móvil, dejar altura automática
             titles.forEach(title => title.style.height = 'auto');
         }
     }
     
-    // Ejecutar al cargar y al cambiar tamaño de ventana
     adjustArticleCardHeight();
     window.addEventListener('resize', adjustArticleCardHeight);
     
-    // Efecto parallax para la sección de bienvenida
     const bienvenida = document.querySelector('.bienvenida');
     if (bienvenida) {
         window.addEventListener('scroll', function() {
@@ -291,7 +266,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Animación de aparición al hacer scroll
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('.caracteristica, .catalogo, .tarjeta-articulo');
         
@@ -306,7 +280,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
     
-    // Aplicar estilos iniciales para animación
     const elementsToAnimate = document.querySelectorAll('.caracteristica, .catalogo, .tarjeta-articulo');
     elementsToAnimate.forEach(element => {
         element.style.opacity = '0';
@@ -314,7 +287,6 @@ document.addEventListener('DOMContentLoaded', function() {
         element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
     
-    // Ejecutar animación al cargar y al hacer scroll
     window.addEventListener('load', animateOnScroll);
     window.addEventListener('scroll', animateOnScroll);
 });
@@ -325,11 +297,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuPrincipal = document.querySelector('.menu-principal');
     const menuItems = document.querySelectorAll('.menu-principal > li.menu-desplegable');
     
-    // Toggle para el menú principal
     if (menuToggle && menuPrincipal) {
         menuToggle.addEventListener('click', function() {
             menuPrincipal.classList.toggle('active');
-            document.body.classList.toggle('menu-open'); // Para bloquear el scroll cuando el menú está abierto
+            document.body.classList.toggle('menu-open'); 
         });
     }
     
@@ -338,7 +309,6 @@ document.addEventListener("DOMContentLoaded", function() {
             if (window.innerWidth <= 991) {
                 if (e.target === item.querySelector('a') || e.target === item.querySelector('a > *')) {
                     e.preventDefault();
-                    // Cerrar todos los otros submenús
                     menuItems.forEach(otherItem => {
                         if (otherItem !== item) {
                             otherItem.classList.remove('active');
