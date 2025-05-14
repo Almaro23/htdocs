@@ -1094,11 +1094,7 @@ h2 {
     }
 }
 
-/* Añadir JavaScript para el menú móvil */
 
-/* Estilos adicionales para el menú móvil */
-
-/* Estilo para el botón de menú móvil */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -1148,7 +1144,7 @@ h2 {
     }
   
     .menu-principal.active {
-      right: 0; /* Visible cuando está activo */
+      right: 0;
     }
   
     .menu-principal li {
@@ -1157,7 +1153,7 @@ h2 {
     }
   
     .menu-principal a {
-      color: #000; /* Asegúrate de que sea visible en el fondo */
+      color: #000; 
       padding: 12px 0;
     }
   
@@ -1168,7 +1164,7 @@ h2 {
       box-shadow: none;
       display: none;
       opacity: 1;
-      background-color: #f5f5f5; /* Un tono más claro para diferenciar */
+      background-color: #f5f5f5; 
       border-radius: 5px;
       margin-top: 5px;
       padding: 5px 0;
@@ -1198,7 +1194,6 @@ h2 {
       content: "-";
     }
   
-    /* Ajustes para la barra de búsqueda */
     .barra-busqueda {
       position: absolute;
       top: 70px;
@@ -1217,7 +1212,6 @@ h2 {
       visibility: visible;
     }
   
-    /* Botón para mostrar/ocultar la barra de búsqueda */
     .search-toggle {
       display: block;
       background: none;
@@ -1229,7 +1223,6 @@ h2 {
     }
   }
   
-  /* Ajustes para pantallas muy pequeñas */
   @media (max-width: 480px) {
     .menu-principal {
       width: 250px;
@@ -1241,9 +1234,7 @@ h2 {
     }
   }
   
-  /* Corrección para el menú móvil */
 @media (max-width: 991px) {
-    /* Asegurarse de que el botón de menú sea visible */
     .menu-toggle {
       display: flex;
       flex-direction: column;
@@ -1255,7 +1246,7 @@ h2 {
       cursor: pointer;
       padding: 0;
       z-index: 1000;
-      position: relative; /* Asegurar que sea visible */
+      position: relative; 
     }
     
     .menu-toggle span {
@@ -1267,29 +1258,27 @@ h2 {
       transition: all 0.3s ease;
     }
     
-    /* Estilo unificado para el menú principal en móvil */
+  
     .menu-principal {
       position: fixed;
       top: 0;
-      right: -300px; /* Oculto por defecto */
+      right: -300px; 
       width: 280px;
       height: 100vh;
-      background-color: #fff; /* Color de fondo unificado */
+      background-color: #fff; 
       flex-direction: column;
       padding: 80px 20px 20px;
       transition: right 0.3s ease;
       box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
       z-index: 999;
       overflow-y: auto;
-      display: flex; /* Asegurar que se muestre como flex */
+      display: flex; 
     }
     
-    /* Cuando está activo, mostrar el menú */
     .menu-principal.active {
       right: 0;
     }
     
-    /* Asegurar que los elementos del menú sean visibles */
     .menu-principal li {
       margin: 10px 0;
       width: 100%;
@@ -1304,9 +1293,8 @@ h2 {
     }
   }
 
-  /* Estilos para el botón de menú móvil */
 .menu-toggle {
-    display: none; /* Oculto en escritorio */
+    display: none; 
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -1328,7 +1316,6 @@ h2 {
     transition: all 0.3s ease;
   }
   
-  /* Botón de búsqueda para móvil */
   .search-toggle {
     display: none;
     background: none;
@@ -1338,9 +1325,7 @@ h2 {
     margin-left: 10px;
   }
   
-  /* Media query para móvil */
   @media (max-width: 991px) {
-    /* Mostrar botón de menú y ocultar menú principal */
     .menu-toggle {
       display: flex;
     }
@@ -1349,7 +1334,6 @@ h2 {
       display: block;
     }
   
-    /* Ajustes para la barra de navegación */
     .barra-navegacion {
       padding: 10px 20px;
       position: relative;
@@ -1358,11 +1342,10 @@ h2 {
       align-items: center;
     }
     
-    /* Estilo para el menú principal en móvil */
     .menu-principal {
       position: fixed;
       top: 0;
-      right: -300px; /* Oculto por defecto */
+      right: -300px; 
       width: 280px;
       height: 100vh;
       background-color: #fff;
@@ -1376,7 +1359,7 @@ h2 {
     }
     
     .menu-principal.active {
-      right: 0; /* Visible cuando está activo */
+      right: 0; 
     }
     
     .menu-principal li {
@@ -1540,19 +1523,18 @@ h2 {
 .color {
     width: 60px;
     height: 60px;
-    border-radius: 50%; /* Hace que sean redondos */
+    border-radius: 50%;
     cursor: pointer;
-    border: 2px solid #ccc; /* Opcional: da un borde fino para que destaquen */
+    border: 2px solid #ccc; 
     transition: transform 0.2s ease;
 }
 
 .color:hover {
     transform: scale(1.1);
-    border-color: #999; /* Efecto sutil al pasar el ratón */
+    border-color: #999; 
 }
 
 
-/* Universal box-sizing y correcciones para evitar desbordes */
 *,
 *::before,
 *::after {
@@ -1582,7 +1564,7 @@ h2 {
 
 .swiper-container {
     width: 100%;
-    max-width: 800px; /* puedes ajustar este valor */
+    max-width: 800px; 
     margin: 0 auto;
     margin-top: 45px;
 }
@@ -1591,13 +1573,13 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px; /* Altura fija para uniformidad */
+    height: 500px; 
     overflow: hidden;
 }
 
 .product-image {
     width: 100%;
-    max-width: 750px; /* aumenta este valor para hacerlas más grandes */
+    max-width: 750px; 
     height: auto;
     object-fit: cover;
     border-radius: 8px;
@@ -1638,3 +1620,8 @@ h2 {
     .zoom-block:hover {
         transform: scale(1.1);
     }
+
+    /* Botones flecha */
+
+
+
