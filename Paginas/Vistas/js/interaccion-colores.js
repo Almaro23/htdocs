@@ -154,9 +154,9 @@ const searchInput = document.querySelector('#search-input');
 
 // Mostrar la barra de búsqueda cuando se hace clic en la lupa
 lupaBtn.addEventListener('click', function(event) {
-    event.stopPropagation();  // Evitar que el clic se propague
-    barraBusqueda.classList.toggle('show');  // Alternar visibilidad
-    searchInput.focus();  // Focalizar el campo de texto
+    event.stopPropagation();  
+    barraBusqueda.classList.toggle('show');  
+    searchInput.focus();  
 });
 
 // Cerrar la barra de búsqueda si se hace clic fuera de ella
@@ -334,12 +334,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     
-    // Toggle para submenús en móvil
     menuItems.forEach(item => {
         item.addEventListener('click', function(e) {
-            // Solo en vista móvil
             if (window.innerWidth <= 991) {
-                // Si el clic fue directamente en el enlace principal (no en un submenú)
                 if (e.target === item.querySelector('a') || e.target === item.querySelector('a > *')) {
                     e.preventDefault();
                     // Cerrar todos los otros submenús
@@ -348,14 +345,12 @@ document.addEventListener("DOMContentLoaded", function() {
                             otherItem.classList.remove('active');
                         }
                     });
-                    // Toggle el submenú actual
                     item.classList.toggle('active');
                 }
             }
         });
     });
     
-    // Cerrar el menú al hacer clic fuera
     document.addEventListener('click', function(e) {
         if (menuPrincipal && menuPrincipal.classList.contains('active')) {
             if (!menuPrincipal.contains(e.target) && e.target !== menuToggle) {
@@ -365,14 +360,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
     
-    // Cerrar el menú al redimensionar la ventana a tamaño desktop
     window.addEventListener('resize', function() {
         if (window.innerWidth > 991) {
             if (menuPrincipal && menuPrincipal.classList.contains('active')) {
                 menuPrincipal.classList.remove('active');
                 document.body.classList.remove('menu-open');
             }
-            // Eliminar la clase active de todos los elementos del menú
             menuItems.forEach(item => {
                 item.classList.remove('active');
             });
@@ -404,7 +397,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Submenu toggle for mobile
   const menuItems = document.querySelectorAll(".menu-principal > li.menu-desplegable")
 
   menuItems.forEach((item) => {
