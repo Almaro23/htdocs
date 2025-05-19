@@ -2,8 +2,6 @@
 const colorOptions = document.querySelectorAll('.color');
 
 
-
-
 // Iteramos sobre cada opción de color
 colorOptions.forEach(color => {
     color.addEventListener('click', () => {
