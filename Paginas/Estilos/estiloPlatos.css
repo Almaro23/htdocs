@@ -1344,10 +1344,10 @@ h2 {
     
     .menu-principal {
       position: fixed;
-      top: 0;
+      top: 40px;
       right: -300px; 
       width: 280px;
-      height: 100vh;
+      height: 50vh;
       background-color: #fff;
       flex-direction: column;
       padding: 80px 20px 20px;
