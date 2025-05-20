@@ -1209,6 +1209,8 @@ main {
       border-radius: 5px;
       margin-top: 5px;
       padding: 5px 0;
+        height: 7cm;
+
     }
     
     .menu-principal li.active > .submenu {
@@ -1264,6 +1266,9 @@ main {
     gap: 40px;
     margin: 0;
     padding: 0;
+    height: auto;             /* No fijes la altura al 100% de la pantalla */
+
+    overflow-y: visible;  
 }
 
 .menu-principal a {

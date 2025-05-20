@@ -467,6 +467,7 @@ a {
     border-radius: 5px;
     margin-top: 5px;
     padding: 5px 0;
+    height: 7cm;
   }
   
   .menu-principal li:hover > .submenu {
@@ -478,8 +479,9 @@ a {
   }
   
   .submenu a {
-    padding: 10px 15px;
+    padding: 5px 15px;
     border-bottom: 1px solid #eee;
+    ;
   }
   
   .submenu a:last-child {

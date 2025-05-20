@@ -1213,6 +1213,8 @@ body.menu-open {
       border-radius: 5px;
       margin-top: 5px;
       padding: 5px 0;
+          height: 7cm;
+
     }
   
     .menu-principal li.active > .submenu {
@@ -1499,7 +1501,7 @@ body.menu-open {
 .menu-principal {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 42px;
     margin: 0;
     padding: 40px;
     justify-content: flex-end; /* Este alineará el menú a la derecha */
@@ -1648,3 +1650,4 @@ body.menu-open {
     background-color: #555;
     transform: translateY(-3px);
 }
+

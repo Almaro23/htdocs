@@ -1274,6 +1274,8 @@ html, body {
       border-radius: 5px;
       margin-top: 5px;
       padding: 5px 0;
+          height: 7cm;
+
     }
     
     .menu-principal li.active > .submenu {
@@ -1636,4 +1638,10 @@ html, body {
 .boton-subir:hover {
     background-color: #555;
     transform: translateY(-3px);
+}
+.menu-principal{
+     height: auto;             
+    max-height: 100vh;      
+    overflow-y: visible;  
+
 }
