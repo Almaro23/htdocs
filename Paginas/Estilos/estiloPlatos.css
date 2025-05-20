@@ -324,8 +324,8 @@ details[open] {
 }
 
 .redes-sociales img {
-    width: 50px; 
-    height: 50px;
+    width: 40px; 
+    height: 40px;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: brightness(0) invert(1); 
 }
@@ -522,16 +522,22 @@ h2 {
 }
 
 .properties-container {
-    width: 30%; /* Las propiedades ocupan el 35% */
-    padding: 5px;
+    width: 100%; /* Las propiedades ocupan el 35% */
+    padding: 2px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 9px 6px rgba(0, 0, 0, 0.1);
     font-size: 13px;
     
 }
 
 
-  
+  .product-content {
+    display: flex;
+    flex-direction: column; /* 👉 los hijos se colocan uno debajo del otro */
+    align-items: center; /* opcional: centra el contenido horizontalmente */
+    gap: 60px; /* espacio entre carrusel y propiedades */
+}
+
 
   .lightbox {
     position: fixed;
@@ -1598,16 +1604,18 @@ h2 {
 .menu-principal li {
     margin: 0 5px;
     position: relative;
+    text-align: center;
+
 }
-.menu-principal,
-.menu-principal li,
 .menu-principal .submenu,
 .menu-principal .submenu li {
     list-style: none;
     margin: 0;
     padding: 0;
-}
+    text-decoration: none;
+    margin-top:17px;
 
+}
 
    .zoom-block {
         border: 4px solid #000;
@@ -1625,3 +1633,36 @@ h2 {
 
 
 
+ .submenu a {
+        color: #000000;
+        border-bottom: none !important;
+    }
+
+
+
+
+
+
+
+    .boton-subir {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333; /* color oscuro elegante */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-subir:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}

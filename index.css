@@ -99,7 +99,6 @@ main, .transicion, .caracteristicas, .articulos-recientes, .compras-seguras, .ub
     display: block;
     font-size: 14px;
     font-weight: 500;
-    border-bottom: 1px solid #1a1a1a !important;
     transition: background-color 0.3s ease;
 }
 
@@ -381,8 +380,8 @@ main, .transicion, .caracteristicas, .articulos-recientes, .compras-seguras, .ub
 }
 
 .redes-sociales img {
-    width: 50px; 
-    height: 50px;
+    width: 40px; 
+    height: 40px;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: brightness(0) invert(1); 
 }
@@ -888,8 +887,8 @@ body.menu-open {
     }
     
     .redes-sociales img {
-        width: 45px;
-        height: 45px;
+        width: 25px;
+        height: 25px;
     }
     
     .grid-articulos {
@@ -972,8 +971,8 @@ body.menu-open {
     }
     
     .redes-sociales img {
-        width: 30px;
-        height: 30px;
+        width: 40px !important;
+        height: 40px !important;
     }
     
     .mapa-footer ul li a {
@@ -1053,7 +1052,7 @@ body.menu-open {
     
     .submenu a {
         color: #000000;
-        border-bottom: 1px solid #e2e2e2;
+        border-bottom: none !important;
     }
     
     
@@ -1093,7 +1092,18 @@ body.menu-open {
         transform: none;
         box-shadow: none;
     }
-    
+.menu-principal,
+.menu-principal li,
+.menu-principal .submenu,
+.menu-principal .submenu li {
+    list-style: none;
+    margin: 0;
+    padding: 2px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
     .caracteristica:hover,
     .catalogo:hover {
         transform: none;
@@ -1212,7 +1222,6 @@ body.menu-open {
   
     .submenu a {
       padding: 10px 15px;
-      border-bottom: 1px solid #eee;
     }
   
     .submenu a:last-child {
@@ -1442,7 +1451,6 @@ body.menu-open {
     
     .submenu a {
       padding: 10px 15px;
-      border-bottom: 1px solid #eee;
     }
     
     .submenu a:last-child {
@@ -1539,18 +1547,17 @@ body.menu-open {
 }
 
 
-
-
-
 .menu-principal,
 .menu-principal li,
 .menu-principal .submenu,
 .menu-principal .submenu li {
     list-style: none;
     margin: 0;
-    padding: 0;
-    text-align: center;
+    padding: 2px;
+    text-decoration: none;
+    margin-top: 3px;
 }
+
 
 .articulos-recientes {
     background-color: #f9f9f9;
@@ -1617,3 +1624,25 @@ body.menu-open {
     justify-content: flex-start;
 }
 
+.boton-subir {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333; /* color oscuro elegante */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-subir:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
