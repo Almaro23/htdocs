@@ -1666,3 +1666,28 @@ h2 {
     background-color: #555;
     transform: translateY(-3px);
 }
+
+
+.texturas-flex {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* importante para permitir que bajen */
+}
+
+.texturas-flex > div {
+    flex: 1 1 200px; /* ancho mínimo de cada bloque */
+    max-width: 300px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .texturas-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texturas-flex > div {
+        max-width: 90%;
+    }
+}
