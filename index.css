@@ -1628,7 +1628,7 @@ body.menu-open {
 
 .boton-subir {
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     right: 30px;
     background-color: #333; /* color oscuro elegante */
     color: white;
@@ -1642,7 +1642,7 @@ body.menu-open {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     z-index: 999;
     transition: background-color 0.3s ease, transform 0.3s ease;
-        display: none; 
+    display: none; 
 
 }
 
