@@ -360,6 +360,7 @@ a {
   .product-gallery {
     padding: 50px;
     gap: 30px;
+    
   }
   
   .product {
@@ -1103,4 +1104,13 @@ a {
 .product-gallery p {
     font-size: 17px; /* opcional, ajusta según lo que necesites */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+/* Responsive: Espaciado vertical entre productos en móvil */
+@media (max-width: 768px) {
+    .product {
+        margin-bottom: 40px; /* espacio debajo de cada producto */
+    }
 }
