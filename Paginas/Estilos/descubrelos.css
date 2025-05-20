@@ -207,7 +207,7 @@ body.menu-open {
   gap: 30px;
   padding: 50px;
   flex-wrap: wrap;
-    font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', serif;
 
 }
 
@@ -1113,5 +1113,21 @@ a {
     .product {
         margin-bottom: 40px; /* espacio debajo de cada producto */
         margin-top: 20px;
+    }
+}
+
+
+
+
+
+.product {
+    width: 450px; 
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: 80%; 
+        margin-bottom: 30px; 
     }
 }
