@@ -154,3 +154,22 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(contenedorResultados);
     }
 });
+
+
+  const botonSubir = document.getElementById("botonSubir");
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const alturaTotal = document.documentElement.scrollHeight - window.innerHeight;
+
+    if (scrollTop / alturaTotal >= 0.1) {
+      botonSubir.style.display = "block";
+    } else {
+      botonSubir.style.display = "none";
+    }
+  });
+
+  botonSubir.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+

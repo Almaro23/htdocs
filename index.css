@@ -1555,6 +1555,7 @@ body.menu-open {
     padding: 2px;
     text-decoration: none;
     margin-top: 3px;
+    text-align: center;
 }
 
 
@@ -1639,6 +1640,8 @@ body.menu-open {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     z-index: 999;
     transition: background-color 0.3s ease, transform 0.3s ease;
+        display: none; 
+
 }
 
 .boton-subir:hover {
