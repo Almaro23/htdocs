@@ -347,7 +347,6 @@ main, .transicion, .caracteristicas, .articulos-recientes, .compras-seguras, .ub
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
 }
 
 .informacion-footer {
@@ -393,7 +392,7 @@ main, .transicion, .caracteristicas, .articulos-recientes, .compras-seguras, .ub
 
 .mapa-footer {
     flex: 1;
-    margin: 0 20px;
+    margin: 0 10px;
     text-align: left;
 }
 
