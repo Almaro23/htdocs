@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 a {
@@ -150,8 +150,9 @@ main {
     align-items: center;
     gap: 40px;
     padding: 40px 10%;
-    margin: 40px 0;
+    margin: 0px 0;
     background-color: #ffffff;
+    margin-top: 8px;
 }
 
 .product-info {
