@@ -1399,7 +1399,7 @@ main {
     justify-content: flex-end; /* Este alineará el menú a la derecha */
     /* margin-top: -3vh !important; */
 }
-.logo {
+.logo1 {
       width: 300px; /* Ajusta el tamaño de la imagen */
       height: auto; /* Mantiene la proporción original */
       display: block;
