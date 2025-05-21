@@ -688,6 +688,7 @@ h2 {
         border-radius: 5px;
         margin-top: 5px;
         padding: 5px 0;
+         height: 34vh;
     }
     
     .menu-principal li:hover > .submenu {
@@ -1173,6 +1174,7 @@ h2 {
       border-radius: 5px;
       margin-top: 5px;
       padding: 5px 0;
+       height: 34vh;
     }
   
     .menu-principal li.active > .submenu {
