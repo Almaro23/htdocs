@@ -591,7 +591,6 @@ h2 {
   
 
 
-
 /* RESPONSIVE DESIGN */
 
 /* Pantallas grandes (1200px y más) */
@@ -659,6 +658,7 @@ h2 {
         z-index: 999;
         overflow-y: auto;
         display: flex;
+        padding-bottom: 50px; /* Espacio adicional al final */
     }
     
     .menu-principal.active {
@@ -677,18 +677,22 @@ h2 {
         color: #000;
     }
     
+    /* Solución definitiva para submenús en móvil */
     .submenu {
         position: static;
         width: 100%;
         box-shadow: none;
         display: none;
         opacity: 1;
-        padding-left: 15px;
         background-color: #f5f5f5;
         border-radius: 5px;
         margin-top: 5px;
         padding: 5px 0;
-         height: 34vh;
+        /* Eliminar altura fija */
+        height: auto;
+        max-height: none;
+        /* Asegurar que los elementos estén contenidos */
+        overflow: visible;
     }
     
     .menu-principal li:hover > .submenu {
@@ -701,11 +705,18 @@ h2 {
     
     .submenu .submenu {
         left: 0;
+        margin-left: 10px;
+        background-color: #eaeaea;
+        height: auto;
+        max-height: none;
     }
     
     .submenu a {
         padding: 10px 15px;
         border-bottom: 1px solid #eee;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .submenu a:last-child {
@@ -763,8 +774,6 @@ h2 {
     .contenido-footer {
         flex-direction: column;
     }
-    
-    
     
     .informacion-footer, 
     .redes-sociales, 
@@ -996,6 +1005,16 @@ h2 {
         font-size: 14px;
         padding: 6px 10px;
     }
+    
+    /* Ajustes adicionales para submenús en pantallas muy pequeñas */
+    .submenu {
+        padding: 3px 0;
+    }
+    
+    .submenu a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
 }
 
 /* Soporte para modo oscuro del sistema */
@@ -1163,7 +1182,7 @@ h2 {
       padding: 12px 0;
     }
   
-    /* Submenús en móvil */
+    /* Submenús en móvil - SOLUCIÓN ACTUALIZADA */
     .submenu {
       position: static;
       width: 100%;
@@ -1174,7 +1193,11 @@ h2 {
       border-radius: 5px;
       margin-top: 5px;
       padding: 5px 0;
-       height: 34vh;
+      /* Eliminar altura fija */
+      height: auto;
+      max-height: none;
+      /* Asegurar que los elementos estén contenidos */
+      overflow: visible;
     }
   
     .menu-principal li.active > .submenu {
@@ -1184,6 +1207,9 @@ h2 {
     .submenu a {
       padding: 10px 15px;
       border-bottom: 1px solid #eee;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
     }
   
     .submenu a:last-child {
@@ -1280,6 +1306,7 @@ h2 {
       z-index: 999;
       overflow-y: auto;
       display: flex; 
+      padding-bottom: 50px; /* Espacio adicional al final */
     }
     
     .menu-principal.active {
@@ -1297,6 +1324,24 @@ h2 {
       padding: 12px 0;
       display: block;
       width: 100%;
+    }
+    
+    /* Submenús en móvil - SOLUCIÓN ACTUALIZADA */
+    .submenu {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+      display: none;
+      opacity: 1;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      margin-top: 5px;
+      padding: 5px 0;
+      /* Eliminar altura fija */
+      height: auto;
+      max-height: none;
+      /* Asegurar que los elementos estén contenidos */
+      overflow: visible;
     }
   }
 
@@ -1380,7 +1425,7 @@ h2 {
       width: 100%;
     }
     
-    /* Submenús en móvil */
+    /* Submenús en móvil - SOLUCIÓN ACTUALIZADA */
     .submenu {
       position: static;
       width: 100%;
@@ -1391,8 +1436,11 @@ h2 {
       border-radius: 5px;
       margin-top: 5px;
       padding: 5px 0;
-    height: 34vh;
-
+      /* Eliminar altura fija */
+      height: auto;
+      max-height: none;
+      /* Asegurar que los elementos estén contenidos */
+      overflow: visible;
     }
     
     .menu-principal li.active > .submenu {
@@ -1402,6 +1450,9 @@ h2 {
     .submenu a {
       padding: 10px 15px;
       border-bottom: 1px solid #eee;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
     }
     
     .submenu a:last-child {
@@ -1417,38 +1468,35 @@ h2 {
     
     .menu-desplegable.active > a:after {
       content: "-";
-
     }
 
     /* Tablet */
-@media (max-width: 768px) {
-    .propiedades-list {
-        gap: 15px;
+    @media (max-width: 768px) {
+        .propiedades-list {
+            gap: 15px;
+        }
+
+        .propiedad {
+            flex: 1 1 45%;
+        }
     }
 
-    .propiedad {
-        flex: 1 1 45%;
+    /* Móvil */
+    @media (max-width: 480px) {
+        .propiedad {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+
+        .propiedad img {
+            max-width: 60px;
+        }
+
+        .propiedad p {
+            font-size: 0.8rem;
+        }
     }
 }
-
-/* Móvil */
-@media (max-width: 480px) {
-    .propiedad {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .propiedad img {
-        max-width: 60px;
-    }
-
-    .propiedad p {
-        font-size: 0.8rem;
-    }
-}
-
-}
-
 
 
 /* NAVBAR */
@@ -1693,8 +1741,11 @@ h2 {
     .texturas-flex > div {
         max-width: 90%;
     }
+
+    
 }
 .menu-principal{
         overflow-y: visible;  
 
 }
+
