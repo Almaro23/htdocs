@@ -12,6 +12,7 @@ body {
   background-color: #f4f4f4;
   background-image: url('../../imagenes/fondo345.jpg') !important ;
   background-repeat: repeat;
+  overflow-x: hidden;
 }
 
 /* Barra de navegación principal */
@@ -458,17 +459,20 @@ a {
   
   /* Submenús en móvil */
   .submenu {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    display: none;
-    opacity: 1;
-    background-color: #f5f5f5;
-    border-radius: 5px;
-    margin-top: 5px;
-    padding: 5px 0;
-    height: 7cm;
-  }
+  position: static;
+  width: 100%;
+  box-shadow: none;
+  display: none;
+  opacity: 1;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px 0;
+  max-height: 70vh;
+  overflow-y: auto;
+   box-sizing: border-box;
+}
+
   
   .menu-principal li:hover > .submenu {
     display: none;
