@@ -678,3 +678,7 @@ html.menu-open {
     background-color: #555;
     transform: translateY(-3px);
 }
+.menu-principal a:hover {
+    transform: none;
+  box-shadow: none;
+}

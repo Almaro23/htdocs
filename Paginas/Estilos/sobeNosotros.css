@@ -104,11 +104,6 @@ main {
     position: relative;
 }
 
-.menu-principal a:hover {
-    background-color: #e2e2e2;
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
 
 /* Submenú */
 .submenu {
@@ -128,7 +123,6 @@ main {
     display: block;
     opacity: 1;
 }
-
 .submenu li {
     position: relative;
 }
@@ -1166,21 +1160,20 @@ main {
       align-items: center;
     }
     
-    /* Estilo para el menú principal en móvil */
+   /* Estilo para el menú principal en móvil */
     .menu-principal {
-      position: fixed;
-      top: 40px;
-      right: -300px; /* Oculto por defecto */
-      width: 280px;
-      height: 50vh;
-      background-color: #fff;
-      flex-direction: column;
-      padding: 80px 20px 20px;
-      transition: right 0.3s ease;
-      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-      z-index: 999;
-      overflow-y: auto;
-      display: flex;
+    position: fixed;
+    top: 5vh;
+    right: -300px;
+    width: 280px;
+    height: 50vh;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 80px 20px 20px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    display: flex;
     }
     
     .menu-principal.active {
@@ -1188,7 +1181,7 @@ main {
     }
     
     .menu-principal li {
-      margin: 10px 0;
+      margin: 3px 0;
       width: 100%;
     }
     
@@ -1392,3 +1385,17 @@ main {
 
 
 
+.menu-principal a:hover {
+    transform: none;
+  box-shadow: none;
+}
+/* MENÚ PRINCIPAL A LA DERECHA */
+.menu-principal {
+    display: flex;
+    list-style: none;
+    gap: 0px;
+    margin: 0;
+    padding: -10px;
+    justify-content: flex-end; /* Este alineará el menú a la derecha */
+    /* margin-top: -3vh !important; */
+}

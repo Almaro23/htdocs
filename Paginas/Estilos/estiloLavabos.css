@@ -194,7 +194,7 @@ main {
 }
 
 .spec-item {
-    width: 45%;
+    width: 55%;
     margin-bottom: 10px;
 }
 
@@ -526,7 +526,7 @@ html, body {
         top: 40px;
         right: -300px;
         width: 280px;
-        height: 50vh;
+        height: 30vh;
         background-color: #fff;
         flex-direction: column;
         padding: 80px 20px 20px;
@@ -1011,7 +1011,7 @@ html, body {
       top: 0;
       right: -300px; 
       width: 280px;
-      height: 100vh;
+      height: 50vh;
       background-color: #fff; 
       flex-direction: column;
       padding: 80px 20px 20px;
@@ -1147,7 +1147,7 @@ html, body {
       top: 0;
       right: -300px; /* Oculto por defecto */
       width: 280px;
-      height: 100vh;
+      height: 30vh;
       background-color: #fff; /* Color de fondo unificado */
       flex-direction: column;
       padding: 80px 20px 20px;
@@ -1422,7 +1422,6 @@ html, body {
 .menu-principal {
     display: flex;
     list-style: none;
-    gap: 40px;
     margin: 0;
     padding: 0;
 }
@@ -1645,4 +1644,9 @@ html, body {
     max-height: 100vh;      
     overflow-y: visible;  
 
+}
+
+.menu-principal a:hover {
+    transform: none;
+  box-shadow: none;
 }

@@ -1154,29 +1154,28 @@ h2 {
   
     /* Estilo para el menú principal en móvil */
     .menu-principal {
-      position: fixed;
-      top: 0;
-      right: -300px; /* Oculto por defecto */
-      width: 280px;
-      height: 100vh;
-      background-color: #fff; /* Cambia al color que prefieras */
-      flex-direction: column;
-      padding: 80px 20px 20px;
-      transition: right 0.3s ease;
-      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-      z-index: 999;
-      overflow-y: auto;
+    position: fixed !important;
+    top: 5vh !important;
+    right: -300px;
+    width: 280px;
+    height: 50vh;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 80px 20px 20px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    display: flex;
     }
-  
+    
     .menu-principal.active {
-      right: 0;
+      right: 0; /* Visible cuando está activo */
     }
-  
+    
     .menu-principal li {
-      margin: 10px 0;
+      margin: 3px 0 !important;
       width: 100%;
     }
-  
     .menu-principal a {
       color: #000; 
       padding: 12px 0;
@@ -1399,14 +1398,14 @@ h2 {
       top: 40px;
       right: -300px; 
       width: 280px;
-      height: 50vh;
+      height: 35vh;
       background-color: #fff;
       flex-direction: column;
       padding: 80px 20px 20px;
       transition: right 0.3s ease;
       box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
       z-index: 999;
-      overflow-y: auto;
+      overflow-y: none;
       display: flex;
     }
     
@@ -1519,7 +1518,6 @@ h2 {
 .menu-principal {
     display: flex;
     list-style: none;
-    gap: 40px;
     margin: 0;
     padding: 0;
 }
@@ -1747,5 +1745,10 @@ h2 {
 .menu-principal{
         overflow-y: visible;  
 
+}
+
+.menu-principal a:hover {
+    transform: none;
+  box-shadow: none;
 }
 

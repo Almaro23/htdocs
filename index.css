@@ -1405,7 +1405,7 @@ body.menu-open {
     /* Estilo para el menú principal en móvil */
     .menu-principal {
     position: fixed;
-    top: 0;
+    top: -15vh;
     right: -300px;
     width: 280px;
     height: 50vh;
@@ -1422,7 +1422,7 @@ body.menu-open {
     }
     
     .menu-principal li {
-      margin: 10px 0;
+      margin: 15px 0;
       width: 100%;
     }
  
@@ -1482,7 +1482,7 @@ body.menu-open {
     padding: 10px 40px;
     display: flex;
     justify-content: space-between; /* Este alineará el logo a la izquierda y el menú a la derecha */
-    align-items: center;
+    align-items: right;
     border-bottom: 1px solid #eaeaea;
     z-index: 1000;
 }
@@ -1501,10 +1501,11 @@ body.menu-open {
 .menu-principal {
     display: flex;
     list-style: none;
-    gap: 42px;
-    margin: 0;
-    padding: 40px;
+    gap: 0px;
+    padding: 10px;
     justify-content: flex-end; /* Este alineará el menú a la derecha */
+    /* margin-top: -18vh !important; */
+    ;
 }
 
 
@@ -1650,4 +1651,5 @@ body.menu-open {
     background-color: #555;
     transform: translateY(-3px);
 }
+
 
