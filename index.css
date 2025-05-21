@@ -1631,10 +1631,10 @@ body.menu-open {
     position: fixed;
     bottom: 20px;
     right: 30px;
-    background-color: #333; /* color oscuro elegante */
+    background-color: #333; 
     color: white;
     border: none;
-    border-radius: 50%;
+    border-radius: 80%;
     width: 45px;
     height: 45px;
     text-align: center;
