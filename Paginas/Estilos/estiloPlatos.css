@@ -1611,11 +1611,11 @@ h2 {
 }
 
 .lightbox img {
-    max-width: 70%;
+    max-width: 60%;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     margin-top: -140vh;
-    margin-left: 20vh; /* Asegura que la imagen esté en la parte superior */
+    margin-left: 24vh; /* Asegura que la imagen esté en la parte superior */
 }
 
 /* Responsive para pantallas grandes */
@@ -1660,7 +1660,7 @@ h2 {
     
     .lightbox img {
         max-width: 90%;
-        margin-top: -60vh;
+        margin-top: -570vh;
         margin-left: 2vh;
     }
 }
