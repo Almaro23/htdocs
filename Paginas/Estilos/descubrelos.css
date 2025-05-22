@@ -1191,3 +1191,13 @@ a {
     transform: translateY(-10px); /* Mueve la caja 10px hacia arriba */
   }
 }
+
+
+#titulo1{
+   font-family: 'Cinzel', serif;
+  margin-top: 35px;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-left: 32px;
+  margin-right: 32px;
+}
