@@ -1464,17 +1464,12 @@ body.menu-open {
 
 /* NAVBAR SUPERIOR FIJO */
 .barra-navegacion {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 40px;
-    display: flex;
-    justify-content: space-between; 
-    align-items: right;
-    border-bottom: 1px solid #eaeaea;
-    z-index: 1000;
+    background-color: #fff;
+    position: fixed;
 }
 
 /* LOGO A LA IZQUIERDA */
@@ -1544,12 +1539,21 @@ body.menu-open {
 .menu-principal .submenu li {
     list-style: none;
     margin: 0;
-    padding: 2px;
+    padding: 0px;
     text-decoration: none;
     margin-top: 3px;
     text-align: center;
 }
-
+/* MENÚ PRINCIPAL A LA DERECHA */
+.menu-principal {
+    display: flex;
+    list-style: none;
+    gap: 0px;
+    margin: 0;
+    padding: -10px;
+    justify-content: flex-end; /* Este alineará el menú a la derecha */
+    /* margin-top: -3vh !important; */
+}
 
 .articulos-recientes {
     background-color: #f9f9f9;
@@ -1648,3 +1652,5 @@ body.menu-open {
       display: block;
       margin: 20px auto;
   }
+
+
