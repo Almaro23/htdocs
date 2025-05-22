@@ -87,49 +87,14 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Submenú */
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color:#f4f6f6 !important; /* Fondo negro */ 
-    min-width: 200px;
-    border-radius: 5px;
-    opacity: 2;
-    transition: opacity 0.5s ease;
-  }
+
 
 .menu-principal li:hover > .submenu {
     display: block;
     opacity: 1;
 }
 
-.submenu li {
-    position: relative;
-}
 
-.submenu a {
-    color: #000000  !important; /* Texto blanco */
-    padding: 12px 20px;
-    text-decoration: none;
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    border-bottom: 1px solid #1a1a1a !important;
-    transition: background-color 0.3s ease;
-}
-
-.submenu a:hover {
-    padding-left: 20px;
-}
-
-
-.submenu .submenu {
-    top: 0;
-    left: 100%;
-    border-radius: 0 5px 5px 0;
-}
 
 .menu-desplegable > a {
     position: relative;
@@ -576,30 +541,6 @@ html.menu-open {
     margin-left: 4px;
 }
 
-.submenu {
-    display: none;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    background: rgb(255, 255, 255);
-    padding: 8px 0;
-    min-width: 180px;
-    z-index: 10;
-}
-
-.submenu li {
-    padding: 0;
-}
-
-.submenu a {
-    display: block;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 400;
-    color: #111;
-    transition: background-color 0.2s ease;
-}
-
 /* NAVBAR */
 .barra-navegacion {
     display: flex;
@@ -651,10 +592,7 @@ html.menu-open {
     border-radius: 5px;
     white-space: nowrap;
 }
- .submenu a {
-        color: #000000;
-        border-bottom: none !important;
-    }
+
 
 .boton-subir {
     position: fixed;
@@ -688,3 +626,14 @@ html.menu-open {
       display: block;
       margin: 20px auto;
   }
+
+  .menu-principal li:hover > .submenu {
+    display: none !important;
+    opacity: 0 !important;
+}
+.menu-principal .submenu {
+    display: none !important;
+    pointer-events: none;
+    opacity: 0 !important;
+    visibility: hidden;
+}

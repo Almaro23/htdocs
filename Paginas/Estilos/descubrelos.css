@@ -1172,3 +1172,22 @@ a {
     transform: scale(1.2); 
     filter: brightness(1.2) invert(1);
 }
+@media (max-width: 991px) {
+  .menu-principal li .submenu {
+    display: none;
+    top: 5vh;
+    left: 0;
+    height: 30vh;
+    background-color: #fff;
+    border-radius: 0;
+  }
+
+}
+ 
+@media (min-width: 992px) {
+  .submenu .submenu {
+    top: -10px;
+    left: 100%;
+    transform: translateY(-10px); /* Mueve la caja 10px hacia arriba */
+  }
+}

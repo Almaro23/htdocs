@@ -336,7 +336,7 @@ main, .transicion, .caracteristicas, .articulos-recientes, .compras-seguras, .ub
 .pie-pagina {
     background-color: #212121;
     color: #fff;
-    padding: 42px 10%;
+    padding: 70px 10%;
     text-align: center;
     font-family: 'Arial', sans-serif;
     border-top: 1px solid #444;
@@ -417,12 +417,12 @@ main, .transicion, .caracteristicas, .articulos-recientes, .compras-seguras, .ub
 }
 
 .copyright {
-    margin-top: 40px;
+    margin-top: 70px;
     font-size: 0.9rem;
     color: #b0b0b0;
     text-align: center;
     border-top: 1px solid #444;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 /* Estilos generales para las secciones */
@@ -1202,7 +1202,6 @@ body.menu-open {
       padding: 12px 0;
     }
   
-    /* Submenús en móvil */
     .submenu {
       position: static;
       width: 100%;
@@ -1269,7 +1268,6 @@ body.menu-open {
     }
   }
   
-  /* Ajustes para pantallas muy pequeñas */
   @media (max-width: 480px) {
     .menu-principal {
       width: 250px;
@@ -1281,9 +1279,8 @@ body.menu-open {
     }
   }
   
-  /* Corrección para el menú móvil */
 @media (max-width: 991px) {
-    /* Asegurarse de que el botón de menú sea visible */
+    
     .menu-toggle {
       display: flex;
       flex-direction: column;
@@ -1295,7 +1292,7 @@ body.menu-open {
       cursor: pointer;
       padding: 0;
       z-index: 1000;
-      position: relative; /* Asegurar que sea visible */
+      position: relative; 
     }
     
     .menu-toggle span {
@@ -1307,29 +1304,28 @@ body.menu-open {
       transition: all 0.3s ease;
     }
     
-    /* Estilo unificado para el menú principal en móvil */
+  
     .menu-principal {
       position: fixed;
       top: 0;
-      right: -300px; /* Oculto por defecto */
+      right: -300px;
       width: 280px;
       height: 100vh;
-      background-color: #fff; /* Color de fondo unificado */
+      background-color: #fff; 
       flex-direction: column;
       padding: 80px 20px 20px;
       transition: right 0.3s ease;
       box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
       z-index: 999;
       overflow-y: auto;
-      display: flex; /* Asegurar que se muestre como flex */
+      display: flex;
     }
     
-    /* Cuando está activo, mostrar el menú */
     .menu-principal.active {
       right: 0;
     }
     
-    /* Asegurar que los elementos del menú sean visibles */
+  
     .menu-principal li {
       margin: 10px 0;
       width: 100%;
@@ -1344,8 +1340,7 @@ body.menu-open {
     }
   }
 
-  /* Estilos para el botón de menú móvil */
-/* Botón de menú móvil */
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -1356,7 +1351,7 @@ body.menu-open {
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 1002; /* Z-index alto para estar por encima de todo */
+  z-index: 1002; 
   position: absolute;
   right: 20px;
   top: 25px;
@@ -1372,7 +1367,6 @@ body.menu-open {
 }
 
   
-  /* Botón de búsqueda para móvil */
   .search-toggle {
     display: none;
     background: none;
@@ -1382,9 +1376,7 @@ body.menu-open {
     margin-left: 10px;
   }
   
-  /* Media query para móvil */
   @media (max-width: 991px) {
-    /* Mostrar botón de menú y ocultar menú principal */
     .menu-toggle {
       display: flex;
     }
@@ -1393,7 +1385,6 @@ body.menu-open {
       display: block;
     }
   
-    /* Ajustes para la barra de navegación */
     .barra-navegacion {
       padding: 10px 20px;
       position: relative;
@@ -1402,7 +1393,6 @@ body.menu-open {
       align-items: center;
     }
     
-    /* Estilo para el menú principal en móvil */
     .menu-principal {
     position: fixed;
     top: -15vh;
@@ -1418,7 +1408,7 @@ body.menu-open {
     display: flex;
     }
     .menu-principal.active {
-      right: 0; /* Visible cuando está activo */
+      right: 0; 
     }
     
     .menu-principal li {
@@ -1481,7 +1471,7 @@ body.menu-open {
     background-color: #fff;
     padding: 10px 40px;
     display: flex;
-    justify-content: space-between; /* Este alineará el logo a la izquierda y el menú a la derecha */
+    justify-content: space-between; 
     align-items: right;
     border-bottom: 1px solid #eaeaea;
     z-index: 1000;
@@ -1503,8 +1493,7 @@ body.menu-open {
     list-style: none;
     gap: 0px;
     padding: 10px;
-    justify-content: flex-end; /* Este alineará el menú a la derecha */
-    /* margin-top: -18vh !important; */
+    justify-content: flex-end; 
     ;
 }
 
@@ -1654,8 +1643,8 @@ body.menu-open {
 
 
 .logo1 {
-      width: 300px; /* Ajusta el tamaño de la imagen */
-      height: auto; /* Mantiene la proporción original */
+      width: 300px; 
+      height: auto; 
       display: block;
       margin: 20px auto;
   }

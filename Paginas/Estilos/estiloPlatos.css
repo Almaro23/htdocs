@@ -1533,13 +1533,16 @@ h2 {
 
 /* DESPLEGABLES */
 .menu-desplegable {
-    position: relative;
-}
+    position: absolute;}
 
 .menu-desplegable > a::after {
     content: ' ▾';
     font-size: 0.8em;
     margin-left: 4px;
+
+}
+.menu-desplegable li{
+    margin-top: -20px;
 }
 
 .submenu {
@@ -1555,6 +1558,7 @@ h2 {
 
 .submenu li {
     padding: 0;
+    
 }
 
 .submenu a {
@@ -1605,17 +1609,28 @@ h2 {
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
     z-index: 9999;
-    padding-top: 70px; /* Espacio desde la parte superior */
-    overflow: auto;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.show {
+    display: flex;
 }
 
 .lightbox img {
-    max-width: 60%;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    margin-top: -140vh;
-    margin-left: 24vh; /* Asegura que la imagen esté en la parte superior */
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
 }
 
 /* Responsive para pantallas grandes */
@@ -1646,9 +1661,9 @@ h2 {
     }
     
     .lightbox img {
-        max-width: 90%;
-        margin-top: -440vh;
-        margin-left: 3vh;
+        max-width: 100%;
+        margin-top: 10vh;
+        margin-left: 0.5vh;
     }
 }
 
@@ -1733,7 +1748,16 @@ h2 {
     .zoom-block:hover {
         transform: scale(1.1);
     }
+.zoom-block1 {
+        border-radius: 15px;
+        overflow: hidden;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
 
+    .zoom-block1:hover {
+        transform: scale(1.1);
+    }
     /* Botones flecha */
 
 
@@ -1781,7 +1805,7 @@ h2 {
 }
 
 .texturas-flex > div {
-    flex: 1 1 200px; /* ancho mínimo de cada bloque */
+    flex: 1 1 170px; /* ancho mínimo de cada bloque */
     max-width: 300px;
 }
 
@@ -1814,3 +1838,24 @@ h2 {
       display: block;
       margin: 20px auto;
   }
+
+
+  @media (max-width: 991px) {
+  .menu-principal li .submenu {
+    display: none;
+    top: 5vh;
+    left: 0;
+    height: 20vh;
+    background-color: #fff;
+    border-radius: 0;
+  }
+
+}
+ 
+@media (min-width: 992px) {
+  .submenu .submenu {
+    top: -10px;
+    left: 100%;
+    transform: translateY(-10px); /* Mueve la caja 10px hacia arriba */
+  }
+}

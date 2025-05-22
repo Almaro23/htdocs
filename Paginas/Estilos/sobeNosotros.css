@@ -1405,3 +1405,21 @@ main {
       display: block;
       margin: 20px auto;
   }
+
+  /* Estilos para móviles */
+@media (max-width: 768px) {
+  .sobre-nosotros {
+    width: 110%; /* Esto asegura que ocupe todo el ancho de la pantalla en móviles */
+    padding: 10px; /* Puedes ajustar el padding si es necesario */
+    margin-left: -15px;
+  }
+}
+
+/* Para móviles o pantallas más pequeñas */
+@media (max-width: 768px) {
+  .contacto-box {
+    width: 90%; /* O el tamaño que consideres necesario */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
