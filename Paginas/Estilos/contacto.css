@@ -1684,7 +1684,7 @@ box-sizing: border-box;
 .menu-principal {
     display: flex;
     list-style: none;
-    gap: 10px;
+    gap: 0px;
     margin: 0;
     padding: -10px;
     justify-content: flex-end; /* Este alineará el menú a la derecha */
