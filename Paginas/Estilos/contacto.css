@@ -1684,7 +1684,7 @@ box-sizing: border-box;
 .menu-principal {
     display: flex;
     list-style: none;
-    gap: 0px;
+    gap: 10px;
     margin: 0;
     padding: -10px;
     justify-content: flex-end; /* Este alineará el menú a la derecha */
@@ -1741,3 +1741,25 @@ box-sizing: border-box;
 }
 
 
+.mapa-footer ul {
+    columns: 2; /* Divide en dos columnas */
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+.mapa-footer ul li {
+    margin-bottom: 10px; /* Espacio entre elementos */
+}
+
+.mapa-footer ul a {
+    text-decoration: none;
+    color: #333; /* Puedes cambiar este color según tu diseño */
+    transition: color 0.3s ease;
+}
+
+.mapa-footer ul a:hover {
+    color: #007BFF; /* Cambia el color al pasar el mouse */
+}

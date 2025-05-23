@@ -246,8 +246,8 @@ main {
 }
 
 .redes-sociales img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: brightness(0) invert(1);
 }
@@ -1421,4 +1421,27 @@ main {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.mapa-footer ul {
+    columns: 2; /* Divide en dos columnas */
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+.mapa-footer ul li {
+    margin-bottom: 10px; /* Espacio entre elementos */
+}
+
+.mapa-footer ul a {
+    text-decoration: none;
+    color: #333; /* Puedes cambiar este color según tu diseño */
+    transition: color 0.3s ease;
+}
+
+.mapa-footer ul a:hover {
+    color: #007BFF; /* Cambia el color al pasar el mouse */
 }

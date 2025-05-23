@@ -1859,3 +1859,22 @@ h2 {
     transform: translateY(-10px); /* Mueve la caja 10px hacia arriba */
   }
 }
+.mapa-footer ul {
+    column-count: 2; /* Fuerza solo 2 columnas */
+    column-gap: 30px; /* Espacio entre columnas (ajustable) */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.mapa-footer ul a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+
+
+
