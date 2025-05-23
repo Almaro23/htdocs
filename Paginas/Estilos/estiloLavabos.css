@@ -2090,9 +2090,7 @@ h1 {
   transition: color 0.3s ease;
 }
 
-.mapa-footer ul li a:hover {
-  color: #4a90e2;
-}
+
 
 .copyright {
   margin-top: 40px;
@@ -2983,7 +2981,7 @@ a {
 
 .submenu li.menu-desplegable {
     margin-bottom: 3px; /* Reduce espacio entre cada bloque */
-    padding: 0px 10px; /* Opcional: ajusta el padding vertical */
+    padding: 4px 0px; /* Opcional: ajusta el padding vertical */
 }
 
 .submenu li.menu-desplegable a {
