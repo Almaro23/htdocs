@@ -1774,9 +1774,7 @@ body.menu-open {
     transition: color 0.3s ease;
 }
 
-.mapa-footer ul li a:hover {
-    color: #4a90e2;
-}
+
 
 /* Estilos de footer */
 .pie-pagina {

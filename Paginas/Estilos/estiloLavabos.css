@@ -1606,7 +1606,7 @@ html, body {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    margin-top:8px;
+    margin-top:5px;
 }
 .redes-sociales img {
     width: 50px;
@@ -1705,7 +1705,7 @@ html, body {
 
 /* Aumentar la altura del menú desplegable */
 nav .menu-desplegable {
-    height:50px; /* Ajusta según tus necesidades */
+    height:60px; /* Ajusta según tus necesidades */
 }
 
 .mapa-footer ul {
@@ -3135,4 +3135,54 @@ a {
     margin-bottom: 20px;
 }
 
+
+
+
+
+
+.submenu li.menu-desplegable {
+    margin-bottom: px; /* Reduce espacio entre cada bloque */
+    padding: 1px 0px; /* Opcional: ajusta el padding vertical */
+}
+
+.submenu li.menu-desplegable a {
+    padding: 2px 5px; /* Espacio interno del enlace */
+    display: block; /* Asegura que el padding se aplique correctamente */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.submenu li.menu-desplegable a:hover {
+    background-color:  #e2e2e2;
+}
+
+
+
+
+
+.submenu li.menu-desplegable a {
+    padding: 8px 10px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    transition:  background-color 0.2s ease;
+}
+
+.submenu li.menu-desplegable a:hover {
+  background-color:  #e2e2e2 !important;
+    border-radius: 6px;
+}
+
+
+.informacion-footer {
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+
+.submenu{
+    margin-top: -13px !important;
+    padding: 5px  !important;
+    margin-bottom: 2px !important;
+}
 
