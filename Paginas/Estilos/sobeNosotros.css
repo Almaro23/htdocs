@@ -1442,3 +1442,8 @@ main {
     transition: color 0.3s ease;
 }
 
+.informacion-footer {
+    text-align: center; /* Centra el texto */
+    margin-bottom: 20px;
+}
+

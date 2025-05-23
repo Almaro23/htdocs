@@ -1742,3 +1742,7 @@ body.menu-open {
 
     padding-left: 20px;
 }
+.informacion-footer {
+    text-align: center; /* Centra el texto */
+    margin-bottom: 20px;
+}

@@ -1705,7 +1705,7 @@ html, body {
 
 /* Aumentar la altura del menú desplegable */
 nav .menu-desplegable {
-    height:30px; /* Ajusta según tus necesidades */
+    height:50px; /* Ajusta según tus necesidades */
 }
 
 .mapa-footer ul {
@@ -2826,7 +2826,7 @@ a {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    margin-top:17px;
+    margin-top:3px;
 }
 .redes-sociales img {
     width: 40px;
@@ -2982,17 +2982,47 @@ a {
 
 
 .submenu li.menu-desplegable {
-    margin-bottom: 5px; /* Reduce espacio entre cada bloque */
-    padding: 0px 0; /* Opcional: ajusta el padding vertical */
+    margin-bottom: 3px; /* Reduce espacio entre cada bloque */
+    padding: 0px 10px; /* Opcional: ajusta el padding vertical */
 }
 
 .submenu li.menu-desplegable a {
-    padding: 2px 5px; /* Espacio interno del enlace */
+    padding: 10px 5px; /* Espacio interno del enlace */
     display: block; /* Asegura que el padding se aplique correctamente */
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .submenu li.menu-desplegable a:hover {
-    background-color: #f0f0f0;
+    background-color: #e2e2e2;
 }
+
+.informacion-footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+/* Estilo general para todos los submenús */
+.menu-principal .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+}
+
+/* Mostrar submenús al pasar el ratón */
+.menu-principal .menu-desplegable:hover > .submenu {
+    display: block;
+}
+
+/* Submenú desplegado A LA DERECHA y MÁS ABAJO (para los modelos) */
+.menu-principal .submenu .menu-desplegable:hover > .submenu {
+    top: 20px;      /* esto hace que aparezca más abajo */
+    left: 100%;     /* esto lo coloca a la derecha del menú padre */
+}
+
+
+

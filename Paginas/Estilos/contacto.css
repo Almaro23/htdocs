@@ -1760,3 +1760,7 @@ box-sizing: border-box;
     transition: color 0.3s ease;
 }
 
+.informacion-footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
