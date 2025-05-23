@@ -976,7 +976,9 @@ a {
     padding: 10px 40px;
     position: relative;
 }
-
+.espacio-pequeno {
+    margin: 8px 0; /* Espacio vertical pequeño */
+}
 /* LOGO */
 .logo img {
     max-height: 158px;
