@@ -2978,6 +2978,9 @@ a {
 }
 
 
+.espacio-pequeno {
+    margin: 8px 0; /* Espacio vertical pequeño */
+}
 
 .submenu li.menu-desplegable {
     margin-bottom: 3px; /* Reduce espacio entre cada bloque */
