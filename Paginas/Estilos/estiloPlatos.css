@@ -1877,4 +1877,19 @@ h2 {
 
 
 
+.submenu li.menu-desplegable {
+    margin-bottom: 5px; /* Reduce espacio entre cada bloque */
+    padding: 1px 0; /* Opcional: ajusta el padding vertical */
+}
+
+.submenu li.menu-desplegable a {
+    padding: 4px 5px; /* Espacio interno del enlace */
+    display: block; /* Asegura que el padding se aplique correctamente */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.submenu li.menu-desplegable a:hover {
+    background-color: #f0f0f0;
+}
 

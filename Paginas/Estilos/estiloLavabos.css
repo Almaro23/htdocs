@@ -1705,7 +1705,7 @@ html, body {
 
 /* Aumentar la altura del menú desplegable */
 nav .menu-desplegable {
-    height: 60px; /* Ajusta según tus necesidades */
+    height:30px; /* Ajusta según tus necesidades */
 }
 
 .mapa-footer ul {
@@ -1727,6 +1727,1272 @@ nav .menu-desplegable {
     transition: color 0.3s ease;
 }
 
-.mapa-footer ul a:hover {
-    color: #007BFF; /* Cambia el color al pasar el mouse */
+
+/* Reduce espacio entre elementos de cualquier nivel de submenú */
+.submenu li {
+    margin-bottom: 4px; /* Ajusta este valor según el espaciado deseado */
+    padding: 3px 0;     /* Reduce espacio interno vertical */
+}
+
+/* Aplica estilo consistente a enlaces */
+.submenu li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo al pasar el mouse */
+.submenu li a:hover {
+    background-color: #f2f2f2;
+}
+
+/* Opcional: si hay problemas de herencia, fuerza que los submenús no tengan margen extra */
+.submenu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* Reset de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  background-image: url('../../imagenes/fondo345.jpg') !important ;
+  background-repeat: repeat;
+  overflow-x: hidden;
+}
+
+/* Barra de navegación principal */
+.barra-navegacion {
+  background: transparent;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.barra-navegacion .logo {
+  margin-right: 40px;
+}
+
+.barra-navegacion .logo img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Botón de menú móvil */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1002; /* Z-index alto para estar por encima de todo */
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animación para el botón de menú */
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Botón de búsqueda para móvil */
+.search-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Menú principal */
+.menu-principal {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1001; /* Z-index alto para estar por encima del overlay */
+}
+
+.menu-principal li {
+  margin: 0 20px;
+  position: relative;
+}
+
+.menu-principal a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 12px 16px;
+  display: block;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu-principal a:hover {
+  background-color: #e2e2e2;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Submenú */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color:#f4f6f6 !important; /* Fondo negro */ 
+  min-width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+  opacity: 2;
+  transition: opacity 0.5s ease;
+}
+
+.menu-principal li:hover > .submenu {
+  display: block;
+  opacity: 2;
+}
+
+.submenu li {
+  position: relative;
+}
+
+.submenu a {
+  color: #000000  !important; /* Texto blanco */
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #1a1a1a !important;
+  transition: background-color 0.3s ease;
+}
+
+.submenu a:hover {
+  padding-left: 20px;
+}
+
+
+.submenu .submenu {
+  top: 0;
+  left: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.menu-desplegable > a {
+  position: relative;
+}
+
+.menu-desplegable > a:after {
+  content: "";
+  font-size: 14px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.menu-desplegable:hover > a:after {
+  transform: rotate(90deg);
+}
+
+/* Overlay para cerrar el menú al hacer clic fuera */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Por debajo del menú pero por encima del resto */
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+/* Bloquear scroll cuando el menú está abierto */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Galería de productos */
+.product-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  flex-wrap: wrap;
+  font-family: 'Cinzel', serif;
+
+}
+
+.product {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+  width: 450px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #333;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+}
+
+.product h3 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #333;
+}
+
+.product p {
+  font-size: 1rem;
+  color: #666;
+  padding: 0 20px 20px;
+}
+
+/* Estilo para pie de página */
+.pie-pagina {
+  background-color: #212121;
+  color: #fff;
+  padding: 45px 10%;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid #444;
+}
+
+.contenido-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.informacion-footer {
+  flex: 1;
+  margin: 0 20px;
+  text-align: left;
+  padding-right: 30px;
+}
+
+.informacion-footer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #b8b8b8;
+}
+
+.informacion-footer p {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+.redes-sociales {
+  flex: 1;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.redes-sociales a {
+  margin: 0 20px;
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redes-sociales img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.redes-sociales a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.2) invert(1);
+}
+
+.mapa-footer {
+  flex: 1;
+  margin: 0 20px;
+  text-align: left;
+}
+
+.mapa-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mapa-footer ul li {
+  margin: 10px 0;
+}
+
+.mapa-footer ul li a {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.mapa-footer ul li a:hover {
+  color: #4a90e2;
+}
+
+.copyright {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* RESPONSIVE DESIGN UNIFICADO */
+
+/* Pantallas grandes (1200px y más) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  .product-gallery {
+    padding: 50px;
+    gap: 30px;
+    
+  }
+  
+  .product {
+    width: 450px;
+  }
+}
+
+/* Pantallas medianas (992px a 1199px) */
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .caracteristica, 
+  .catalogo {
+    width: 47%;
+    padding: 40px;
+  }
+  
+  .bienvenida {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  .caracteristicas {
+    padding: 40px;
+  }
+  
+  .product-gallery {
+    padding: 40px 30px;
+    gap: 25px;
+  }
+  
+  .product {
+    width: 400px;
+  }
+}
+
+/* Tablets (768px a 991px) */
+@media (max-width: 991px) {
+  .container {
+    max-width: 700px;
+  }
+  
+  /* Navegación móvil */
+  .barra-navegacion {
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .search-toggle {
+    display: block;
+  }
+  
+  .menu-principal {
+    position: fixed;
+    top: 40px;
+    right: -300px;
+    width: 280px;
+    height: 30vh;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 80px 20px 20px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    overflow-y: none;
+    display: flex;
+    pointer-events: auto;
+  }
+  
+  .menu-principal.active {
+    right: 0;
+  }
+  
+  .menu-principal li {
+    margin: 10px 0;
+    width: 100%;
+    list-style: none;
+  }
+  
+  .menu-principal a {
+    padding: 12px 0;
+    width: 100%;
+    color: #000;
+  }
+  
+  .menu-principal a:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Submenús en móvil */
+  .submenu {
+  position: static;
+  width: 100%;
+  box-shadow: none;
+  display: none;
+  opacity: 1;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px 0;
+  max-height: 70vh;
+  overflow-y: auto;
+   box-sizing: border-box;
+}
+
+  
+  .menu-principal li:hover > .submenu {
+    display: none;
+  }
+  
+  .menu-principal li.active > .submenu {
+    display: block;
+  }
+  
+  .submenu a {
+    padding: 5px 15px;
+    border-bottom: 1px solid #eee;
+    ;
+  }
+  
+  .submenu a:last-child {
+    border-bottom: none;
+  }
+  
+  .menu-desplegable > a:after {
+    float: right;
+  }
+  
+  .menu-desplegable.active > a:after {
+    content: "-";
+  }
+  
+  /* Barra de búsqueda */
+  .barra-busqueda {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .barra-busqueda.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Contenido */
+  .bienvenida {
+    height: 60vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+  }
+  
+  .caracteristica, 
+  .catalogo {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .caracteristicas {
+    padding: 30px;
+    gap: 30px;
+  }
+  
+  .product-gallery {
+    padding: 30px 20px;
+    gap: 20px;
+  }
+  
+  .product {
+    width: 350px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  /* Footer */
+  .contenido-footer {
+    flex-direction: column;
+  }
+  
+  .informacion-footer, 
+  .redes-sociales, 
+  .mapa-footer {
+    width: 100%;
+    margin: 0 0 30px 0;
+    text-align: center;
+    padding-right: 0;
+  }
+  
+  .mapa-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .mapa-footer ul li {
+    margin: 5px 10px;
+  }
+  
+  .grid-articulos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móviles grandes (576px a 767px) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  .barra-navegacion .logo img {
+    height: 40px;
+  }
+  
+  .bienvenida {
+    height: 50vh;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 20px;
+  }
+  
+  .caracteristicas {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .caracteristica, 
+  .catalogo {
+    padding: 30px;
+  }
+  
+  .caracteristica h3, 
+  .catalogo h3 {
+    font-size: 20px;
+    padding: 15px;
+  }
+  
+  .transicion {
+    font-size: 20px;
+    padding: 30px 5%;
+  }
+  
+  .ubicacion {
+    padding: 30px 5%;
+  }
+  
+  .ubicacion h2 {
+    font-size: 1.5rem;
+  }
+  
+  .mapa iframe {
+    height: 350px;
+  }
+  
+  .pie-pagina {
+    padding: 30px 5%;
+  }
+  
+  .informacion-footer h2 {
+    font-size: 1.5rem;
+  }
+  
+  .redes-sociales a {
+    margin: 0 10px;
+  }
+  
+  .redes-sociales img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .product-gallery {
+    padding: 25px 15px;
+  }
+  
+  .product {
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 15px 0;
+  }
+  
+  .grid-articulos {
+    grid-template-columns: 1fr;
+  }
+  
+  .titulo-seccion {
+    font-size: 24px;
+  }
+  
+  .subtitulo-seccion {
+    font-size: 14px;
+  }
+  
+  .metodos-pago {
+    gap: 20px;
+  }
+}
+
+/* Móviles medianos (480px a 575px) */
+@media (max-width: 575px) {
+  .barra-navegacion {
+    padding: 5px 15px;
+  }
+  
+  .barra-navegacion .logo img {
+    height: 35px;
+  }
+  
+  .bienvenida {
+    height: 40vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    margin-top: 0;
+  }
+  
+  .caracteristicas {
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .caracteristica, 
+  .catalogo {
+    padding: 20px;
+    height: 220px;
+  }
+  
+  .caracteristica h3, 
+  .catalogo h3 {
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  .boton-catalogo {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  
+  .transicion {
+    font-size: 18px;
+    padding: 20px 5%;
+  }
+  
+  .ubicacion h2 {
+    font-size: 1.3rem;
+  }
+  
+  .mapa iframe {
+    height: 250px;
+  }
+  
+  .product-gallery {
+    padding: 20px 10px;
+    gap: 15px;
+  }
+  
+  .product h3 {
+    font-size: 1.3rem;
+    margin: 15px 0;
+  }
+  
+  .product p {
+    font-size: 0.9rem;
+    padding: 0 15px 15px;
+  }
+  
+  .informacion-footer h2 {
+    font-size: 1.3rem;
+  }
+  
+  .informacion-footer p {
+    font-size: 0.9rem;
+  }
+  
+  .redes-sociales img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .mapa-footer ul li a {
+    font-size: 0.9rem;
+  }
+  
+  .copyright {
+    font-size: 0.8rem;
+  }
+  
+  .metodos-pago {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .metodo img {
+    max-height: 40px;
+    max-width: 100px;
+  }
+  
+  .titulo-articulo {
+    min-height: auto;
+    font-size: 14px;
+  }
+  
+  .imagen-articulo {
+    height: 180px;
+  }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  .barra-navegacion {
+    padding: 10px;
+  }
+  
+  .menu-principal {
+    width: 250px;
+  }
+  
+  .barra-busqueda {
+    width: 95%;
+    top: 60px;
+  }
+  
+  .product img {
+    height: 180px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Móviles muy pequeños (hasta 360px) */
+@media (max-width: 360px) {
+  .product img {
+    height: 160px;
+  }
+  
+  .product h3 {
+    font-size: 1.2rem;
+  }
+  
+  .product p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Móviles extremadamente pequeños (hasta 320px) */
+@media (max-width: 320px) {
+  .barra-navegacion .logo img {
+    height: 30px;
+  }
+  
+  .bienvenida {
+    height: 35vh;
+  }
+  
+  .caracteristica, 
+  .catalogo {
+    height: 200px;
+    padding: 15px;
+  }
+  
+  .caracteristica h3, 
+  .catalogo h3 {
+    font-size: 16px;
+    padding: 8px;
+  }
+  
+  .boton-catalogo {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+
+/* Soporte para modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #000000;
+  }
+  
+  .menu-principal a {
+    color: #000000;
+  }
+  
+  .menu-principal a:hover {
+    background-color: #e2e2e2;
+  }
+  
+  .submenu {
+    background-color: #e2e2e2;
+  }
+  
+  .submenu a {
+    color: #000000;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  
+  .submenu a:hover {
+    background-color: #e2e2e2;
+  }
+  
+  .barra-busqueda {
+    background-color: #333;
+  }
+  
+  .barra-busqueda input {
+    color: #000000;
+  }
+  
+  .titulo-seccion {
+    color: #000000;
+  }
+  
+  .subtitulo-seccion {
+    color: #ccc;
+  }
+  
+  .tarjeta-articulo {
+    background-color: #e2e2e2;
+  }
+  
+  .titulo-articulo {
+    color: #000000;
+  }
+  
+  .fecha {
+    color: #ccc;
+  }
+}
+
+/* Soporte para dispositivos con pantalla táctil */
+@media (hover: none) {
+  .menu-principal a:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .caracteristica:hover,
+  .catalogo:hover {
+    transform: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tarjeta-articulo:hover {
+    transform: none;
+  }
+  
+  .tarjeta-articulo:hover .imagen-articulo img {
+    transform: none;
+  }
+  
+  .redes-sociales a:hover img {
+    transform: none;
+  }
+  
+  /* Estados activos para dispositivos táctiles */
+  .menu-principal a:active {
+    background-color: #ffffff;
+  }
+  
+  .caracteristica:active,
+  .catalogo:active {
+    transform: scale(0.98);
+  }
+  
+  .boton-catalogo:active {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .tarjeta-articulo:active {
+    transform: translateY(-2px);
+  }
+}
+/* #titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+#titulo {
+    font-family: 'Cormorant Garamond', serif;
+} */
+#titulo {
+  font-family: 'Cinzel', serif;
+  margin-top: 35px;
+  margin-bottom: 5px;
+}
+
+/* NAVBAR */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: relative;
+}
+
+/* LOGO */
+.logo img {
+    max-height: 158px;
+    display: block;
+}
+
+/* MENÚ PRINCIPAL */
+.menu-principal {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+  }
+
+.menu-principal a {
+    text-decoration: none;
+    color: #111;
+    font-size: 15px;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+
+
+/* DESPLEGABLES */
+.menu-desplegable {
+    position: relative;
+}
+
+.menu-desplegable > a::after {
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: rgb(255, 255, 255);
+    padding: 8px 0;
+    min-width: 180px;
+    z-index: 10;
+}
+
+.submenu li {
+    padding: 0;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #111;
+    transition: background-color 0.2s ease;
+}
+
+/* NAVBAR */
+.barra-navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  position: fixed;
+  background-color: #fff;
+}
+
+
+
+/* Universal box-sizing y correcciones para evitar desbordes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.menu-principal li {
+    margin: 0 5px;
+    position: relative;
+    text-align: center;
+
+}
+.menu-principal .submenu,
+.menu-principal .submenu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    margin-top:17px;
+}
+.redes-sociales img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+ .submenu a {
+        color: #000000;
+        border-bottom: none !important;
+    }
+
+
+
+.boton-subir {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333; /* color oscuro elegante */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-subir:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+.product-gallery p {
+    font-size: 17px; /* opcional, ajusta según lo que necesites */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+/* Responsive: Espaciado vertical entre productos en móvil */
+@media (max-width: 768px) {
+    .product {
+        margin-bottom: 40px; /* espacio debajo de cada producto */
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+.product {
+    width: 450px; 
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: 80%; 
+        margin-bottom: 30px; 
+    }
+}
+.menu-principal a:hover {
+    transform: none;
+  box-shadow: none;
+}
+.logo1 {
+      width: 300px; /* Ajusta el tamaño de la imagen */
+      height: auto; /* Mantiene la proporción original */
+      display: block;
+      margin: 20px auto;
+  }
+
+
+  .redes-sociales {
+    flex: 1;
+    margin: 55px 20px;
+    text-align: center;
+}
+
+.redes-sociales a {
+    margin: 0 20px;
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redes-sociales img {
+    width: 40px; 
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) invert(1); 
+}
+
+.redes-sociales a:hover img {
+    transform: scale(1.2); 
+    filter: brightness(1.2) invert(1);
+}
+@media (max-width: 991px) {
+  .menu-principal li .submenu {
+    display: none;
+    top: 5vh;
+    left: 0;
+    height: 30vh;
+    background-color: #fff;
+    border-radius: 0;
+  }
+
+}
+ 
+@media (min-width: 992px) {
+  .submenu .submenu {
+    top: -10px;
+    left: 100%;
+    transform: translateY(-10px); /* Mueve la caja 10px hacia arriba */
+  }
+}
+
+
+#titulo1{
+   font-family: 'Cinzel', serif;
+  margin-top: 35px;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+
+.mapa-footer ul {
+    columns: 2; /* Divide en dos columnas */
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+.mapa-footer ul li {
+    margin-bottom: 10px; /* Espacio entre elementos */
+}
+
+.mapa-footer ul a {
+    text-decoration: none;
+    color: #333; /* Puedes cambiar este color según tu diseño */
+    transition: color 0.3s ease;
+}
+
+
+
+.submenu li.menu-desplegable {
+    margin-bottom: 5px; /* Reduce espacio entre cada bloque */
+    padding: 0px 0; /* Opcional: ajusta el padding vertical */
+}
+
+.submenu li.menu-desplegable a {
+    padding: 2px 5px; /* Espacio interno del enlace */
+    display: block; /* Asegura que el padding se aplique correctamente */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.submenu li.menu-desplegable a:hover {
+    background-color: #f0f0f0;
 }

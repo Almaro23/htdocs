@@ -1760,6 +1760,3 @@ box-sizing: border-box;
     transition: color 0.3s ease;
 }
 
-.mapa-footer ul a:hover {
-    color: #007BFF; /* Cambia el color al pasar el mouse */
-}
