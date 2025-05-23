@@ -3027,3 +3027,110 @@ a {
 
 
 
+
+
+
+
+
+
+/* Sección de mapa en pie de página */
+.mapa-footer {
+    flex: 1;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.mapa-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mapa-footer ul li {
+    margin: 10px 0;
+}
+
+.mapa-footer ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.mapa-footer ul li a:hover {
+    color: #4a90e2;
+}
+
+/* Estilos de footer */
+.pie-pagina {
+    background-color: #212121;
+    color: #fff;
+    padding: 20px 5%;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #444;
+}
+
+.contenido-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.informacion-footer {
+    flex: 1;
+    margin: 0 20px;
+    text-align: left;
+    padding-right: 30px;
+}
+
+.informacion-footer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #b8b8b8;
+}
+
+.informacion-footer p {
+    font-size: 1rem;
+    color: #b0b0b0;
+}
+
+.redes-sociales {
+    flex: 1;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.redes-sociales a {
+    margin: 0 20px;
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redes-sociales img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+
+.redes-sociales a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.2) invert(1);
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.informacion-footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
