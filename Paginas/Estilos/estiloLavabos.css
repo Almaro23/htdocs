@@ -1606,7 +1606,7 @@ html, body {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    margin-top:5px;
+    margin-top:-9px !important;
 }
 .redes-sociales img {
     width: 50px;
@@ -3142,7 +3142,7 @@ a {
 
 .submenu li.menu-desplegable {
     margin-bottom: -10px; /* Reduce espacio entre cada bloque */
-    padding: 0px 0px; /* Opcional: ajusta el padding vertical */
+    padding: 4px -16px !important; /* Opcional: ajusta el padding vertical */
 }
 
 .submenu li.menu-desplegable a {
