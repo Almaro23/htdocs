@@ -2984,7 +2984,7 @@ a {
 
 .submenu li.menu-desplegable {
     margin-bottom: -7px; /* Reduce espacio entre cada bloque */
-    padding: 0px 0px; /* Opcional: ajusta el padding vertical */
+    padding: 0px -5px; /* Opcional: ajusta el padding vertical */
 }
 
 .submenu li.menu-desplegable a {
@@ -3141,8 +3141,8 @@ a {
 
 
 .submenu li.menu-desplegable {
-    margin-bottom: px; /* Reduce espacio entre cada bloque */
-    padding: 1px 0px; /* Opcional: ajusta el padding vertical */
+    margin-bottom: -10px; /* Reduce espacio entre cada bloque */
+    padding: 0px 0px; /* Opcional: ajusta el padding vertical */
 }
 
 .submenu li.menu-desplegable a {
