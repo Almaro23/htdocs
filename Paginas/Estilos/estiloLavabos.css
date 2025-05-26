@@ -430,7 +430,6 @@ main {
     transform: scale(1.2);
     filter: brightness(1.2) invert(1);
 }
-
 .mapa-footer {
     flex: 1;
     margin: 0 20px;
@@ -454,9 +453,6 @@ main {
     transition: color 0.3s ease;
 }
 
-.mapa-footer ul li a:hover {
-    color: #4a90e2;
-}
 
 .copyright {
     margin-top: 40px;
@@ -3056,9 +3052,6 @@ a {
     transition: color 0.3s ease;
 }
 
-.mapa-footer ul li a:hover {
-    color: #4a90e2;
-}
 
 /* Estilos de footer */
 .pie-pagina {

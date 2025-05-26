@@ -1788,9 +1788,7 @@ box-sizing: border-box;
     transition: color 0.3s ease;
 }
 
-.mapa-footer ul li a:hover {
-    color: #4a90e2;
-}
+
 
 /* Estilos de footer */
 .pie-pagina {
@@ -2061,10 +2059,6 @@ main {
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s ease;
-}
-
-.mapa-footer ul li a:hover {
-    color: #4a90e2;
 }
 
 /* Estilos de footer */

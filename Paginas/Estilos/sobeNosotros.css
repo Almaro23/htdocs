@@ -193,9 +193,7 @@ main {
     transition: color 0.3s ease;
 }
 
-.mapa-footer ul li a:hover {
-    color: #4a90e2;
-}
+
 
 /* Estilos de footer */
 .pie-pagina {
@@ -358,15 +356,7 @@ main {
     color: #555;
 }
 
-.contacto-box a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
 
-.contacto-box a:hover {
-    color: #0056b3;
-}
 
 
 /* #titulo {
