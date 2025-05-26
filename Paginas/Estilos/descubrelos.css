@@ -2935,6 +2935,7 @@ h2 {
   @media (max-width: 991px) {
     .menu-toggle {
       display: flex;
+      margin-top: -45px;
     }
     
     .search-toggle {
